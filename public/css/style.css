@@ -16973,53 +16973,12 @@ html.tablet .ui-to-top {
 	position: relative;
 	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
-	display: inline-flex;
+	display: flex;
+	flex-direction: row;
 }
 
-.rd-navbar-search .form-input {
-	padding-top: 9px;
-	padding-bottom: 9px;
-	min-height: 50px;
-	padding-right: 50px;
-}
 
-.rd-navbar-search .form-label {
-	top: 25px;
-}
 
-.rd-navbar-search .rd-search-form-submit {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	width: 50px;
-	padding: 0;
-	margin: 0;
-	border: none;
-	cursor: pointer;
-	background-color: transparent;
-	font-size: 20px;
-	color: #ccc;
-	transition: .33s;
-}
-
-.rd-navbar-search .rd-search-form-submit:hover {
-	color: #35ad79;
-}
-
-.rd-navbar-search-toggle {
-	background: none;
-	border: none;
-	display: inline-block;
-	padding: 0;
-	outline: none;
-	outline-offset: 0;
-	cursor: pointer;
-	-webkit-appearance: none;
-	display: none;
-	align-items: center;
-	justify-content: center;
-}
 
 .rd-navbar-search-toggle::-moz-focus-inner {
 	border: none;
@@ -18531,7 +18490,13 @@ html.rd-navbar-fixed-linked .page {
 	opacity: .15;
 }
 
-.rd-navbar-classic .rd-navbar-list-link:hover {
+.rd-navbar-classic .rd-navbar-list-links {
+	display: block;
+	max-width: 80px;
+	opacity: .2;
+}
+
+.rd-navbar-classic .rd-navbar-list-links:hover {
 	opacity: .8;
 }
 

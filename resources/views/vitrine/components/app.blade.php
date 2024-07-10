@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/style.css" id="main-styles-link">
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div class="preloader">

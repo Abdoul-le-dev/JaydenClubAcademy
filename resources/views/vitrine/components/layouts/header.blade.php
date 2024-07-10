@@ -40,9 +40,9 @@
                 <li>
                   <!-- Select 2-->
                   <select class="select" name="lang" data-container-class="select-inline" data-dropdown-class="select-inline-dropdown">
-                    <option selected="">en</option>
-                    <option>fr</option>
-                    <option>es</option>
+                    <option selected="">fr</option>
+                    <option>en</option>
+                    
                   </select>
                 </li>
                 <li>
@@ -54,7 +54,9 @@
                       <div class="cart-inline-inner">
                         
                         
-                        <div class="cart-inline-footer"><a class="button button-md button-default-outline" href="shopping-cart.html">Go to Cart</a><a class="button button-md button-primary" href="checkout.html">Checkout</a></div>
+                        <div class="cart-inline-footer">
+                          <a class="button button-md button-default-outline" >+22966283896</a>
+                          <a class="button button-md button-primary">contact@</a></div>
                       </div>
                     </article>
                   </div>
@@ -73,21 +75,20 @@
               </div>
               <!-- RD Navbar List-->
               <ul class="rd-navbar-list">
-                <li class="rd-navbar-list-item"><a class="rd-navbar-list-link" href="#"><img src="images/partners-1-inverse-75x42.png" alt="" width="75" height="42"></a></li>
-                <li class="rd-navbar-list-item"><a class="rd-navbar-list-link" href="#"><img src="images/partners-2-inverse-88x45.png" alt="" width="88" height="45"></a></li>
-                <li class="rd-navbar-list-item"><a class="rd-navbar-list-link" href="#"><img src="images/partners-3-inverse-79x52.png" alt="" width="79" height="52"></a></li>
+                <li class="rd-navbar-list-item"><a class="rd-navbar-list-link" ><img src="assets/image/discipline.png" alt="" width="75" height="42"></a></li>
+                <li class="rd-navbar-list-item"><a class="rd-navbar-list-link" ><img src="assets/image/passion.png" alt="" width="88" height="45"></a></li>
+                <li class="rd-navbar-list-item"><a class="rd-navbar-list-link" ><img src="assets/image/work-team.png" alt="" width="79" height="52"></a></li>
               </ul>
               <!-- RD Navbar Search-->
               <div class="rd-navbar-search">
-                <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
-                  <div class="form-wrap">
-                    <label class="form-label" for="rd-navbar-search-form-input">Enter your search request here...</label>
-                    <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
-                    <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                  </div>
-                  <button class="rd-search-form-submit fl-budicons-launch-search81" type="submit"></button>
-                </form>
+                   <ul class="flex flex-row ml-[70px]">
+                      <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="assets/image/soccer-game.png" alt="" width="75" height="42"></a></li>
+                      <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="assets/image/football (2).png" alt="" width="88" height="45"></a></li>
+                      <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="assets/image/football.png" alt="" width="79" height="52"></a></li>
+                    </ul>
+                  
+                 
+                
               </div>
             </div>
           </div>

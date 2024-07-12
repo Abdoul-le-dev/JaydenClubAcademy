@@ -669,33 +669,11 @@ a[href*='tel'], a[href*='mailto'] {
 	color: #151515;
 }
 
-.link-cart-counter {
-	position: relative;
-	top: -2px;
-	height: 18px;
-	min-width: 18px;
-	font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	font-size: 12px;
-	font-weight: 500;
-	line-height: 18px;
-	border-radius: 50%;
-	color: #fff;
-	background: #35ad79;
-	transition: .22s;
-}
 
-.link-cart-counter-2 {
-	position: relative;
-	color: #fff;
-}
 
-.link-cart-counter-2::before {
-	content: '( ';
-}
 
-.link-cart-counter-2::after {
-	content: ' )';
-}
+
+
 
 .iphone .link-cart-counter {
 	line-height: 17px;
@@ -17932,7 +17910,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-main {
-	background: #35363c;
+	background: #dadada;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -18493,7 +18471,7 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-classic .rd-navbar-list-links {
 	display: block;
 	max-width: 80px;
-	opacity: .2;
+	
 }
 
 .rd-navbar-classic .rd-navbar-list-links:hover {

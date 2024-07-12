@@ -22,7 +22,7 @@
               </div>
               <div class="unit-body">
                 <p class="text-[#ffff]">
-                  Le site JAYDENACADEMY vous propose les dernières nouvelles de notre équipe ainsi que des mises à jour sur nos matchs et autres événements.</p>
+                  Le site JAYDEN ACADEMY vous propose les dernières nouvelles de notre équipe ainsi que des mises à jour sur nos matchs et autres événements.</p>
               </div>
             </article>
             <ul class="list-inline list-inline-bordered list-inline-bordered-lg">

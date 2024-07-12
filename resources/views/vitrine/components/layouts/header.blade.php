@@ -97,7 +97,7 @@
             <div class="rd-navbar-main-container container">
               <!-- RD Navbar Nav-->
                                 <ul class="rd-navbar-nav">
-                                  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                                  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">JAYDEN FOOTBALL ACADEMY</a>
                                                       <ul class="rd-menu rd-navbar-dropdown">
                                                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Niche Templates</a>
                                                                             <ul class="rd-menu rd-navbar-dropdown">

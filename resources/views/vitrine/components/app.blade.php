@@ -38,7 +38,7 @@
     <!-- PANEL-->
     <div class="layout-panel-wrap">
       <div class="layout-panel">
-        <button class="layout-panel-toggle" data-custom-toggle=".layout-panel-wrap"><span></span></button>
+        <!-- <button class="layout-panel-toggle" data-custom-toggle=".layout-panel-wrap"><span></span></button>-->
         <div class="layout-panel-content">
           <h6>Choose your color scheme:</h6>
           <div class="theme-switcher-list">

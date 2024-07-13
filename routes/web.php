@@ -6,10 +6,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VitrineController;
 use Illuminate\Support\Facades\Route;
 
+
+//vitrine
 Route::get('/', [VitrineController::class,'index']);
-Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard.view');
-
-
 Route::get('/contact', [ContactController::class,'index'])->name('contact-view');
 
 
@@ -30,3 +29,12 @@ Route::controller(AuthController::class)->group(function () {
         Route::post('/change-password', 'change_password')->name('change_password');
     });
 });
+
+
+
+//dashbord
+Route::prefix('/dashboard')->group(function () {
+    Route::get('', [DashboardController::class,'index'])->name('dashboard.view');
+    Route::get('/joueurs-staffs', [DashboardController::class,'joueurs_staffs_view'])->name('dashboard.joueurs_staff');
+});
+

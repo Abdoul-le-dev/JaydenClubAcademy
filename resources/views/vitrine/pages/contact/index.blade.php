@@ -4,9 +4,9 @@
 <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="images/bg-breadcrumbs-1-1920x726.jpg">
     <div class="parallax-content breadcrumbs-custom context-dark">
       <div class="container">
-        <h3 class="breadcrumbs-custom-title">Contact us</h3>
+        <h3 class="breadcrumbs-custom-title">Contactez-nous</h3>
         <ul class="breadcrumbs-custom-path">
-          <li><a href="index.html">JAYDEN FOOTBALL ACADEMY</a></li>
+          <li><a href="{{route('Home')}}">JAYDEN FOOTBALL ACADEMY</a></li>
          
           <li class="active">Contactez-nous</li>
         </ul>
@@ -21,7 +21,7 @@
           <!-- Heading Component-->
           <article class="heading-component">
             <div class="heading-component-inner">
-              <h5 class="heading-component-title">Get in touch
+              <h5 class="heading-component-title">Entrer en contact
               </h5>
             </div>
           </article>
@@ -69,15 +69,17 @@
           <div class="contact-list">
             <dl>
               <dt>E-mail</dt>
-              <dd><span class="icon icon-primary mdi mdi-email-outline"></span><a class="link" href="mailto:#">info@demolink.org</a></dd>
+              <dd><span class="icon icon-primary mdi mdi-email-outline"></span><a class="link" href="mailto:#">jaydenfootballacademy@gmail.com</a></dd>
             </dl>
             <dl>
               <dt>Address</dt>
-              <dd><span class="icon icon-primary mdi mdi-map-marker"></span><a class="link" href="#">71 Pilgrim Avenue Chevy Chase, MD 20815</a></dd>
+              <dd><span class="icon icon-primary mdi mdi-map-marker"></span>
+                <a class="link" href="#">Cotonou, Littoral, Benin, LOT 691 Dandji
+            </a></dd>
             </dl>
             <dl>
-              <dt>Phone</dt>
-              <dd><span class="icon icon-primary mdi mdi-phone"></span><a class="link link-md" href="tel:#">+34 91 398 43 00</a></dd>
+              <dt>Téléphone</dt>
+              <dd><span class="icon icon-primary mdi mdi-phone"></span><a class="link link-md" href="tel:#">+229 687 322 37 </a></dd>
             </dl>
           </div>
         </div>

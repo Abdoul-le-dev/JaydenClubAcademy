@@ -55,8 +55,8 @@
                         
                         
                         <div class="cart-inline-footer flex flex-row">
-                          <a class="button button-md button-default-outline" >+22966283896</a>
-                          <a class="button button-md button-primary">contact@jaydenclub.com</a>
+                          <a class="button button-md button-default-outline" >+22968732237</a>
+                          <a class="button button-md button-primary" href="mailto::jaydenfootballacademy@gmail.com">:jaydenfootballacademy@gmail.com</a>
                         </div>
                       </div>
                     </article>
@@ -72,7 +72,7 @@
           <div class="rd-navbar-main-top">
             <div class="rd-navbar-main-container container">
               <!-- RD Navbar Brand-->
-              <div class="rd-navbar-brand"><a class="brand" href="../landing"><img class="brand-logo " src="assets/image/logo_s_b.png" alt="" width="95" height="126"></a>
+              <div class="rd-navbar-brand"><a class="brand" href="{{route('Home')}}"><img class="brand-logo " src="assets/image/logo_s_b.png" alt="" width="95" height="126"></a>
               </div>
               <!-- RD Navbar List-->
               <ul class="rd-navbar-list">

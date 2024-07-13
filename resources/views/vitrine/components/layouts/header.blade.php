@@ -41,8 +41,8 @@
                   <!-- Select 2-->
                   <select class="select" name="lang" data-container-class="select-inline" data-dropdown-class="select-inline-dropdown">
                     <option selected="">fr</option>
-
-
+                    
+                    
                   </select>
                 </li>
                 <li>
@@ -52,8 +52,8 @@
                     <!-- Cart Inline-->
                     <article class="cart-inline cart-inline-toggled" id="cart-inline">
                       <div class="cart-inline-inner">
-
-
+                        
+                        
                         <div class="cart-inline-footer flex flex-row">
                           <a class="button button-md button-default-outline" >+22968732237</a>
                           <a class="button button-md button-primary" href="mailto::jaydenfootballacademy@gmail.com">:jaydenfootballacademy@gmail.com</a>
@@ -72,28 +72,24 @@
           <div class="rd-navbar-main-top">
             <div class="rd-navbar-main-container container">
               <!-- RD Navbar Brand-->
-<<<<<<< HEAD
-              <div class="rd-navbar-brand"><a class="brand" href="{{route('Home')}}"><img class="brand-logo " src="assets/image/logo_s_b.png" alt="" width="95" height="126"></a>
-=======
-              <div class="rd-navbar-brand"><a class="brand" href="../landing"><img class="brand-logo " src="/landing_assets/assets/image/logo_s_b.png" alt="" width="95" height="126"></a>
->>>>>>> d1c488cd81e2a68b7eceadf607933d3ac7758f51
+              <div class="rd-navbar-brand"><a class="brand" href="{{route('Home')}}"><img class="brand-logo " src="landing_assets/assets/image/logo_s_b.png" alt="" width="95" height="126"></a>
               </div>
               <!-- RD Navbar List-->
               <ul class="rd-navbar-list">
-                <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="/landing_assets/assets/image/discipline.png" alt="discipline" width="75" height="42"></a></li>
-                <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="/landing_assets/assets/image/passion.png" alt="passion" width="88" height="45"></a></li>
-                <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="/landing_assets/assets/image/work-team.png" alt="work-team" width="70" height="45"></a></li>
+                <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="landing_assets/assets/image/discipline.png" alt="discipline" width="75" height="42"></a></li>
+                <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="landing_assets/assets/image/passion.png" alt="passion" width="88" height="45"></a></li>
+                <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="landing_assets/assets/image/work-team.png" alt="work-team" width="70" height="45"></a></li>
               </ul>
               <!-- RD Navbar Search-->
               <div class="rd-navbar-search">
                    <ul class="flex flex-row lg:ml-[70px]">
-                      <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="/landing_assets/assets/image/soccer-game.png" alt="" width="75" height="42"></a></li>
-                      <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="/landing_assets/assets/image/football (2).png" alt="" width="88" height="45"></a></li>
-                      <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="/landing_assets/assets/image/football.png" alt="" width="79" height="52"></a></li>
+                      <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="landing_assets/assets/image/soccer-game.png" alt="" width="75" height="42"></a></li>
+                      <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="landing_assets/assets/image/football (2).png" alt="" width="88" height="45"></a></li>
+                      <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="landing_assets/assets/image/football.png" alt="" width="79" height="52"></a></li>
                     </ul>
-
-
-
+                  
+                 
+                
               </div>
             </div>
           </div>
@@ -105,7 +101,7 @@
                                                       <ul class="rd-menu rd-navbar-dropdown">
                                                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Niche Templates</a>
                                                                             <ul class="rd-menu rd-navbar-dropdown">
-
+                                                                             
                                                                               <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../rugby">Rugby</a>
                                                                               </li>
                                                                             </ul>
@@ -114,7 +110,7 @@
                                                                             <ul class="rd-menu rd-navbar-dropdown">
                                                                               <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index.html">Home Soccer</a>
                                                                               </li>
-
+                                                                             
                                                                             </ul>
                                                         </li>
                                                       </ul>

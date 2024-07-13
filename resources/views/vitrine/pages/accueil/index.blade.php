@@ -3,7 +3,7 @@
 @section('content')
 <section class="section swiper-container swiper-slider swiper-classic bg-gray-2" data-swiper='{"autoplay":{"delay":4000},"simulateTouch":false,"effect":"fade"}'>
     <div class="swiper-wrapper">
-      <div class="swiper-slide text-center" data-slide-bg="/images/slider-1-slide-1-1920x671.jpg">
+      <div class="swiper-slide text-center" data-slide-bg="/landing_assets/images/slider-1-slide-1-1920x671.jpg">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-6">
@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide" data-slide-bg="/images/slider-1-slide-2-1920x671.jpg">
+      <div class="swiper-slide" data-slide-bg="/landing_assets/images/slider-1-slide-2-1920x671.jpg">
         <div class="container">
           <div class="row justify-content-end">
             <div class="col-xl-5">
@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide" data-slide-bg="/images/slider-1-slide-3-1920x671.jpg">
+      <div class="swiper-slide" data-slide-bg="/landing_assets/images/slider-1-slide-3-1920x671.jpg">
         <div class="container">
           <div class="row">
             <div class="col-xl-5">
@@ -61,7 +61,7 @@
             <div class="row row-30">
               <div class="col-md-6">
                 <!-- Post Future-->
-                <article class="post-future"><a class="post-future-figure" href="blog-post.html"><img src="images/news-2-1-368x287.jpg" alt="" width="368" height="287"></a>
+                <article class="post-future"><a class="post-future-figure" href="blog-post.html"><img src="/landing_assets/images/news-2-1-368x287.jpg" alt="" width="368" height="287"></a>
                   <div class="post-future-main">
                     <h4 class="post-future-title"><a href="blog-post.html">Sadio mane still makes a difference, sam wilson admits</a></h4>
                     <div class="post-future-meta">
@@ -97,7 +97,7 @@
               </div>
               <div class="col-md-6">
                 <!-- Post Future-->
-                <article class="post-future"><a class="post-future-figure" href="blog-post.html"><img src="images/news-2-2-368x287.jpg" alt="" width="368" height="287"></a>
+                <article class="post-future"><a class="post-future-figure" href="blog-post.html"><img src="/landing_assets/images/news-2-2-368x287.jpg" alt="" width="368" height="287"></a>
                   <div class="post-future-main">
                     <h4 class="post-future-title"><a href="blog-post.html">Robertson's decent debut at european cup 2024</a></h4>
                     <div class="post-future-meta">
@@ -133,7 +133,7 @@
               </div>
               <div class="col-md-6">
                 <!-- Post Future-->
-                <article class="post-future"><a class="post-future-figure" href="blog-post.html"><img src="images/news-2-3-368x287.jpg" alt="" width="368" height="287"></a>
+                <article class="post-future"><a class="post-future-figure" href="blog-post.html"><img src="/landing_assets/images/news-2-3-368x287.jpg" alt="" width="368" height="287"></a>
                   <div class="post-future-main">
                     <h4 class="post-future-title"><a href="blog-post.html">Pochettino and ‘gaffer’s son’ Rose estranged – reports</a></h4>
                     <div class="post-future-meta">
@@ -169,7 +169,7 @@
               </div>
               <div class="col-md-6">
                 <!-- Post Future-->
-                <article class="post-future"><a class="post-future-figure" href="blog-post.html"><img src="images/news-2-4-368x287.jpg" alt="" width="368" height="287"></a>
+                <article class="post-future"><a class="post-future-figure" href="blog-post.html"><img src="/landing_assets/images/news-2-4-368x287.jpg" alt="" width="368" height="287"></a>
                   <div class="post-future-main">
                     <h4 class="post-future-title"><a href="blog-post.html">Coutinho’s camp: It was all Barca’s fault and we can prove it</a></h4>
                     <div class="post-future-meta">
@@ -205,7 +205,7 @@
               </div>
               <div class="col-md-12">
                 <!-- Post Gloria-->
-                <article class="post-gloria"><img src="images/post-gloria-1-769x429.jpg" alt="" width="769" height="429">
+                <article class="post-gloria"><img src="/landing_assets/images/post-gloria-1-769x429.jpg" alt="" width="769" height="429">
                   <div class="post-gloria-main">
                     <h3 class="post-gloria-title"><a href="blog-post.html">Premier League Winners and Losers: a quick look</a></h3>
                     <div class="post-gloria-meta">
@@ -227,7 +227,7 @@
               </div>
               <div class="col-md-12">
                 <!-- Post Future-->
-                <article class="post-future post-future-horizontal"><a class="post-future-figure" href="blog-post.html"><img src="images/news-3-1-370x325.jpg" alt="" width="370" height="325"></a>
+                <article class="post-future post-future-horizontal"><a class="post-future-figure" href="blog-post.html"><img src="/landing_assets/images/news-3-1-370x325.jpg" alt="" width="370" height="325"></a>
                   <div class="post-future-main">
                     <h4 class="post-future-title"><a href="blog-post.html">Zidane: “We’re not going to change the way we play at the Calderón”</a></h4>
                     <div class="post-future-meta">
@@ -247,7 +247,7 @@
               </div>
               <div class="col-md-12">
                 <!-- Post Future-->
-                <article class="post-future post-future-horizontal"><a class="post-future-figure" href="blog-post.html"><img src="images/news-3-2-370x325.jpg" alt="" width="370" height="325"></a>
+                <article class="post-future post-future-horizontal"><a class="post-future-figure" href="blog-post.html"><img src="/landing_assets/images/news-3-2-370x325.jpg" alt="" width="370" height="325"></a>
                   <div class="post-future-main">
                     <h4 class="post-future-title"><a href="blog-post.html">NFL Will Handle Referee Pete Morelli’s Use of Profanity Internally</a></h4>
                     <div class="post-future-meta">
@@ -271,7 +271,7 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                                           <!-- Post Alice-->
-                                          <article class="post-alice"><img src="images/post-slide-1-769x397.jpg" alt="" width="769" height="397">
+                                          <article class="post-alice"><img src="/landing_assets/images/post-slide-1-769x397.jpg" alt="" width="769" height="397">
                                             <div class="post-alice-main">
                                               <!-- Badge-->
                                               <div class="badge badge-secondary">the team
@@ -287,7 +287,7 @@ Sevens head coach</a></h3>
                     </div>
                     <div class="swiper-slide">
                                           <!-- Post Alice-->
-                                          <article class="post-alice"><img src="images/post-slide-2-769x397.jpg" alt="" width="769" height="397">
+                                          <article class="post-alice"><img src="/landing_assets/images/post-slide-2-769x397.jpg" alt="" width="769" height="397">
                                             <div class="post-alice-main">
                                               <!-- Badge-->
                                               <div class="badge badge-primary">The League
@@ -302,7 +302,7 @@ Sevens head coach</a></h3>
                     </div>
                     <div class="swiper-slide">
                                           <!-- Post Alice-->
-                                          <article class="post-alice"><img src="images/post-slide-3-769x397.jpg" alt="" width="769" height="397">
+                                          <article class="post-alice"><img src="/landing_assets/images/post-slide-3-769x397.jpg" alt="" width="769" height="397">
                                             <div class="post-alice-main">
                                               <!-- Post Video Button--><a class="post-video-button" href="#modal1" data-bs-toggle="modal"><span class="icon material-icons-play_arrow"></span></a>
                                               <h3 class="post-alice-title"><a href="blog-post.html">2024 Europa League Final</a></h3>
@@ -323,7 +323,7 @@ Sevens head coach</a></h3>
               </div>
               <div class="col-md-12">
                 <!-- Post Future-->
-                <article class="post-future post-future-horizontal"><a class="post-future-figure" href="blog-post.html"><img src="images/news-3-3-370x325.jpg" alt="" width="370" height="325"></a>
+                <article class="post-future post-future-horizontal"><a class="post-future-figure" href="blog-post.html"><img src="/landing_assets/images/news-3-3-370x325.jpg" alt="" width="370" height="325"></a>
                   <div class="post-future-main">
                     <h4 class="post-future-title"><a href="blog-post.html">Zidane: “We’re not going to change the way we play at the Calderón”</a></h4>
                     <div class="post-future-meta">
@@ -360,7 +360,7 @@ Sevens head coach</a></h3>
                 <h3 class="game-info-title">Champions league semi-final 2024</h3>
                 <div class="game-info-main">
                   <div class="game-info-team game-info-team-first">
-                    <figure><img src="images/team-sportland-75x99.png" alt="" width="75" height="99">
+                    <figure><img src="/landing_assets/images/team-sportland-75x99.png" alt="" width="75" height="99">
                     </figure>
                     <div class="game-result-team-name">Sportland</div>
                     <div class="game-result-team-country">Italy</div>
@@ -381,7 +381,7 @@ Sevens head coach</a></h3>
                     </div>
                   </div>
                   <div class="game-info-team game-info-team-second">
-                    <figure><img src="images/team-dream-team-91x91.png" alt="" width="91" height="91">
+                    <figure><img src="/landing_assets/images/team-dream-team-91x91.png" alt="" width="91" height="91">
                     </figure>
                     <div class="game-result-team-name">Dream Team</div>
                     <div class="game-result-team-country">Spain</div>
@@ -418,7 +418,7 @@ Sevens head coach</a></h3>
                   <article class="game-result game-result-creative">
                     <div class="game-result-main-vertical">
                       <div class="game-result-team game-result-team-horizontal game-result-team-first">
-                        <figure class="game-result-team-figure"><img src="images/team-sportland-31x41.png" alt="" width="31" height="41">
+                        <figure class="game-result-team-figure"><img src="/landing_assets/images/team-sportland-31x41.png" alt="" width="31" height="41">
                         </figure>
                         <div class="game-result-team-title">
                           <div class="game-result-team-name">Sportland</div>
@@ -428,7 +428,7 @@ Sevens head coach</a></h3>
                         </div>
                       </div><span class="game-result-team-divider">VS</span>
                       <div class="game-result-team game-result-team-horizontal game-result-team-second">
-                        <figure class="game-result-team-figure"><img src="images/team-fenix-40x32.png" alt="" width="40" height="32">
+                        <figure class="game-result-team-figure"><img src="/landing_assets/images/team-fenix-40x32.png" alt="" width="40" height="32">
                         </figure>
                         <div class="game-result-team-title">
                           <div class="game-result-team-name">Real madrid</div>
@@ -452,7 +452,7 @@ Sevens head coach</a></h3>
                   <article class="game-result game-result-creative">
                     <div class="game-result-main-vertical">
                       <div class="game-result-team game-result-team-horizontal game-result-team-first">
-                        <figure class="game-result-team-figure"><img src="images/team-bavaria-fc-26x34.png" alt="" width="26" height="34">
+                        <figure class="game-result-team-figure"><img src="/landing_assets/images/team-bavaria-fc-26x34.png" alt="" width="26" height="34">
                         </figure>
                         <div class="game-result-team-title">
                           <div class="game-result-team-name">Bavaria FC</div>
@@ -462,7 +462,7 @@ Sevens head coach</a></h3>
                         </div>
                       </div><span class="game-result-team-divider">VS</span>
                       <div class="game-result-team game-result-team-horizontal game-result-team-second">
-                        <figure class="game-result-team-figure"><img src="images/team-athletic-33x30.png" alt="" width="33" height="30">
+                        <figure class="game-result-team-figure"><img src="/landing_assets/images/team-athletic-33x30.png" alt="" width="33" height="30">
                         </figure>
                         <div class="game-result-team-title">
                           <div class="game-result-team-name">Atletico</div>
@@ -497,7 +497,7 @@ Sevens head coach</a></h3>
               <div class="list-post-classic">
                                   <!-- Post Classic-->
                                   <article class="post-classic">
-                                    <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/blog-element-1-94x94.jpg" alt="" width="94" height="94"></a></div>
+                                    <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="/landing_assets/images/blog-element-1-94x94.jpg" alt="" width="94" height="94"></a></div>
                                     <div class="post-classic-main">
                                       <p class="post-classic-title"><a href="blog-post.html">Raheem Sterling turns the tide for Manchester</a></p>
                                       <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
@@ -507,7 +507,7 @@ Sevens head coach</a></h3>
                                   </article>
                                   <!-- Post Classic-->
                                   <article class="post-classic">
-                                    <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/blog-element-2-94x94.jpg" alt="" width="94" height="94"></a></div>
+                                    <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="/landing_assets/images/blog-element-2-94x94.jpg" alt="" width="94" height="94"></a></div>
                                     <div class="post-classic-main">
                                       <p class="post-classic-title"><a href="blog-post.html">Prem in 90 seconds: Chelsea's crisis is over!</a></p>
                                       <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
@@ -517,7 +517,7 @@ Sevens head coach</a></h3>
                                   </article>
                                   <!-- Post Classic-->
                                   <article class="post-classic">
-                                    <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/blog-element-3-94x94.jpg" alt="" width="94" height="94"></a></div>
+                                    <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="/landing_assets/images/blog-element-3-94x94.jpg" alt="" width="94" height="94"></a></div>
                                     <div class="post-classic-main">
                                       <p class="post-classic-title"><a href="blog-post.html">Good vibes back at struggling Schalke</a></p>
                                       <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
@@ -527,7 +527,7 @@ Sevens head coach</a></h3>
                                   </article>
                                   <!-- Post Classic-->
                                   <article class="post-classic">
-                                    <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/blog-element-4-94x94.jpg" alt="" width="94" height="94"></a></div>
+                                    <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="/landing_assets/images/blog-element-4-94x94.jpg" alt="" width="94" height="94"></a></div>
                                     <div class="post-classic-main">
                                       <p class="post-classic-title"><a href="blog-post.html">Liverpool in desperate need of backup players</a></p>
                                       <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
@@ -560,7 +560,7 @@ Sevens head coach</a></h3>
                     <tr>
                       <td><span>1</span></td>
                       <td class="team-inline">
-                        <div class="team-figure"><img src="images/team-sportland-31x41.png" alt="" width="31" height="41">
+                        <div class="team-figure"><img src="/landing_assets/images/team-sportland-31x41.png" alt="" width="31" height="41">
                         </div>
                         <div class="team-title">
                           <div class="team-name">Sportland</div>
@@ -574,7 +574,7 @@ Sevens head coach</a></h3>
                     <tr>
                       <td><span>2</span></td>
                       <td class="team-inline">
-                        <div class="team-figure"><img src="images/team-dream-team-34x34.png" alt="" width="34" height="34">
+                        <div class="team-figure"><img src="/landing_assets/images/team-dream-team-34x34.png" alt="" width="34" height="34">
                         </div>
                         <div class="team-title">
                           <div class="team-name">Dream team</div>
@@ -588,7 +588,7 @@ Sevens head coach</a></h3>
                     <tr>
                       <td><span>3</span></td>
                       <td class="team-inline">
-                        <div class="team-figure"><img src="images/team-real-madrid-28x37.png" alt="" width="28" height="37">
+                        <div class="team-figure"><img src="/landing_assets/images/team-real-madrid-28x37.png" alt="" width="28" height="37">
                         </div>
                         <div class="team-title">
                           <div class="team-name">Real Madrid</div>
@@ -602,7 +602,7 @@ Sevens head coach</a></h3>
                     <tr>
                       <td><span>4</span></td>
                       <td class="team-inline">
-                        <div class="team-figure"><img src="images/team-celta-vigo-35x39.png" alt="" width="35" height="39">
+                        <div class="team-figure"><img src="/landing_assets/images/team-celta-vigo-35x39.png" alt="" width="35" height="39">
                         </div>
                         <div class="team-title">
                           <div class="team-name">Celta Vigo</div>
@@ -616,7 +616,7 @@ Sevens head coach</a></h3>
                     <tr>
                       <td><span>5</span></td>
                       <td class="team-inline">
-                        <div class="team-figure"><img src="images/team-barcelona-30x35.png" alt="" width="30" height="35">
+                        <div class="team-figure"><img src="/landing_assets/images/team-barcelona-30x35.png" alt="" width="30" height="35">
                         </div>
                         <div class="team-title">
                           <div class="team-name">Barcelona</div>
@@ -630,7 +630,7 @@ Sevens head coach</a></h3>
                     <tr>
                       <td><span>6</span></td>
                       <td class="team-inline">
-                        <div class="team-figure"><img src="images/team-bavaria-fc-26x34.png" alt="" width="26" height="34">
+                        <div class="team-figure"><img src="/landing_assets/images/team-bavaria-fc-26x34.png" alt="" width="26" height="34">
                         </div>
                         <div class="team-title">
                           <div class="team-name">Bavaria FC</div>
@@ -682,7 +682,7 @@ Sevens head coach</a></h3>
                                       <div class="divider"></div>
                                       <h5 class="awards-item-time">December 2014</h5>
                                     </div>
-                                    <div class="awards-item-aside"> <img src="images/thumbnail-minimal-1-67x147.png" alt="" width="67" height="147">
+                                    <div class="awards-item-aside"> <img src="/landing_assets/images/thumbnail-minimal-1-67x147.png" alt="" width="67" height="147">
                                     </div>
                                   </div>
                                   <!-- Awards Item-->
@@ -693,7 +693,7 @@ Sevens head coach</a></h3>
                                       <div class="divider"></div>
                                       <h5 class="awards-item-time">June 2015</h5>
                                     </div>
-                                    <div class="awards-item-aside"> <img src="images/thumbnail-minimal-2-68x126.png" alt="" width="68" height="126">
+                                    <div class="awards-item-aside"> <img src="/landing_assets/images/thumbnail-minimal-2-68x126.png" alt="" width="68" height="126">
                                     </div>
                                   </div>
                                   <!-- Awards Item-->
@@ -704,7 +704,7 @@ Sevens head coach</a></h3>
                                       <div class="divider"></div>
                                       <h5 class="awards-item-time">November 2016</h5>
                                     </div>
-                                    <div class="awards-item-aside"> <img src="images/thumbnail-minimal-3-73x135.png" alt="" width="73" height="135">
+                                    <div class="awards-item-aside"> <img src="/landing_assets/images/thumbnail-minimal-3-73x135.png" alt="" width="73" height="135">
                                     </div>
                                   </div>
               </div>
@@ -719,22 +719,22 @@ Sevens head coach</a></h3>
               </article>
               <article class="gallery" data-lightgallery="group">
                 <div class="row row-10 row-narrow">
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="images/gallery-soccer-1-original.jpg"><img src="images/gallery-soccer-1-212x212.jpg" alt="">
+                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-1-original.jpg"><img src="/landing_assets/images/gallery-soccer-1-212x212.jpg" alt="">
                       <div class="thumbnail-creative-overlay"></div></a>
                   </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="images/gallery-soccer-2-original.jpg"><img src="images/gallery-soccer-2-212x212.jpg" alt="">
+                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-2-original.jpg"><img src="/landing_assets/images/gallery-soccer-2-212x212.jpg" alt="">
                       <div class="thumbnail-creative-overlay"></div></a>
                   </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="images/gallery-soccer-3-original.jpg"><img src="images/gallery-soccer-3-212x212.jpg" alt="">
+                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-3-original.jpg"><img src="/landing_assets/images/gallery-soccer-3-212x212.jpg" alt="">
                       <div class="thumbnail-creative-overlay"></div></a>
                   </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="images/gallery-soccer-4-original.jpg"><img src="images/gallery-soccer-4-212x212.jpg" alt="">
+                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-4-original.jpg"><img src="/landing_assets/images/gallery-soccer-4-212x212.jpg" alt="">
                       <div class="thumbnail-creative-overlay"></div></a>
                   </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="images/gallery-soccer-5-original.jpg"><img src="images/gallery-soccer-5-212x212.jpg" alt="">
+                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-5-original.jpg"><img src="/landing_assets/images/gallery-soccer-5-212x212.jpg" alt="">
                       <div class="thumbnail-creative-overlay"></div></a>
                   </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="images/gallery-soccer-6-original.jpg"><img src="images/gallery-soccer-6-212x212.jpg" alt="">
+                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-6-original.jpg"><img src="/landing_assets/images/gallery-soccer-6-212x212.jpg" alt="">
                       <div class="thumbnail-creative-overlay"></div></a>
                   </div>
                 </div>
@@ -752,7 +752,7 @@ Sevens head coach</a></h3>
                 <div class="group-md">
                   <!-- Player Voting Item-->
                   <div class="player-voting-item">
-                    <div class="player-voting-item-figure"><img src="images/player-5-152x144.jpg" alt="" width="152" height="144">
+                    <div class="player-voting-item-figure"><img src="/landing_assets/images/player-5-152x144.jpg" alt="" width="152" height="144">
                       <div class="player-number">
                         <p>21</p>
                       </div>
@@ -784,7 +784,7 @@ Sevens head coach</a></h3>
                   </div>
                   <!-- Player Voting Item-->
                   <div class="player-voting-item">
-                    <div class="player-voting-item-figure"><img src="images/player-6-152x144.jpg" alt="" width="152" height="144">
+                    <div class="player-voting-item-figure"><img src="/landing_assets/images/player-6-152x144.jpg" alt="" width="152" height="144">
                       <div class="player-number">
                         <p>7</p>
                       </div>
@@ -839,7 +839,7 @@ Sevens head coach</a></h3>
                       <!-- Badge-->
                       <div class="badge badge-red">hot<span class="icon material-icons-whatshot"></span>
                       </div>
-                      <div class="product-figure"><img src="images/shop/product-1.png" alt=""></div>
+                      <div class="product-figure"><img src="/landing_assets/images/shop/product-1.png" alt=""></div>
                       <div class="product-buttons">
                         <div class="product-button product-button-share fl-bigmug-line-share27" style="font-size: 22px">
                           <ul class="product-share">
@@ -849,7 +849,7 @@ Sevens head coach</a></h3>
                             <li class="product-share-item"><a class="icon fa fa-twitter" href="#"></a></li>
                             <li class="product-share-item"><a class="icon fa fa-google-plus" href="#"></a></li>
                           </ul>
-                        </div><a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a><a class="product-button fl-bigmug-line-zoom60" href="images/shop/product-1-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
+                        </div><a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a><a class="product-button fl-bigmug-line-zoom60" href="/landing_assets/images/shop/product-1-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
                       </div>
                     </header>
                     <footer class="product-content">
@@ -870,7 +870,7 @@ Sevens head coach</a></h3>
                       <!-- Badge-->
                       <div class="badge badge-shop">new
                       </div>
-                      <div class="product-figure"><img src="images/shop/product-2.png" alt=""></div>
+                      <div class="product-figure"><img src="/landing_assets/images/shop/product-2.png" alt=""></div>
                       <div class="product-buttons">
                         <div class="product-button product-button-share fl-bigmug-line-share27" style="font-size: 22px">
                           <ul class="product-share">
@@ -880,7 +880,7 @@ Sevens head coach</a></h3>
                             <li class="product-share-item"><a class="icon fa fa-twitter" href="#"></a></li>
                             <li class="product-share-item"><a class="icon fa fa-google-plus" href="#"></a></li>
                           </ul>
-                        </div><a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a><a class="product-button fl-bigmug-line-zoom60" href="images/shop/product-2-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
+                        </div><a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a><a class="product-button fl-bigmug-line-zoom60" href="/landing_assets/images/shop/product-2-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
                       </div>
                     </header>
                     <footer class="product-content">
@@ -901,7 +901,7 @@ Sevens head coach</a></h3>
                       <!-- Badge-->
                       <div class="badge badge-red">hot<span class="icon material-icons-whatshot"></span>
                       </div>
-                      <div class="product-figure"><img src="images/shop/product-3.png" alt=""></div>
+                      <div class="product-figure"><img src="/landing_assets/images/shop/product-3.png" alt=""></div>
                       <div class="product-buttons">
                         <div class="product-button product-button-share fl-bigmug-line-share27" style="font-size: 22px">
                           <ul class="product-share">
@@ -911,7 +911,7 @@ Sevens head coach</a></h3>
                             <li class="product-share-item"><a class="icon fa fa-twitter" href="#"></a></li>
                             <li class="product-share-item"><a class="icon fa fa-google-plus" href="#"></a></li>
                           </ul>
-                        </div><a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a><a class="product-button fl-bigmug-line-zoom60" href="images/shop/product-3-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
+                        </div><a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a><a class="product-button fl-bigmug-line-zoom60" href="/landing_assets/images/shop/product-3-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
                       </div>
                     </header>
                     <footer class="product-content">

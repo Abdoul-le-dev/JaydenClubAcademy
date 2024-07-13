@@ -16,9 +16,9 @@
         </form>
         <div class="row row-50">
           <div class="col-lg-5 text-center text-sm-start">
-            
+
             <article class="unit unit-sm-horizontal unit-middle justify-content-center justify-content-sm-start footer-classic-info">
-              <div class="unit-left bg-[#dadada] rounded-full"><a class="brand brand-md" href="../landing"><img class="brand-logo " src="assets/image/logo_s_b_crop.png" alt="logo" width="200" height="200" ></a>
+              <div class="unit-left bg-[#dadada] rounded-full"><a class="brand brand-md" href="../landing"><img class="brand-logo " src="/landing_assets/assets/image/logo_s_b_crop.png" alt="logo" width="200" height="200" ></a>
               </div>
               <div class="unit-body">
                 <p class="text-[#ffff]">
@@ -74,7 +74,7 @@
               <div class="col-sm-6">
                       <!-- Post Classic-->
                       <article class="post-classic">
-                        <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/footer-soccer-post-1-93x87.jpg" alt="" width="93" height="87"></a></div>
+                        <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="/landing_assets/images/footer-soccer-post-1-93x87.jpg" alt="" width="93" height="87"></a></div>
                         <div class="post-classic-main">
                           <!-- Badge-->
                           <div class="badge badge-secondary">The Team
@@ -89,7 +89,7 @@
               <div class="col-sm-6">
                       <!-- Post Classic-->
                       <article class="post-classic">
-                        <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/footer-soccer-post-2-93x87.jpg" alt="" width="93" height="87"></a></div>
+                        <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="/landing_assets/images/footer-soccer-post-2-93x87.jpg" alt="" width="93" height="87"></a></div>
                         <div class="post-classic-main">
                           <!-- Badge-->
                           <div class="badge badge-red">Hot<span class="icon material-icons-whatshot"></span>
@@ -104,7 +104,7 @@
               <div class="col-sm-6">
                       <!-- Post Classic-->
                       <article class="post-classic">
-                        <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/footer-soccer-post-3-93x87.jpg" alt="" width="93" height="87"></a></div>
+                        <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="/landing_assets/images/footer-soccer-post-3-93x87.jpg" alt="" width="93" height="87"></a></div>
                         <div class="post-classic-main">
                           <!-- Badge-->
                           <div class="badge badge-primary">The League
@@ -119,7 +119,7 @@
               <div class="col-sm-6">
                       <!-- Post Classic-->
                       <article class="post-classic">
-                        <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/footer-soccer-post-4-93x87.jpg" alt="" width="93" height="87"></a></div>
+                        <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="/landing_assets/images/footer-soccer-post-4-93x87.jpg" alt="" width="93" height="87"></a></div>
                         <div class="post-classic-main">
                           <!-- Badge-->
                           <div class="badge badge-primary">The League

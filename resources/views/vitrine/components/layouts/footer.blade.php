@@ -1,13 +1,13 @@
 <footer class="section footer-classic footer-classic-dark context-dark">
     <div class="footer-classic-main">
       <div class="container">
-        <p class="heading-7">Subscribe to our Newsletter</p>
+        <p class="heading-7">ABONNEZ-VOUS À NOTRE NEWSLETTER</p>
         <!-- RD Mailform-->
         <form class="rd-mailform rd-form rd-inline-form-creative" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
           <div class="form-wrap">
             <div class="form-input-wrap">
               <input class="form-input" id="footer-form-email" type="email" name="email" data-constraints="">
-              <label class="form-label" for="footer-form-email">Enter your E-mail</label>
+              <label class="form-label" for="footer-form-email">Entrer votre Email</label>
             </div>
           </div>
           <div class="form-button">
@@ -16,11 +16,13 @@
         </form>
         <div class="row row-50">
           <div class="col-lg-5 text-center text-sm-start">
+            
             <article class="unit unit-sm-horizontal unit-middle justify-content-center justify-content-sm-start footer-classic-info">
-              <div class="unit-left"><a class="brand brand-md" href="../landing"><img class="brand-logo " src="images/logo-soccer-default-95x126.png" alt="" width="95" height="126"></a>
+              <div class="unit-left bg-[#dadada] rounded-full"><a class="brand brand-md" href="../landing"><img class="brand-logo " src="assets/image/logo_s_b_crop.png" alt="logo" width="200" height="200" ></a>
               </div>
               <div class="unit-body">
-                <p>Sportland website offers you the latest news about our team as well as updates on our matches and other events.</p>
+                <p class="text-[#ffff]">
+                  Le site JAYDEN ACADEMY vous propose les dernières nouvelles de notre équipe ainsi que des mises à jour sur nos matchs et autres événements.</p>
               </div>
             </article>
             <ul class="list-inline list-inline-bordered list-inline-bordered-lg">
@@ -37,7 +39,7 @@
                     </svg>
                   </div>
                   <div class="unit-body">
-                    <h6>Join Our Team</h6><a class="link" href="mailto:#">info@demolink.org</a>
+                    <h6>Rejoins notre équipe</h6><a class="link" href="mailto:#">info@demolink.org</a>
                   </div>
                 </div>
               </li>
@@ -49,7 +51,7 @@
                     </svg>
                   </div>
                   <div class="unit-body">
-                    <h6>Contact Us</h6><a class="link" href="mailto:#">info@demolink.org</a>
+                    <h6>Contactez-nous</h6><a class="link" href="mailto:#">info@demolink.org</a>
                   </div>
                 </div>
               </li>
@@ -62,7 +64,7 @@
                   <li><a class="icon icon-corporate fa fa-google-plus" href="#"></a></li>
                   <li><a class="icon icon-corporate fa fa-instagram" href="#"></a></li>
                 </ul>
-              </div><a class="button button-sm button-gray-outline" href="contact-us.html">Get in Touch</a>
+              </div><a class="button button-sm button-gray-outline" href="contact-us.html">Entrer en contact</a>
             </div>
           </div>
           <div class="col-lg-7">

@@ -41,22 +41,23 @@
                   <!-- Select 2-->
                   <select class="select" name="lang" data-container-class="select-inline" data-dropdown-class="select-inline-dropdown">
                     <option selected="">fr</option>
-                    <option>en</option>
+                    
                     
                   </select>
                 </li>
                 <li>
                   <div class="cart-inline-toggled-outer">
                     <!-- Link Cart-->
-                    <button class="link link-cart cart-inline-toggle" data-rd-navbar-toggle="#cart-inline"><span class="link-cart-icon fl-bigmug-line-shopping202"></span><span class="link-cart-counter">2</span></button>
+                    <button class="link link-cart cart-inline-toggle" data-rd-navbar-toggle="#cart-inline"><span class="link-cart-icon fa-phone-square"></span></button>
                     <!-- Cart Inline-->
                     <article class="cart-inline cart-inline-toggled" id="cart-inline">
                       <div class="cart-inline-inner">
                         
                         
-                        <div class="cart-inline-footer">
+                        <div class="cart-inline-footer flex flex-row">
                           <a class="button button-md button-default-outline" >+22966283896</a>
-                          <a class="button button-md button-primary">contact@</a></div>
+                          <a class="button button-md button-primary">contact@jaydenclub.com</a>
+                        </div>
                       </div>
                     </article>
                   </div>
@@ -75,13 +76,13 @@
               </div>
               <!-- RD Navbar List-->
               <ul class="rd-navbar-list">
-                <li class="rd-navbar-list-item"><a class="rd-navbar-list-link" ><img src="assets/image/discipline.png" alt="" width="75" height="42"></a></li>
-                <li class="rd-navbar-list-item"><a class="rd-navbar-list-link" ><img src="assets/image/passion.png" alt="" width="88" height="45"></a></li>
-                <li class="rd-navbar-list-item"><a class="rd-navbar-list-link" ><img src="assets/image/work-team.png" alt="" width="79" height="52"></a></li>
+                <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="assets/image/discipline.png" alt="discipline" width="75" height="42"></a></li>
+                <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="assets/image/passion.png" alt="passion" width="88" height="45"></a></li>
+                <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="assets/image/work-team.png" alt="work-team" width="70" height="45"></a></li>
               </ul>
               <!-- RD Navbar Search-->
               <div class="rd-navbar-search">
-                   <ul class="flex flex-row ml-[70px]">
+                   <ul class="flex flex-row lg:ml-[70px]">
                       <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="assets/image/soccer-game.png" alt="" width="75" height="42"></a></li>
                       <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="assets/image/football (2).png" alt="" width="88" height="45"></a></li>
                       <li class="rd-navbar-list-item"><a class="rd-navbar-list-links" ><img src="assets/image/football.png" alt="" width="79" height="52"></a></li>
@@ -96,20 +97,11 @@
             <div class="rd-navbar-main-container container">
               <!-- RD Navbar Nav-->
                                 <ul class="rd-navbar-nav">
-                                  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                                  <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">JAYDEN FOOTBALL ACADEMY</a>
                                                       <ul class="rd-menu rd-navbar-dropdown">
                                                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Niche Templates</a>
                                                                             <ul class="rd-menu rd-navbar-dropdown">
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index.htm">Soccer</a>
-                                                                              </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../baseball">Baseball</a>
-                                                                              </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../basketball">Basketball</a>
-                                                                              </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../billiards">Billiards</a>
-                                                                              </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../bowling">Bowling</a>
-                                                                              </li>
+                                                                             
                                                                               <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../rugby">Rugby</a>
                                                                               </li>
                                                                             </ul>
@@ -118,18 +110,7 @@
                                                                             <ul class="rd-menu rd-navbar-dropdown">
                                                                               <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index.html">Home Soccer</a>
                                                                               </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="home-baseball.html">Home Baseball</a>
-                                                                              </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="home-basketball.html">Home Basketball</a>
-                                                                              </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="home-billiards.html">Home Billiards</a>
-                                                                              </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="home-bowling.html">Home Bowling</a>
-                                                                              </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="home-rugby.html">Home Rugby</a>
-                                                                              </li>
-                                                                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="home-tennis.html">Home Tennis</a>
-                                                                              </li>
+                                                                             
                                                                             </ul>
                                                         </li>
                                                       </ul>

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //vitrine
-Route::get('/', [VitrineController::class,'index']);
+Route::get('/', [VitrineController::class,'index'])->name('Home');
 Route::get('/contact', [ContactController::class,'index'])->name('contact-view');
 
 

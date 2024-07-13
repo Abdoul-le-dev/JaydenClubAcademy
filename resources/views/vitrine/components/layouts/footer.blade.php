@@ -21,7 +21,7 @@
               <div class="unit-left bg-[#dadada] rounded-full"><a class="brand brand-md" href="../landing"><img class="brand-logo " src="/landing_assets/assets/image/logo_s_b_crop.png" alt="logo" width="200" height="200" ></a>
               </div>
               <div class="unit-body">
-                <p class="text-[#ffff]">
+                <p class="text-[#ffff] ">
                   Le site JAYDEN ACADEMY vous propose les dernières nouvelles de notre équipe ainsi que des mises à jour sur nos matchs et autres événements.</p>
               </div>
             </article>
@@ -39,7 +39,7 @@
                     </svg>
                   </div>
                   <div class="unit-body">
-                    <h6>Rejoins notre équipe</h6><a class="link" href="mailto:#">info@demolink.org</a>
+                    <h6>Rejoins notre équipe</h6><a class="link" href="mailto:jaydenfootballacademy@gmail.com">jaydenfootballacademy@gmail.com</a>
                   </div>
                 </div>
               </li>
@@ -51,7 +51,7 @@
                     </svg>
                   </div>
                   <div class="unit-body">
-                    <h6>Contactez-nous</h6><a class="link" href="mailto:#">info@demolink.org</a>
+                    <h6>Contactez-nous</h6><a class="link" href="mailto:jaydenfootballacademy@gmail.com">jaydenfootballacademy@gmail.com</a>
                   </div>
                 </div>
               </li>
@@ -64,7 +64,7 @@
                   <li><a class="icon icon-corporate fa fa-google-plus" href="#"></a></li>
                   <li><a class="icon icon-corporate fa fa-instagram" href="#"></a></li>
                 </ul>
-              </div><a class="button button-sm button-gray-outline" href="contact-us.html">Entrer en contact</a>
+              </div><a class="button button-sm button-gray-outline" href="{{route('contact-view')}}">Entrer en contact</a>
             </div>
           </div>
           <div class="col-lg-7">

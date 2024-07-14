@@ -16,6 +16,7 @@
         <link href="/admin_assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="/admin_assets/assets/css/icons.min.css" rel="stylesheet" type="text/css">
         <link href="/admin_assets/assets/css/theme.min.css" rel="stylesheet" type="text/css">
+        @yield('page_css')
 
     </head>
 
@@ -78,6 +79,7 @@
 
         <!-- Custom Js -->
         <script src="/admin_assets/assets/pages/dashboard-demo.js"></script>
+        @yield('page_script')
 
         <!-- App js -->
         <script src="/admin_assets/assets/js/theme.js"></script>

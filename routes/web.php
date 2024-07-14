@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\JoueurController;
+use App\Http\Controllers\OfficielController;
 use App\Http\Controllers\VitrineController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +37,11 @@ Route::controller(AuthController::class)->group(function () {
 //dashbord
 Route::prefix('/dashboard')->group(function () {
     Route::get('', [DashboardController::class,'index'])->name('dashboard.view');
-    Route::get('/joueurs-staffs', [DashboardController::class,'joueurs_staffs_view'])->name('dashboard.joueurs_staff');
+    Route::get('/joueurs', [DashboardController::class,'joueurs_view'])->name('dashboard.joueurs');
+    Route::get('/joueurs/new', [DashboardController::class,'new_joueur'])->name('dashboard.joueurs.new.view');
+    Route::post('/joueurs/new', [JoueurController::class,'create'])->name('dashboard.joueurs.new.create');
+    Route::get('/officiels', [DashboardController::class,'officiels_view'])->name('dashboard.officiel.view');
+    Route::get('/officiels/new', [DashboardController::class,'new_officiel'])->name('dashboard.officiel.new.view');
+    Route::post('/officiels/new', [OfficielController::class,'create'])->name('dashboard.officiel.new.create');
 });
 

@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('email')->unique();
+            $table->string('email')->nullable();
             $table->date('date_de_naissance');
             $table->string('nationalite');
+            $table->string('numero')->nullable();
             $table->string('position_sur_terrain');
             $table->string('photo')->nullable();
             $table->string('style_de_jeu')->nullable();

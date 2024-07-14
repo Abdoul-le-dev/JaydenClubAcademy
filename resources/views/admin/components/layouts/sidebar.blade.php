@@ -18,8 +18,16 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a class='waves-effect' href='index.htm'><i class="mdi mdi-home-analytics"></i><span class="badge badge-pill badge-primary float-right">7</span><span>Dashboard</span></a>
+                    <a class='waves-effect' href='{{route('dashboard.view')}}'><i class="mdi mdi-home-analytics"></i><span class="badge badge-pill badge-primary float-right">7</span><span>Dashboard</span></a>
                 </li>
+
+                <li>
+                    <a class='waves-effect' href='{{route('dashboard.joueurs')}}'><i class="mdi mdi-account"></i><span>Joueurs</span></a>
+                </li>
+                <li>
+                    <a class='waves-effect' href='{{route('dashboard.officiel.view')}}'><i class="mdi mdi-account"></i><span>Membres</span></a>
+                </li>
+
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>UI Elements</span></a>

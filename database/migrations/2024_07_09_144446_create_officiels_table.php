@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('prenom');
             $table->string('email')->unique();
             $table->string('fonction');
+            $table->string('photo')->nullable();
             $table->string('telephone');
             $table->string('facebook')->nullable();
             $table->timestamps();

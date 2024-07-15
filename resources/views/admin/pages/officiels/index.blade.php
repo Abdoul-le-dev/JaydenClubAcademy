@@ -67,7 +67,18 @@
                                     <td>
                                         {{$officiel->telephone}}
                                     </td>
-                                    <td></td>
+                                    <td>
+                                        <div class="d-flex gap-4 flex-wrap">
+                                            <a href="{{route('dashboard.officiel.update.view',['id'=>$officiel->id])}}"  class="btn btn-warning" >Modifier</a>
+                                            <form action="{{ route('dashboard.officiel.delete', $officiel->id) }}" method="POST" >
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger text-white px-4 py-2 rounded-lg">
+                                                    Supprimer
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>
                                 </tr>
                                 @endforeach
 

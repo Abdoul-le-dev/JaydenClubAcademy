@@ -71,7 +71,19 @@
                                     <td>
                                         {{$joueur->numero}}
                                     </td>
-                                    <td></td>
+                                    <td>
+                                        <div class="d-flex gap-4 flex-wrap">
+                                            <a href="{{route('dashboard.joueurs.update.view',['id'=>$joueur->id])}}"  class="btn btn-warning me-3" >Modifier</a>
+                                            <form action="{{ route('dashboard.joueurs.delete', $joueur->id) }}" method="POST" >
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger text-white px-4 py-2 rounded-lg">
+                                                    Supprimer
+                                                </button>
+                                            </form>
+                                        </div>
+
+                                    </td>
                                 </tr>
                                 @endforeach
 

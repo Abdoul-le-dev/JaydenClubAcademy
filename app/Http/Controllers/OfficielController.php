@@ -81,16 +81,56 @@ class OfficielController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateOfficielRequest $request, Officiel $officiel)
+    public function update(Request $request,$id)
     {
+
+        $officiel=Officiel::findOrFail($id);
+
         //
+        $credentials = $request->validate([
+            'email' => ['required'],
+            'nom' => ['required'],
+            'prenom' => ['required'],
+            'fonction' => ['required'],
+            'telephone' => ['required'],
+        ], [
+            'email.required' => 'Le champ email est requis.',
+            'nom.required' => 'Le champ nom est requis.',
+            'prenom.required' => 'Le champ prénom est requis.',
+            'photo.required' => 'Le champ photo est requis.',
+            'photo.file' => 'Le champ photo doit etre une image.',
+            'telephone.required' => 'Le champ telephone est requis.',
+            'fonction.required' => 'Le champ fonction requis.',
+        ]);
+
+
+
+        $user = $officiel->update([
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'email' => $request->email,
+            'fonction' => $request->fonction,
+            'telephone' => $request->telephone,
+
+        ]);
+
+        if($request->hasFile('photo')){
+            $user = $officiel->update([
+                'photo' =>  $request->file('photo')->store('public/officiels_photos')
+            ]);
+        }
+
+        return redirect()->back()->with('success', 'Officiel modifié avec succès');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Officiel $officiel)
+    public function destroy($id)
     {
         //
+        $officiel=Officiel::findOrFail($id);
+        $officiel->forceDelete();
+        return redirect()->back()->with('success', 'Officiel supprimé avec succès');
     }
 }

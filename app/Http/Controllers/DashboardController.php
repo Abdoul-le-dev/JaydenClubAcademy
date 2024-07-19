@@ -29,4 +29,12 @@ class DashboardController extends Controller
     public function new_officiel(){
         return view('admin.pages.officiels.create');
     }
+    public function update_officiel($id){
+        $officiel=Officiel::findOrFail($id);
+        return view('admin.pages.officiels.update_officiel',['officiel'=>$officiel]);
+    }
+    public function update_joueur($id){
+        $joueur=Joueur::findOrFail($id);
+        return view('admin.pages.joueurs.update_joueur',['joueur'=>$joueur]);
+    }
 }

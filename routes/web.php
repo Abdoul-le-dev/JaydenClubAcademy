@@ -44,8 +44,15 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/joueurs', [DashboardController::class,'joueurs_view'])->name('dashboard.joueurs');
     Route::get('/joueurs/new', [DashboardController::class,'new_joueur'])->name('dashboard.joueurs.new.view');
     Route::post('/joueurs/new', [JoueurController::class,'create'])->name('dashboard.joueurs.new.create');
+    Route::get('/joueurs/{id}/update', [DashboardController::class,'update_joueur'])->name('dashboard.joueurs.update.view');
+    Route::post('/joueurs/{id}/update', [JoueurController::class,'update'])->name('dashboard.joueurs.update');
+    Route::delete('/joueurs/{id}/delete', [JoueurController::class,'destroy'])->name('dashboard.joueurs.delete');
+
     Route::get('/officiels', [DashboardController::class,'officiels_view'])->name('dashboard.officiel.view');
     Route::get('/officiels/new', [DashboardController::class,'new_officiel'])->name('dashboard.officiel.new.view');
     Route::post('/officiels/new', [OfficielController::class,'create'])->name('dashboard.officiel.new.create');
+    Route::get('/officiels/{id}/update', [DashboardController::class,'update_officiel'])->name('dashboard.officiel.update.view');
+    Route::post('/officiels/{id}/update', [OfficielController::class,'update'])->name('dashboard.officiel.update');
+    Route::delete('/officiels/{id}/delete', [OfficielController::class,'destroy'])->name('dashboard.officiel.delete');
 });
 

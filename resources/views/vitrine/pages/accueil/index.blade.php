@@ -1,6 +1,9 @@
 @extends('vitrine.components.app')
 
 @section('content')
+<!-- Abdoul Page-->
+<!-- jayden club information-->
+
 <section class="section swiper-container swiper-slider swiper-classic bg-gray-2" data-swiper='{"autoplay":{"delay":4000},"simulateTouch":false,"effect":"fade"}'>
     <div class="swiper-wrapper">
       <div class="swiper-slide text-center" data-slide-bg="/landing_assets/images/slider-1-slide-1-1920x671.jpg">
@@ -43,10 +46,51 @@
     <div class="swiper-button swiper-button-prev"></div>
     <div class="swiper-button swiper-button-next"></div>
     <div class="swiper-pagination"></div>
-  </section>
+</section>
+
+<section class="bg-[#F3F4F6] flex flex-row   w-full h-[600px]">
+
+  <div class="flex flex-col  w-[60%] h-[300px] ">
+      
+    <div class="flex flex-row w-full">
+      <div class="p-4">
+        <img src="" alt="Image 1" class="inset-0  object-cover z-10 Image1 w-[350px] h-[250px]">
+    
+      </div>
+     
+      <div class="p-4">
+        <img src="" alt="Image 2" class="inset-0 object-cover z-10 Image2 w-[350px] h-[250px]">
+    
+      </div>
+    </div>
+    <div class="flex flex-row w-full">
+      <div class="p-4">
+        <img src="" alt="Image 2" class="inset-0  object-cover z-10 Image3 w-[350px] h-[250px]">
+    
+      </div>
+     
+      <div class="p-4">
+        <img src="" alt="Image 4" class="inset-0 object-cover z-10 Image4 w-[350px] h-[250px]">
+    
+      </div>
+    </div>
+    
+  </div>
+
+ <div class="flex flex-col justify-center items-center w-[40%] ">
+    <h3 class="text-3xl font-semibold mb-4">JAYDEN FOOTBALL ACADEMY</h3>
+    <p class="text-gray-700 mb-4 p-2">
+      Fondée en mars 2024 et basée au Bénin, Jayden Football Academy se consacre à la formation et au développement des talents footballistiques. Notre objectif est d'offrir à chaque jeune talent la possibilité de s'épanouir, quel que soit son contexte financier. Nous recrutons des joueurs prometteurs à travers l'Afrique, leur fournissant une formation de qualité et des opportunités de développement professionnel dans le monde du football.
+    </p>
+    <a href="our-club/index.htm" class="mt-4 inline-block px-6 py-3 hover:text-white hover:bg-black border border-gray-300 text-gray-700 rounded-md ">
+      Obtenir plus d'informations
+    </a>
+ </div>
+
+</section>
 
   <!-- Latest News-->
-  <section class="section section-md bg-gray-100">
+<section class="section section-md bg-gray-100">
     <div class="container">
       <div class="row row-50">
         <div class="col-lg-8">
@@ -54,8 +98,8 @@
             <!-- Heading Component-->
             <article class="heading-component">
               <div class="heading-component-inner">
-                <h5 class="heading-component-title">Popular news
-                </h5><a class="button button-xs button-gray-outline" href="news-1.html">All news</a>
+                <h5 class="heading-component-title">BLOG D'ACTUALITÉS
+                </h5><a class="button button-xs button-gray-outline" href="news-1.html">Toute les nouvelles</a>
               </div>
             </article>
             <div class="row row-30">
@@ -276,8 +320,7 @@
                                               <!-- Badge-->
                                               <div class="badge badge-secondary">the team
                                               </div>
-                                              <h3 class="post-alice-title"><a href="blog-post.html">Lewis named AIG MCAA
-Sevens head coach</a></h3>
+                                              <h3 class="post-alice-title"><a href="blog-post.html">Lewis named AIG MCAA Sevens head coach</a></h3>
                                               <div class="divider"></div>
                                               <div class="post-alice-time"><span class="icon mdi mdi-clock"></span>
                                                 <time datetime="2024">April 15, 2024</time>
@@ -402,7 +445,7 @@ Sevens head coach</a></h3>
                 <!-- Heading Component-->
                 <article class="heading-component">
                   <div class="heading-component-inner">
-                    <h5 class="heading-component-title">Latest results
+                    <h5 class="heading-component-title">DERNIERS RÉSULTATS
                     </h5>
                     <div class="owl-carousel-arrows-outline">
                       <div class="owl-nav">
@@ -537,7 +580,7 @@ Sevens head coach</a></h3>
                                   </article>
               </div>
             </div>
-            <div class="aside-component">
+            {{-- <div class="aside-component">
               <!-- Heading Component-->
               <article class="heading-component">
                 <div class="heading-component-inner">
@@ -644,7 +687,7 @@ Sevens head coach</a></h3>
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div> --}}
             <div class="aside-component">
               <!-- Heading Component-->
               <article class="heading-component">
@@ -822,7 +865,7 @@ Sevens head coach</a></h3>
                 <!-- Heading Component-->
                 <article class="heading-component">
                   <div class="heading-component-inner">
-                    <h5 class="heading-component-title">Shop
+                    <h5 class="heading-component-title">Joueurs
                     </h5>
                     <div class="owl-carousel-arrows-outline">
                       <div class="owl-nav">
@@ -840,93 +883,16 @@ Sevens head coach</a></h3>
                       <div class="badge badge-red">hot<span class="icon material-icons-whatshot"></span>
                       </div>
                       <div class="product-figure"><img src="/landing_assets/images/shop/product-1.png" alt=""></div>
-                      <div class="product-buttons">
-                        <div class="product-button product-button-share fl-bigmug-line-share27" style="font-size: 22px">
-                          <ul class="product-share">
-                            <li class="product-share-item"><span>Share</span></li>
-                            <li class="product-share-item"><a class="icon fa fa-facebook" href="#"></a></li>
-                            <li class="product-share-item"><a class="icon fa fa-instagram" href="#"></a></li>
-                            <li class="product-share-item"><a class="icon fa fa-twitter" href="#"></a></li>
-                            <li class="product-share-item"><a class="icon fa fa-google-plus" href="#"></a></li>
-                          </ul>
-                        </div><a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a><a class="product-button fl-bigmug-line-zoom60" href="/landing_assets/images/shop/product-1-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
-                      </div>
+                     
                     </header>
                     <footer class="product-content">
                       <h6 class="product-title"><a href="product-page.html">Nike hoops elite backpack</a></h6>
                       <div class="product-price"><span class="product-price-old">$400</span><span class="heading-6 product-price-new">$290</span>
                       </div>
-                      <ul class="product-rating">
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star_half"></span></li>
-                      </ul>
+                     
                     </footer>
                   </article>
-                  <article class="product">
-                    <header class="product-header">
-                      <!-- Badge-->
-                      <div class="badge badge-shop">new
-                      </div>
-                      <div class="product-figure"><img src="/landing_assets/images/shop/product-2.png" alt=""></div>
-                      <div class="product-buttons">
-                        <div class="product-button product-button-share fl-bigmug-line-share27" style="font-size: 22px">
-                          <ul class="product-share">
-                            <li class="product-share-item"><span>Share</span></li>
-                            <li class="product-share-item"><a class="icon fa fa-facebook" href="#"></a></li>
-                            <li class="product-share-item"><a class="icon fa fa-instagram" href="#"></a></li>
-                            <li class="product-share-item"><a class="icon fa fa-twitter" href="#"></a></li>
-                            <li class="product-share-item"><a class="icon fa fa-google-plus" href="#"></a></li>
-                          </ul>
-                        </div><a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a><a class="product-button fl-bigmug-line-zoom60" href="/landing_assets/images/shop/product-2-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
-                      </div>
-                    </header>
-                    <footer class="product-content">
-                      <h6 class="product-title"><a href="product-page.html">Nike Air Zoom Pegasus</a></h6>
-                      <div class="product-price"><span class="heading-6 product-price-new">$290</span>
-                      </div>
-                      <ul class="product-rating">
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star_half"></span></li>
-                      </ul>
-                    </footer>
-                  </article>
-                  <article class="product">
-                    <header class="product-header">
-                      <!-- Badge-->
-                      <div class="badge badge-red">hot<span class="icon material-icons-whatshot"></span>
-                      </div>
-                      <div class="product-figure"><img src="/landing_assets/images/shop/product-3.png" alt=""></div>
-                      <div class="product-buttons">
-                        <div class="product-button product-button-share fl-bigmug-line-share27" style="font-size: 22px">
-                          <ul class="product-share">
-                            <li class="product-share-item"><span>Share</span></li>
-                            <li class="product-share-item"><a class="icon fa fa-facebook" href="#"></a></li>
-                            <li class="product-share-item"><a class="icon fa fa-instagram" href="#"></a></li>
-                            <li class="product-share-item"><a class="icon fa fa-twitter" href="#"></a></li>
-                            <li class="product-share-item"><a class="icon fa fa-google-plus" href="#"></a></li>
-                          </ul>
-                        </div><a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a><a class="product-button fl-bigmug-line-zoom60" href="/landing_assets/images/shop/product-3-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
-                      </div>
-                    </header>
-                    <footer class="product-content">
-                      <h6 class="product-title"><a href="product-page.html">Nike distressed baseball hat</a></h6>
-                      <div class="product-price"><span class="product-price-old">$400</span><span class="heading-6 product-price-new">$290</span>
-                      </div>
-                      <ul class="product-rating">
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star"></span></li>
-                        <li><span class="material-icons-star_half"></span></li>
-                      </ul>
-                    </footer>
-                  </article>
+                 
                 </div>
               </div>
             </div>
@@ -934,5 +900,5 @@ Sevens head coach</a></h3>
         </div>
       </div>
     </div>
-  </section>
+</section>
 @endsection

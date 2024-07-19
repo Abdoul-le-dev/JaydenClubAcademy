@@ -22,6 +22,7 @@ class AuthController extends Controller
     public function login_view()
     {
         return view("auth.pages.login_register",['isLogin'=>true]);
+        
     }
     public function register_view()
     {
@@ -78,7 +79,7 @@ class AuthController extends Controller
         ]);
         if (Auth::attempt($request->only(['email', 'password']))) {
             $request->session()->regenerate();
-            return redirect()->intended(route('dashbbord.index'));
+            return redirect()->intended(view('admin.pages.dashboard.index'));
 
             // if (auth()->user()->email_verified_at) {
             // } else {
@@ -146,7 +147,7 @@ class AuthController extends Controller
 
         //envoie mail
         $user = User::where('email', $request->email)->first();
-        $user->notify(new ForgetPasswordNotification($token));
+       // $user->notify(new ForgetPasswordNotification($token));
         return view('auth.pages.password_forget_message',['email'=>$request->email ]);
     }
     public function change_password_view($token)

@@ -62,7 +62,7 @@
                     </article>
                   </div>
                 </li>
-                <li><a class="link link-icon link-icon-left link-classic" href="login-and-register.html"><span class="icon fl-bigmug-line-login12"></span><span class="link-icon-text">Votre Compte</span></a></li>
+                <li><a class="link link-icon link-icon-left link-classic" href="{{route('login.view')}}"><span class="icon fl-bigmug-line-login12"></span><span class="link-icon-text">Votre Compte</span></a></li>
               </ul>
             </div>
             <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
@@ -99,14 +99,14 @@
                                 <ul class="rd-navbar-nav">
                                   <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">JAYDEN FOOTBALL ACADEMY</a>
                                                       <ul class="rd-menu rd-navbar-dropdown">
-                                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Niche Templates</a>
+                                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Notre approche pédagogie</a>
                                                                             <ul class="rd-menu rd-navbar-dropdown">
                                                                              
                                                                               <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../rugby">Rugby</a>
                                                                               </li>
                                                                             </ul>
                                                         </li>
-                                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Home Types</a>
+                                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Programe Sportif</a>
                                                                             <ul class="rd-menu rd-navbar-dropdown">
                                                                               <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index.html">Home Soccer</a>
                                                                               </li>
@@ -115,7 +115,7 @@
                                                         </li>
                                                       </ul>
                                   </li>
-                                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">Features</a>
+                                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">Blog</a>
                                                                         <article class="rd-menu rd-navbar-megamenu rd-megamenu-2-columns context-light">
                                                                           <div class="rd-megamenu-main">
                                                                                               <div class="rd-megamenu-item rd-megamenu-item-nav">
@@ -258,7 +258,7 @@
                                                                                             </article>
                                                                         </article>
                                   </li>
-                                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">News</a>
+                                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">Gallery</a>
                                                       <ul class="rd-menu rd-navbar-dropdown">
                                                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-elements.html">Blog Elements</a>
                                                         </li>
@@ -276,7 +276,7 @@
                                                         </li>
                                                       </ul>
                                   </li>
-                                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">Team</a>
+                                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">Joueurs</a>
                                                       <ul class="rd-menu rd-navbar-dropdown">
                                                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="sport-elements.html">Sport Elements</a>
                                                         </li>
@@ -296,7 +296,8 @@
                                                         </li>
                                                       </ul>
                                   </li>
-                                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">Shop</a>
+
+                                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">Qui sommes nous ?</a>
                                                       <ul class="rd-menu rd-navbar-dropdown">
                                                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="shop-elements.html">Shop Elements</a>
                                                         </li>
@@ -314,6 +315,15 @@
                                                         </li>
                                                       </ul>
                                   </li>
+                                  <li class="rd-nav-item"><a class="rd-nav-link" href="#">Recrutement</a>
+                                    <ul class="rd-menu rd-navbar-dropdown">
+                                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="checkout.html">Admission</a>
+                                      </li>
+                                      <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="checkout.html">Conditions d'admission</a>
+                                      </li>
+                                    </ul>
+                                   </li>
+                                  
                                 </ul>
               <div class="rd-navbar-main-element">
                 <ul class="list-inline list-inline-sm">

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\JoueurController;
@@ -12,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 //vitrine
 Route::get('/', [VitrineController::class,'index'])->name('Home');
 Route::get('/contact', [ContactController::class,'index'])->name('contact-view');
+Route::get('/blog', [BlogController::class,'index'])->name('blog-view');
+Route::post('/blog', [BlogController::class,'create'])->name('create');
+
 
 
 

@@ -1,5 +1,9 @@
 @extends('vitrine.components.app')
 
+@section('page_title')
+Contact
+@endsection
+
 @section('content')
 <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="images/bg-breadcrumbs-1-1920x726.jpg">
     <div class="parallax-content breadcrumbs-custom context-dark">

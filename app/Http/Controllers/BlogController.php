@@ -22,26 +22,19 @@ class BlogController extends Controller
 
         //dd($titre);
        
-        
-
-        $post_id = Post::latest()->first();
-        if($post_id !== null ){$post_id = (int) $post_id->id + 1;}
-        else
-        {
-            $post_id=1;
-
-        }
+    
         
         if($format =='Image')
         {
-            $fichier = $request->file->store('blog_image');
+            $fichier = $request->file->store('fichier');
             
             $post = Post::create([
-                    'title'      =>$titre,
+                    'titre'=>$request->titre,
+                    'entete'=> 'news',
                     'description' =>$contenu,
                     'fichier_image'=>$fichier,
                     'type_article'=>$format,
-                    'detail_id'=>$post_id,
+                   
                     
             ]);
         }
@@ -62,18 +55,13 @@ class BlogController extends Controller
                 // If no match is found, return null or handle the error appropriately
                 return null;
             }
-            // Extraire l'identifiant de la vidéo de l'URL
-           // preg_match('/youtu\.be\/([^\?]*)/', $video_link, $matches);
-
-            //$video_id = $matches[1];
+            
             
             $video_id = "https://www.youtube-nocookie.com/embed/".$video_id."?si=sutV20EDxIDLzQLy&amp;controls=0&amp;start=68";
             $post = Post::create([
-                'title'      =>$titre,
+                'titre'=>$titre,
                 'description' =>$contenu,
-               // 'fichier_image'=>$fichier,
                 'type_article'=>$format,
-                'detail_id'=>$post_id,
                 'fichier_link'=>$video_id,
                 
             ]);
@@ -88,5 +76,8 @@ class BlogController extends Controller
        
         
     }
+
+  
+
    
 }

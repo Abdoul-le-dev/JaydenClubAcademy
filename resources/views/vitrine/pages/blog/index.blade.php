@@ -1,5 +1,9 @@
 @extends('vitrine.components.app')
 
+@section('page_title')
+Blog
+@endsection
+
 @section('content')
 
 <div class=" flex flex-col  items-center min-h-[100vh] lg:min-h-[87vh] shadow bg-[#DCDCDC]">

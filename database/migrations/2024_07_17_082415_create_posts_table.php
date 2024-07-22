@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('fichier_image')->nullable();
             $table->string('fichier_link')->nullable();
             $table->boolean('mettre_avant')->default(0);
-            $table->foreignIdFor(User::class);
+           // $table->foreignIdFor(User::class);
             $table->timestamps();
         });
     }

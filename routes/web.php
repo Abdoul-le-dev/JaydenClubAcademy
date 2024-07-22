@@ -4,17 +4,53 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\GetData;
 use App\Http\Controllers\JoueurController;
 use App\Http\Controllers\OfficielController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\RecrutementController;
 use App\Http\Controllers\VitrineController;
+use App\Models\Recrutement;
 use Illuminate\Support\Facades\Route;
 
 
 //vitrine
+
+//acceuil
 Route::get('/', [VitrineController::class,'index'])->name('Home');
+
+//contact
 Route::get('/contact', [ContactController::class,'index'])->name('contact-view');
+
+//blog
 Route::get('/blog', [BlogController::class,'index'])->name('blog-view');
 Route::post('/blog', [BlogController::class,'create'])->name('create');
+Route::get('/article', [PostController::class,'show'])->name('model-article');
+
+//albums
+Route::get('/albums', [Controller::class,'albums'])->name('album-view');
+
+//galerie
+Route::get('/galerie', [Controller::class,'galerie'])->name('galerie-view');
+
+//joueur
+Route::get('/nos_joueurs', [JoueurController::class,'index'])->name('nosJoueurs-view');
+Route::get('/joueur', [JoueurController::class,'joueur'])->name('joueur-view');
+
+//paperase
+Route::get('/apropos', [Controller::class,'aPropos'])->name('apropos-view');
+Route::get('/mention_legale', [Controller::class,'mentionLegal'])->name('mentionLegale-view');
+Route::get('/nosresultats', [Controller::class,'nosResultats'])->name('nosResultats-view');
+Route::get('/politique_de_confidentialite', [Controller::class,'politiqueC'])->name('pc-view');
+
+//recrutement
+Route::get('/recrutement', [RecrutementController::class,'index'])->name('recrutement-view');
+
+
+//get data  
+Route::get('/get_image_gallerie', [GetData::class,'getImage']);
+Route::get('/get_image_joueur', [GetData::class,'getJoueur']);
 
 
 

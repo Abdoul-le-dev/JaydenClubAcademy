@@ -44,7 +44,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('vitrine.pages.blog.modelArticle');
     }
 
     /**

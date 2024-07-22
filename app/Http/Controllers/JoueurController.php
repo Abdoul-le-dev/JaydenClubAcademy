@@ -14,7 +14,12 @@ class JoueurController extends Controller
      */
     public function index()
     {
-        //
+        return view('vitrine.pages.joueur.nosJoueur');
+    }
+
+    public function joueur()
+    {
+        return view('vitrine.pages.joueur.index');
     }
 
     /**

@@ -53,6 +53,20 @@ Route::get('/get_image_gallerie', [GetData::class,'getImage']);
 Route::get('/get_image_joueur', [GetData::class,'getJoueur']);
 
 
+//admin 
+Route::prefix('/dashboard')->group(function () {
+
+    Route::get('/blog', [DashboardController::class,'blog'])->name('admin-blog');
+    Route::get('/blog/ajout', [DashboardController::class,'ajouter'])->name('admin-blog-add');
+    Route::get('/blog/article/{id}', [DashboardController::class,'article'])->name('admin-blog-article');
+    Route::get('/blog/update/{id}', [DashboardController::class,'update'])->name('admin-blog-update');
+    Route::post('/blog/update/{id}', [DashboardController::class,'update'])->name('admin-blog-update');
+    Route::get('/blog/delete/{id}', [DashboardController::class,'delete'])->name('admin-blog-delete');
+  
+
+});
+
+
 
 
 // authentication

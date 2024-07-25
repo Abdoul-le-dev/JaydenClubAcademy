@@ -6,7 +6,7 @@
             <a class='logo' href='index.htm'>
                 <i class="mdi mdi-album"></i>
                 <span>
-                    Xeloro
+                    JAYDEN 
                 </span>
             </a>
         </div>
@@ -26,6 +26,29 @@
                 </li>
                 <li>
                     <a class='waves-effect' href='{{route('dashboard.officiel.view')}}'><i class="mdi mdi-account"></i><span>Membres</span></a>
+                </li>
+
+               
+               
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>Blog</span></a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href='{{route('admin-blog-add')}}'>Ajouter un article</a></li>
+                        <li><a href='{{route('admin-blog')}}'>Liste des article</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a class='waves-effect' href='{{route('blog-view')}}'><i class="mdi mdi-account"></i><span>Galerie</span></a>
+                </li>
+                <li>
+                    <a class='waves-effect' href='{{route('blog-view')}}'><i class="mdi mdi-account"></i><span>Album</span></a>
+                </li>
+                <li>
+                    <a class='waves-effect' href='{{route('blog-view')}}'><i class="mdi mdi-account"></i><span>Recrutement</span></a>
+                </li>
+                <li>
+                    <a class='waves-effect' href='{{route('blog-view')}}'><i class="mdi mdi-account"></i><span>Contact</span></a>
                 </li>
 
 

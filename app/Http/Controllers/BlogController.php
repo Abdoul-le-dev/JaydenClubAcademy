@@ -37,6 +37,8 @@ class BlogController extends Controller
                    
                     
             ]);
+
+            return redirect()->route('admin-blog')->with('success','L\'article à été ajouter avec succes');
         }
         if($format =='Video')
         {   
@@ -65,6 +67,8 @@ class BlogController extends Controller
                 'fichier_link'=>$video_id,
                 
             ]);
+
+            return redirect()->route('admin-blog')->with('success','L\'article à été ajouter avec succes');
 
         }
        

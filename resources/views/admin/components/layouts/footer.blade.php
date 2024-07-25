@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                2020 © Xeloro.
+                2024 © JAYDEN ACADEMY FOOTBALL.
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-right d-none d-sm-block">

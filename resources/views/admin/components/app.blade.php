@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
     <head>
         <meta charset="utf-8">
@@ -16,6 +16,7 @@
         <link href="/admin_assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="/admin_assets/assets/css/icons.min.css" rel="stylesheet" type="text/css">
         <link href="/admin_assets/assets/css/theme.min.css" rel="stylesheet" type="text/css">
+        <script src="https://cdn.tailwindcss.com"></script>
         @yield('page_css')
 
     </head>
@@ -83,6 +84,9 @@
 
         <!-- App js -->
         <script src="/admin_assets/assets/js/theme.js"></script>
+        <script src="/landing_assets/js/Abdoul/upluoad.js"></script>
+        <script src="/landing_assets/js/Abdoul/blog.js"></script>
+        <script src="/landing_assets/js/Abdoul/update.js"></script>
 
     </body>
 

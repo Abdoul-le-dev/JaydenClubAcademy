@@ -60,8 +60,6 @@
     <script src="/landing_assets/js/core.min.js"></script>
     <script src="/landing_assets/js/script.js"></script>
     <script src="/landing_assets/js/Abdoul/animation.js"></script>
-    <script src="/landing_assets/js/Abdoul/upluoad.js"></script>
-    <script src="/landing_assets/js/Abdoul/blog.js"></script>
     <script src="/landing_assets/js/Abdoul/getData.js"></script>
     <script src="/landing_assets/js/jquerrys.js"></script>
     @yield('page_script')

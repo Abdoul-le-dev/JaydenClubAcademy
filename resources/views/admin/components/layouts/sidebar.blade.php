@@ -39,10 +39,20 @@
                     </ul>
                 </li>
                 <li>
-                    <a class='waves-effect' href='{{route('blog-view')}}'><i class="mdi mdi-account"></i><span>Galerie</span></a>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>Galerie</span></a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href='{{route('galerie-add')}}'>Ajouter </a></li>
+                        <li><a href='{{route('galerie-view')}}'>Photo Video</a></li>
+                        
+                    </ul>
                 </li>
                 <li>
-                    <a class='waves-effect' href='{{route('blog-view')}}'><i class="mdi mdi-account"></i><span>Album</span></a>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>Album</span></a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href='{{route('album-add')}}'>Ajouter un album</a></li>
+                        <li><a href='{{route('album-view')}}'>Liste des albums</a></li>
+                        
+                    </ul>
                 </li>
                 <li>
                     <a class='waves-effect' href='{{route('blog-view')}}'><i class="mdi mdi-account"></i><span>Recrutement</span></a>

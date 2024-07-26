@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\GallerieController;
 use App\Http\Controllers\GetData;
 use App\Http\Controllers\JoueurController;
 use App\Http\Controllers\OfficielController;
@@ -25,24 +26,22 @@ Route::get('/contact', [ContactController::class,'index'])->name('contact-view')
 
 //blog
 Route::get('/blog', [BlogController::class,'index'])->name('blog-view');
-Route::post('/blog', [BlogController::class,'create'])->name('create');
 Route::get('/article', [PostController::class,'show'])->name('model-article');
 
-//albums
-Route::get('/albums', [Controller::class,'albums'])->name('album-view');
+
 
 //galerie
-Route::get('/galerie', [Controller::class,'galerie'])->name('galerie-view');
+Route::get('/galerie', [DashboardController::class,'galeries'])->name('galerie-view');
 
 //joueur
 Route::get('/nos_joueurs', [JoueurController::class,'index'])->name('nosJoueurs-view');
 Route::get('/joueur', [JoueurController::class,'joueur'])->name('joueur-view');
 
 //paperase
-Route::get('/apropos', [Controller::class,'aPropos'])->name('apropos-view');
-Route::get('/mention_legale', [Controller::class,'mentionLegal'])->name('mentionLegale-view');
-Route::get('/nosresultats', [Controller::class,'nosResultats'])->name('nosResultats-view');
-Route::get('/politique_de_confidentialite', [Controller::class,'politiqueC'])->name('pc-view');
+Route::get('/apropos', [DashboardController::class,'aPropos'])->name('apropos-view');
+Route::get('/mention_legale', [DashboardController::class,'mentionLegal'])->name('mentionLegale-view');
+Route::get('/nosresultats', [DashboardController::class,'nosResultats'])->name('nosResultats-view');
+Route::get('/politique_de_confidentialite', [DashboardController::class,'politiqueC'])->name('pc-view');
 
 //recrutement
 Route::get('/recrutement', [RecrutementController::class,'index'])->name('recrutement-view');
@@ -59,9 +58,22 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/blog', [DashboardController::class,'blog'])->name('admin-blog');
     Route::get('/blog/ajout', [DashboardController::class,'ajouter'])->name('admin-blog-add');
     Route::get('/blog/article/{id}', [DashboardController::class,'article'])->name('admin-blog-article');
+    Route::post('/blog', [BlogController::class,'create'])->name('create');
     Route::get('/blog/update/{id}', [DashboardController::class,'update'])->name('admin-blog-update');
     Route::post('/blog/update/{id}', [DashboardController::class,'update'])->name('admin-blog-update');
     Route::get('/blog/delete/{id}', [DashboardController::class,'delete'])->name('admin-blog-delete');
+
+    //albums
+    Route::get('/album/add', [DashboardController::class,'addAlbums'])->name('album-add');
+    Route::get('/albums', [DashboardController::class,'albums'])->name('album-view');
+
+    //galerie
+    Route::get('/galerie', [DashboardController::class,'galerie'])->name('galerie-view');
+    Route::get('/galerie/add', [DashboardController::class,'addData'])->name('galerie-add');
+    Route::get('/galerie/image', [DashboardController::class,'image'])->name('galerie-image');
+    Route::post('/galerie/fichier', [GallerieController::class,'create'])->name('galerie-save');
+    Route::get('/galerie/video', [DashboardController::class,'video'])->name('galerie-video');
+  
   
 
 });

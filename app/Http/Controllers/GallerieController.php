@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Gallerie;
 use App\Http\Requests\StoreGallerieRequest;
 use App\Http\Requests\UpdateGallerieRequest;
+use Illuminate\Support\Facades\Request;
 
 class GallerieController extends Controller
 {
@@ -19,10 +20,60 @@ class GallerieController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(StoreGallerieRequest $request)
     {
-        //
+        $credentials = $request->validate([
+            'nom' => ['required'],
+            'format' => ['required'],
+        ], [
+            
+            'nom.required' => 'le nom du fichier est requis',
+            'format.required' => 'Un fichier est requis'
+        ]);
+
+        $nom = $request->nom;
+        $format = $request->format;
+        
+        $link = $request->link;
+
+       
+
+        if($format =='image')
+        {
+           
+
+            $image = Gallerie::create(
+                [
+                    'type' => 'image',
+                    'nom' =>$nom,
+                    'fichier_image'=> $request->file->store('gallerie')
+
+                ]);
+
+            return redirect()->route('galerie-view')->with('success',"L'image à été ajouté avec succès");    
+
+        }
+        if($link != null)
+        {
+            $type = 'image';
+
+            $image = Gallerie::created(
+                [
+                    'type' => $type,
+                    'nom' =>$nom,
+                    'link'=> $link,
+
+                ]);
+
+            return redirect()->route('galerie-view')->with('success','La vidéo à été ajouté avec succès');    
+
+        }
+
+        return redirect()->route('galerie-view')->with('error',"Impossible d'ajouter le fichier"); 
+
+        
     }
+    
 
     /**
      * Store a newly created resource in storage.

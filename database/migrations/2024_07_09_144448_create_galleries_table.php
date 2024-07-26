@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
-            $table->boolean('type');
-            $table->string('path_fichier');
+            $table->string('type');
+            $table->string('nom');
+            $table->string('fichier_image')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }

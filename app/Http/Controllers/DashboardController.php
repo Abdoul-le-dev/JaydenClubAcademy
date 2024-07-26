@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallerie;
 use App\Models\Joueur;
 use App\Models\Officiel;
 use App\Models\Post;
@@ -152,4 +153,53 @@ class DashboardController extends Controller
         $article= Post::findOrFail($id);
         return view('admin.pages.blog.update',compact('article'));
     }
+
+    public function albums()
+    {
+        return view('admin.pages.album.index');
+    }
+    public function addAlbums()
+    {
+        return view('admin.pages.album.add');
+    }
+
+    public function galeries()
+    {
+        $datas =Gallerie::latest()->get();
+        return view('vitrine.pages.galerie.index',compact('datas'));
+    }
+    public function galerie()
+    {
+        $datas =Gallerie::latest()->get();
+        return view('admin.pages.galerie.index',compact('datas'));
+    }
+    public function addData()
+    {
+        return view('admin.pages.galerie.add');
+    }
+    public function image()
+    {
+        return view('admin.pages.galerie.image');
+    }
+    public function video()
+    {
+        return view('admin.pages.galerie.video');
+    }
+    public function aPropos()
+    {
+        return view('vitrine.pages.paperase.apropos');
+    }
+    public function mentionLegal()
+    {
+        return view('vitrine.pages.paperase.mentionLegale');
+    }
+    public function nosResultats()
+    {
+        return view('vitrine.pages.paperase.nosresultat');
+    } 
+    public function politiqueC()
+    {
+        return view('vitrine.pages.paperase.politiqueDeConfidentialite');
+    }
+
 }

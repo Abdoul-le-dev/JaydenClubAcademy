@@ -11,7 +11,7 @@ class StoreGallerieRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,5 +24,9 @@ class StoreGallerieRequest extends FormRequest
         return [
             //
         ];
+    }
+    public function withValidator($validator)
+    {
+        
     }
 }

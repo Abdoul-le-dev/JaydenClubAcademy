@@ -14,16 +14,7 @@
        
        
     </div>
-    @if ($errors)
-
-    @foreach ( $errors->all() as $error  )
-    <div class="flex flex-col justify-start">
-        <li class="Placeholder text-red-400">{{ $error}}</li>
-    </div>
-        
-    @endforeach
-        
-    @endif
+    
 
    
 

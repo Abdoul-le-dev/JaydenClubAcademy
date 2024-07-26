@@ -70,7 +70,7 @@ let progresss = document.querySelector('.pls');
 let loads = 0;
 let processs = "";
 let filez = document.querySelector('.Uploads');
-
+/*
 // Fonction pour gérer la simulation de progression du téléchargement
 let uploads = () => {
     if (loads >= 100) {
@@ -79,6 +79,7 @@ let uploads = () => {
     } else {
         loads++;
         progresss.value = loads;
+
         document.querySelector('.exs').innerText = loads + '% téléchargement en cours';
     }
 };
@@ -99,35 +100,86 @@ function getFiles(filenames) {
 }
 
 // Gestionnaire d'événement pour la sélection de fichier
-if(filez)
-    {
-        filez.oninput = () => {
-            let filenames = filez.files[0].name;
-            let extension = filenames.split('.').pop().toLowerCase();
-            let filesizes = filez.files[0].size;
-        
-            if (filenames.length > 10) {
-                filenames = filenames.substring(0, 10) + '...';
-            }
-        
-            const audioExtensions = ['mp3', 'wav', 'ogg', 'flac', 'aac', 'm4a'];
-            if (!audioExtensions.includes(extension)) {
-                alert("Veuillez sélectionner un fichier audio.");
-                filez.value = "";
-                return;
-            }
-        
-            if (filesizes <= 1000000) {
-                filesizes = (filesizes / 1000).toFixed(2) + 'kb';
-            } else if (filesizes <= 1000000000) {
-                filesizes = (filesizes / 1000000).toFixed(2) + 'mb';
-            } else if (filesizes <= 1000000000000) {
-                filesizes = (filesizes / 1000000000).toFixed(2) + 'gb';
-            }
-        
-            document.querySelector('.labels').innerText = filenames;
-            document.querySelector('.sizes').innerText = filesizes;
-        
-            getFiles(filenames);
-        };
+if (filez) {
+    filez.oninput = () => {
+        let filenames = filez.files[0].name;
+        let extension = filenames.split('.').pop().toLowerCase();
+        let filesizes = filez.files[0].size;
+
+        if (filenames.length > 10) {
+            filenames = filenames.substring(0, 10) + '...';
+        }
+
+        const videoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'flv', 'wmv'];
+        if (!videoExtensions.includes(extension)) {
+            alert("Veuillez sélectionner un fichier vidéo.");
+            filez.value = "";
+            return;
+        }
+
+        if (filesizes <= 1000000) {
+            filesizes = (filesizes / 1000).toFixed(2) + 'kb';
+        } else if (filesizes <= 1000000000) {
+            filesizes = (filesizes / 1000000).toFixed(2) + 'mb';
+        } else if (filesizes <= 1000000000000) {
+            filesizes = (filesizes / 1000000000).toFixed(2) + 'gb';
+        }
+
     }
+}*/
+
+if (filez) {
+    filez.oninput = () => {
+        let filenames = filez.files[0].name;
+        let extension = filenames.split('.').pop().toLowerCase();
+        let filesizes = filez.files[0].size;
+
+        if (filenames.length > 10) {
+            filenames = filenames.substring(0, 10) + '...';
+        }
+
+        const videoExtensions = ['mp4', 'avi', 'mov', 'mkv', 'flv', 'wmv'];
+        if (!videoExtensions.includes(extension)) {
+            alert("Veuillez sélectionner un fichier vidéo.");
+            filez.value = "";
+            return;
+        }
+
+        if (filesizes <= 1000000) {
+            filesizes = (filesizes / 1000).toFixed(2) + 'kb';
+        } else if (filesizes <= 1000000000) {
+            filesizes = (filesizes / 1000000).toFixed(2) + 'mb';
+        } else if (filesizes <= 1000000000000) {
+            filesizes = (filesizes / 1000000000).toFixed(2) + 'gb';
+        }
+
+        document.querySelector('.exs').innerText = filenames;
+        document.querySelector('.size').innerText = filesizes;
+
+        getFiles(filenames);
+    };
+}
+
+function getFiles(filenames) {
+    if (filenames) {
+       
+        document.querySelector('.pls').classList.remove('hidden');
+        document.querySelector('.pls').classList.add('block');
+        loads = 0;
+        progresss.value = 0;
+        document.querySelector('.exs').innerText = '';
+
+        processs = setInterval(uploadss, 100);
+    }
+}
+
+let uploadss = () => {
+    if (loads >= 100) {
+        clearInterval(processs);
+        document.querySelector('.exs').innerText = '100% téléchargement complet';
+    } else {
+        loads++;
+        progresss.value = loads;
+        document.querySelector('.exs').innerText = loads + '% téléchargement en cours';
+    }
+};

@@ -6,7 +6,7 @@
             <a class='logo' href='index.htm'>
                 <i class="mdi mdi-album"></i>
                 <span>
-                    JAYDEN 
+                    JAYDEN
                 </span>
             </a>
         </div>
@@ -28,14 +28,23 @@
                     <a class='waves-effect' href='{{route('dashboard.officiel.view')}}'><i class="mdi mdi-account"></i><span>Membres</span></a>
                 </li>
 
-               
-               
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>Blog</span></a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href='{{route('dashboard.match.new.view')}}'>Ajouter un match</a></li>
+                        <li><a href='{{route('dashboard.match.view')}}'>Liste des matches</a></li>
+
+                    </ul>
+                </li>
+
+
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>Blog</span></a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href='{{route('admin-blog-add')}}'>Ajouter un article</a></li>
                         <li><a href='{{route('admin-blog')}}'>Liste des article</a></li>
-                        
+
                     </ul>
                 </li>
                 <li>
@@ -43,7 +52,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href='{{route('galerie-add')}}'>Ajouter </a></li>
                         <li><a href='{{route('galerie-view')}}'>Photo Video</a></li>
-                        
+
                     </ul>
                 </li>
                 <li>
@@ -51,7 +60,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href='{{route('album-add')}}'>Ajouter un album</a></li>
                         <li><a href='{{route('album-view')}}'>Liste des albums</a></li>
-                        
+
                     </ul>
                 </li>
                 <li>

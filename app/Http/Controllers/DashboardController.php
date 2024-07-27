@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallerie;
 use App\Models\Joueur;
+use App\Models\Matche;
 use App\Models\Officiel;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -67,17 +68,17 @@ class DashboardController extends Controller
         {
             $tab = array_merge($tab,['description' => $contenu]);
         }
-  
+
         if($format =='Image')
         {
             $fichier = $request->file->store('fichier');
 
             $tab = array_merge($tab,['fichier_image' => $fichier]);
-            
+
         }
         if($format =='Video')
-        {   
-           
+        {
+
             if (preg_match('/youtu\.be\/([^\?]*)/', $video_link, $matches)) {
                 $video_id = $matches[1];
             }
@@ -96,14 +97,14 @@ class DashboardController extends Controller
            // preg_match('/youtu\.be\/([^\?]*)/', $video_link, $matches);
 
             //$video_id = $matches[1];
-            
+
             $video_id = "https://www.youtube-nocookie.com/embed/".$video_id."?si=sutV20EDxIDLzQLy&amp;controls=0&amp;start=68";
-            
-          
+
+
             $tab = array_merge($tab,['fichier_link' => $video_id]);
 
         }
-        
+
 
         $article = Post::findOrFail($post_id);
 
@@ -112,8 +113,8 @@ class DashboardController extends Controller
         return redirect()->route('admin-blog')->with('sucess','L\'article à été mise a jour avec succes');
 
 
-       
-        
+
+
     }
 
 
@@ -132,7 +133,7 @@ class DashboardController extends Controller
 
 
     public function blog()
-    {   
+    {
         $posts = Post::latest()->get();
         return view('admin.pages.blog.liste',compact('posts'));
     }
@@ -196,10 +197,25 @@ class DashboardController extends Controller
     public function nosResultats()
     {
         return view('vitrine.pages.paperase.nosresultat');
-    } 
+    }
     public function politiqueC()
     {
         return view('vitrine.pages.paperase.politiqueDeConfidentialite');
+    }
+
+
+
+
+    public function matches_view(){
+        $matches=Matche::all();
+        return view('admin.pages.matches.index',['matches'=>$matches]);
+    }
+    public function new_match(){
+        return view('admin.pages.matches.create_match');
+    }
+    public function update_match($id){
+        $matche=Matche::findOrFail($id);
+        return view('admin.pages.matches.update_matche',['matche'=>$matche]);
     }
 
 }

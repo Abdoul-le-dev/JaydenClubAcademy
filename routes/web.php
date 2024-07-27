@@ -10,6 +10,7 @@ use App\Http\Controllers\GallerieController;
 use App\Http\Controllers\GetData;
 use App\Http\Controllers\JoueurController;
 use App\Http\Controllers\MatcheController;
+use App\Http\Controllers\MatchResultatController;
 use App\Http\Controllers\OfficielController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RecrutementController;
@@ -127,6 +128,7 @@ Route::prefix('/dashboard')->group(function () {
     Route::post('/matches/new', [MatcheController::class,'create'])->name('dashboard.match.new.create');
     Route::get('/matches/{id}/update', [DashboardController::class,'update_match'])->name('dashboard.match.update.view');
     Route::post('/matches/{id}/update', [MatcheController::class,'update'])->name('dashboard.match.update');
+    Route::post('/matches/{id}/resultat', [MatchResultatController::class,'create'])->name('dashboard.match.result.edit');
     Route::delete('/matches/{id}/delete', [MatcheController::class,'destroy'])->name('dashboard.match.delete');
     // team
     Route::get('/equipe', [EquipeController::class, 'index'])->name('equipe.view');

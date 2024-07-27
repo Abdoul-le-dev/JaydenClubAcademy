@@ -16,4 +16,23 @@ class Matche extends Model
         'end_date',
         'terrain'
     ];
+
+    public function equipeA()
+    {
+        return $this->belongsTo(Equipe::class,'equipe_a');
+    }
+    public function equipeB()
+    {
+        return $this->belongsTo(Equipe::class,'equipe_b');
+    }
+
+    public function resultat()
+    {
+        $result=MatchResultat::where('match_id',$this->id)->first();
+        if($result!=null){
+            return $result;
+        }
+        return null;
+    }
+
 }

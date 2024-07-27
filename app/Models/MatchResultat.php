@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class MatchResultat extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'score_a',
+        'score_b',
+        'match_id'
+    ];
 }

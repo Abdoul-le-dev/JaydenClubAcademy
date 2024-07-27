@@ -29,7 +29,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>Blog</span></a>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>Match</span></a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href='{{route('dashboard.match.new.view')}}'>Ajouter un match</a></li>
                         <li><a href='{{route('dashboard.match.view')}}'>Liste des matches</a></li>

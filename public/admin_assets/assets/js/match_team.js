@@ -36,7 +36,7 @@ $(document).ready(function() {
         });
     }
 
-    loadTeams();
+    // loadTeams();
 
     // Création d'une équipe
     $('#createEquipeForm').on('submit', function(e) {

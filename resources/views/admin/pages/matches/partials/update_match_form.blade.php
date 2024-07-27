@@ -7,20 +7,17 @@
     <div class="col-xl-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Ajouter un match</h4>
-                <p class="card-subtitle mb-4">Ajouter un nouveau match en quelques clics.</p>
-                <form method="POST" action="{{route('dashboard.match.new.create')}}" class="needs-validation" novalidate="" enctype="multipart/form-data">
+                <h4 class="card-title">Modifier ce match</h4>
+                <form method="POST" action="{{route('dashboard.match.update',['id'=>$matche->id])}}" class="needs-validation" novalidate="" enctype="multipart/form-data">
                     @csrf
-
-
                     <div class="form-row">
                       <div class="col-md-6 mb-3">
                         <label for="equipe_a">Èquipe A</label>
-                        <select id="type" name="equipe_a" value="{{old('equipe_a')}}" class="form-control select_team" required >
+                        <select id="type" name="equipe_a" value="{{$matche->equipe_a}}" class="form-control select_team" required >
                             <option>Sélectionner une équipe</option>
 
                             @foreach ($equipes as $equipe )
-                            <option value="{{$equipe->id}}">{{$equipe->nom}}</option>
+                            <option value="{{$equipe->id}}"  @if ($matche->equipe_a==$equipe->id) @selected(true) @endif  >{{$equipe->nom}}</option>
                             @endforeach
 
                             <option value="new">Nouvelle equipe</option>
@@ -36,7 +33,7 @@
                             <option>Sélectionner une équipe</option>
 
                             @foreach ($equipes as $equipe )
-                            <option value="{{$equipe->id}}">{{$equipe->nom}}</option>
+                            <option @if ($matche->equipe_b==$equipe->id) @selected(true) @endif value="{{$equipe->id}}">{{$equipe->nom}}</option>
                             @endforeach
                             <option value="new">Nouvelle équipe</option>
                         </select>
@@ -44,10 +41,11 @@
                           Bon travail!
                         </div>
                       </div>
+
                       <div class="col-md-6 mb-3">
                         <label for="match_date">Date du match</label>
                         <div class="input-group">
-                          <input type="date" class="form-control" value="{{old('match_date')}}" name="match_date" id="match_date" placeholder="Date du match" aria-describedby="validationTooltipUsernamePrepend" required="">
+                          <input type="date" class="form-control" value="{{$matche->match_date}}" name="match_date" id="match_date" placeholder="Date du match" aria-describedby="validationTooltipUsernamePrepend" required="">
                           <div class="invalid-tooltip">
                             Veuillez entrer le mail du joueur.
                           </div>
@@ -56,26 +54,26 @@
                       <div class="col-md-6 mb-3">
                         <div class="form-group">
                             <label>Terrain</label>
-                            <input type="text" name="terrain" value="{{old('terrain')}}" class="form-control" required>
+                            <input type="text" name="terrain" value="{{$matche->terrain}}" class="form-control" required>
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
                         <label for="nationalite">Heure du debut</label>
-                        <input type="time" class="form-control" value="{{old('start_date')}}" id="start_date" name="start_date" placeholder="Heaur du debut" required="">
+                        <input type="time" class="form-control" value="{{$matche->start_date}}" id="start_date" name="start_date" placeholder="Heaur du debut" required="">
                         <div class="valid-tooltip">
                           Bon travail!
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
                         <label for="end_date">Heure de la fin</label>
-                        <input type="time" class="form-control" id="end_date" value="{{old('end_date')}}" name="end_date" placeholder="end_date">
+                        <input type="time" class="form-control" id="end_date" value="{{$matche->end_date}}" name="end_date" placeholder="end_date">
                         <div class="valid-tooltip">
                           Bon travail!
                         </div>
                       </div>
                     </div>
 
-                    <button class="btn btn-primary waves-effect waves-light" type="submit">Créer Match</button>
+                    <button class="btn btn-primary waves-effect waves-light" type="submit">Modifier ce match</button>
                   </form>
 
             </div> <!-- end card-body-->

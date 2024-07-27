@@ -88,17 +88,20 @@ class MatcheController extends Controller
 
         //
         $credentials = $request->validate([
-            'equipe_a' => ['required', 'email', 'unique:joueurs'],
-            'equipe_b' => ['required'],
-            'match_date' => ['required'],
-            'start_date' => ['required','date'],
+            'equipe_a' => ['required', 'exists:equipes,id'],
+            'equipe_b' => ['required', 'exists:equipes,id', 'different:equipe_a'],
+            'match_date' => ['required', 'date'],
+            'start_date' => ['required'],
             'terrain' => ['required'],
         ], [
-            'equipe_a.required' => 'Equipe A est requis.',
-            'equipe_b.required' => 'Equipe B  est requis.',
-            'match_date.required' => 'La date du match est requis.',
-            'start_date.required' => 'Heure du début est requis.',
-            'terrain.required' => 'Le terrain est requis.'
+            'equipe_a.required' => 'Equipe A est requise.',
+            'equipe_b.required' => 'Equipe B est requise.',
+            'match_date.required' => 'La date du match est requise.',
+            'start_date.required' => 'Heure du début est requise.',
+            'terrain.required' => 'Le terrain est requis.',
+            'equipe_a.exists' => 'Equipe A doit exister.',
+            'equipe_b.exists' => 'Equipe B doit exister.',
+            'equipe_b.different' => 'Equipe B doit être différente de Equipe A.',
         ]);
 
 
@@ -122,6 +125,6 @@ class MatcheController extends Controller
         //
         $matche=Matche::findOrFail($id);
         $matche->forceDelete();
-        return redirect()->back()->with('success', 'Joueur supprimé avec succès');
+        return redirect()->back()->with('success', 'Match supprimé avec succès');
     }
 }

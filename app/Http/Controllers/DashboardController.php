@@ -215,7 +215,7 @@ class DashboardController extends Controller
     }
     public function update_match($id){
         $matche=Matche::findOrFail($id);
-        return view('admin.pages.matches.update_matche',['matche'=>$matche]);
+        return view('admin.pages.matches.update_match',['matche'=>$matche]);
     }
 
 }

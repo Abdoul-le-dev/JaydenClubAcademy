@@ -26,7 +26,7 @@
 
 
 {{-- match list hier  --}}
-
+@include('admin.pages.matches.partials.match_list')
     <!--end row-->
 
 

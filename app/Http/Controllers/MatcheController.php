@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Matche;
 use App\Http\Requests\StoreMatcheRequest;
 use App\Http\Requests\UpdateMatcheRequest;
+use Illuminate\Http\Request;
 
 class MatcheController extends Controller
 {
@@ -19,9 +20,38 @@ class MatcheController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
+
         //
+        $credentials = $request->validate([
+            'equipe_a' => ['required', 'exists:equipes,id'],
+            'equipe_b' => ['required', 'exists:equipes,id', 'different:equipe_a'],
+            'match_date' => ['required', 'date'],
+            'start_date' => ['required', 'date_format:H:i'],
+            'terrain' => ['required'],
+        ], [
+            'equipe_a.required' => 'Equipe A est requise.',
+            'equipe_b.required' => 'Equipe B est requise.',
+            'match_date.required' => 'La date du match est requise.',
+            'start_date.required' => 'Heure du début est requise.',
+            'terrain.required' => 'Le terrain est requis.',
+            'equipe_a.exists' => 'Equipe A doit exister.',
+            'equipe_b.exists' => 'Equipe B doit exister.',
+            'equipe_b.different' => 'Equipe B doit être différente de Equipe A.',
+        ]);
+
+        $user = Matche::create([
+            'equipe_a' => $request->equipe_a,
+            'equipe_b' => $request->equipe_b,
+            'match_date' => $request->match_date,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
+            'terrain' => $request->terrain
+        ]);
+
+        return redirect()->back()->with('success', 'Match ajouté avec succès');
+
     }
 
     /**
@@ -51,16 +81,50 @@ class MatcheController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateMatcheRequest $request, Matche $matche)
+    public function update(Request $request,$id)
     {
+
+        $matche=Matche::findOrFail($id);
+
         //
+        $credentials = $request->validate([
+            'equipe_a' => ['required', 'exists:equipes,id'],
+            'equipe_b' => ['required', 'exists:equipes,id', 'different:equipe_a'],
+            'match_date' => ['required', 'date'],
+            'start_date' => ['required'],
+            'terrain' => ['required'],
+        ], [
+            'equipe_a.required' => 'Equipe A est requise.',
+            'equipe_b.required' => 'Equipe B est requise.',
+            'match_date.required' => 'La date du match est requise.',
+            'start_date.required' => 'Heure du début est requise.',
+            'terrain.required' => 'Le terrain est requis.',
+            'equipe_a.exists' => 'Equipe A doit exister.',
+            'equipe_b.exists' => 'Equipe B doit exister.',
+            'equipe_b.different' => 'Equipe B doit être différente de Equipe A.',
+        ]);
+
+
+
+        $match = $matche->update([
+            'equipe_a' => $request->equipe_a,
+            'equipe_b' => $request->equipe_b,
+            'match_date' => $request->match_date,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
+            'terrain' => $request->terrain
+        ]);
+        return redirect()->back()->with('success', 'Match modifié avec succès');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Matche $matche)
+    public function destroy($id)
     {
         //
+        $matche=Matche::findOrFail($id);
+        $matche->forceDelete();
+        return redirect()->back()->with('success', 'Match supprimé avec succès');
     }
 }

@@ -5,13 +5,17 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\GallerieController;
 use App\Http\Controllers\GetData;
 use App\Http\Controllers\JoueurController;
+use App\Http\Controllers\MatcheController;
+use App\Http\Controllers\MatchResultatController;
 use App\Http\Controllers\OfficielController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RecrutementController;
 use App\Http\Controllers\VitrineController;
+use App\Models\Equipe;
 use App\Models\Recrutement;
 use Illuminate\Support\Facades\Route;
 
@@ -48,12 +52,12 @@ Route::get('/admission', [RecrutementController::class,'index'])->name('recrutem
 Route::get('/condition_admission', [RecrutementController::class,'caView'])->name('recrutementCondition-view');
 
 
-//get data  
+//get data
 Route::get('/get_image_gallerie', [GetData::class,'getImage']);
 Route::get('/get_image_joueur', [GetData::class,'getJoueur']);
 
 
-//admin 
+//admin
 Route::prefix('/dashboard')->group(function () {
 
     Route::get('/blog', [DashboardController::class,'blog'])->name('admin-blog');
@@ -74,8 +78,8 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/galerie/image', [DashboardController::class,'image'])->name('galerie-image');
     Route::post('/galerie/fichier', [GallerieController::class,'create'])->name('galerie-save');
     Route::get('/galerie/video', [DashboardController::class,'video'])->name('galerie-video');
-  
-  
+
+
 
 });
 
@@ -111,11 +115,28 @@ Route::prefix('/dashboard')->group(function () {
     Route::post('/joueurs/{id}/update', [JoueurController::class,'update'])->name('dashboard.joueurs.update');
     Route::delete('/joueurs/{id}/delete', [JoueurController::class,'destroy'])->name('dashboard.joueurs.delete');
 
+    //officiels
     Route::get('/officiels', [DashboardController::class,'officiels_view'])->name('dashboard.officiel.view');
     Route::get('/officiels/new', [DashboardController::class,'new_officiel'])->name('dashboard.officiel.new.view');
     Route::post('/officiels/new', [OfficielController::class,'create'])->name('dashboard.officiel.new.create');
     Route::get('/officiels/{id}/update', [DashboardController::class,'update_officiel'])->name('dashboard.officiel.update.view');
     Route::post('/officiels/{id}/update', [OfficielController::class,'update'])->name('dashboard.officiel.update');
     Route::delete('/officiels/{id}/delete', [OfficielController::class,'destroy'])->name('dashboard.officiel.delete');
+
+    //officiels
+    Route::get('/matches', [DashboardController::class,'matches_view'])->name('dashboard.match.view');
+    Route::get('/matches/new', [DashboardController::class,'new_match'])->name('dashboard.match.new.view');
+    Route::post('/matches/new', [MatcheController::class,'create'])->name('dashboard.match.new.create');
+    Route::get('/matches/{id}/update', [DashboardController::class,'update_match'])->name('dashboard.match.update.view');
+    Route::post('/matches/{id}/update', [MatcheController::class,'update'])->name('dashboard.match.update');
+    Route::post('/matches/{id}/resultat', [MatchResultatController::class,'create'])->name('dashboard.match.result.edit');
+    Route::delete('/matches/{id}/delete', [MatcheController::class,'destroy'])->name('dashboard.match.delete');
+    // team
+    Route::get('/equipe', [EquipeController::class, 'index'])->name('equipe.view');
+    Route::get('/equipe/list', [EquipeController::class, 'list'])->name('equipe.list');
+    Route::post('/equipe/create', [EquipeController::class, 'create'])->name('equipe.create');
+    Route::put('/equipe/update/{id}', [EquipeController::class, 'update'])->name('equipe.update');
+    Route::delete('/equipe/update/{id}', [EquipeController::class, 'delete'])->name('equipe.delete');
+
 });
 

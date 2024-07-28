@@ -25,10 +25,12 @@ class GallerieController extends Controller
         $credentials = $request->validate([
             'nom' => ['required'],
             'format' => ['required'],
+            'file' => ['required'],
         ], [
             
             'nom.required' => 'le nom du fichier est requis',
-            'format.required' => 'Un fichier est requis'
+            'format.required' => 'Un fichier est requis',
+            'file.required' => 'Un fichier est requis'
         ]);
 
         $nom = $request->nom;
@@ -46,22 +48,22 @@ class GallerieController extends Controller
                 [
                     'type' => 'image',
                     'nom' =>$nom,
-                    'fichier_image'=> $request->file->store('gallerie')
+                    'fichier'=> $request->file->store('gallerie')
 
                 ]);
 
             return redirect()->route('galerie-view')->with('success',"L'image à été ajouté avec succès");    
 
         }
-        if($link != null)
+        if($format =='video')
         {
-            $type = 'image';
+            $type = 'video';
 
             $image = Gallerie::created(
                 [
                     'type' => $type,
                     'nom' =>$nom,
-                    'link'=> $link,
+                    'fichier'=> $request->file->store('gallerie')
 
                 ]);
 

@@ -6,23 +6,34 @@
 <!-- Section Gallery-->
 <section class="section section-variant-1  text-center">
   <div class="container">
-    <div class="row row-30" data-lightgallery="group">
+    <div class="row row-30 w-full" data-lightgallery="group">
 
         @forelse ($datas as $data )
 
-        <div class="col-xs-8 col-sm-6 col-lg-4 shadow">
+       
+          <div class="col-xs-8 col-sm-6 col-lg-4 shadow flex flex-col justify-between items-center my-4 ">
           
-            <article class="thumbnail-classic">
+           <div>
+            <article class="thumbnail-classic ">
 
               <a class="thumbnail-classic-figure" href="{{asset('storage/'.$data->fichier_image)}}" data-lightgallery="item">
                 
                 <img src="{{  asset('storage/'.$data->fichier_image) }}" alt="{{ $data->nom }}" width="370" height="340">
               
               </a>
+
               
 
             </article>
+           </div>
+           <div class=" bg-blue-400 w-full">
+            <h3>{{ $data->nom }}</h3>
+           </div>
+           
+            
         </div>
+       
+        
             
         @empty
 

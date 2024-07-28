@@ -21,7 +21,7 @@
                           </div>
                           <div class="col-md-12 mb-3">
                             <label for="score_b">Score B</label>
-                            <input type="number" class="form-control" value="@if($resultat!=null){{$resultat->score_b}}@endif"name="score_b" id="score_b" placeholder="Score de l'équipe B" required="">
+                            <input type="number" class="form-control" value="@if($resultat!=null){{$resultat->score_b}}@endif"  name="score_b" id="score_b" placeholder="Score de l'équipe B" required="">
                           </div>
                     </div>
                     <div class="modal-footer">

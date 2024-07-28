@@ -15,6 +15,11 @@ class OfficielController extends Controller
     {
         //
     }
+    public function staff_view($id){
+        $officiel=Officiel::findOrFail($id);
+
+        return view('vitrine.pages.staff.single_staff',compact('officiel'));
+    }
 
     /**
      * Show the form for creating a new resource.

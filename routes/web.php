@@ -55,6 +55,11 @@ Route::get('/recrutement', [RecrutementController::class,'index'])->name('recrut
 Route::get('/get_image_gallerie', [GetData::class,'getImage']);
 Route::get('/get_image_joueur', [GetData::class,'getJoueur']);
 
+//membre de staff
+Route::get('/staffs', [VitrineController::class,'staffs_view'])->name('staffs.view');
+Route::get('/staffs/{id}', [OfficielController::class,'staff_view'])->name('staffs.single.view');
+
+
 
 //admin
 Route::prefix('/dashboard')->group(function () {

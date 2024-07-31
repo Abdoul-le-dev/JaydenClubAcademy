@@ -1,13 +1,13 @@
 @extends('vitrine.components.app')
 
 @section('page_title')
-admission
+Admission
 @endsection
 
 
 @section('content')
 
-<section class="section parallax-container breadcrumbs-wrap " data-parallax-img="images/bg-breadcrumbs-1-1920x726.jpg">
+<section class="section parallax-container breadcrumbs-wrap " data-parallax-img="landing_assets/assets/data/5.jpg">
     <div class="parallax-content breadcrumbs-custom context-dark">
       <div class="container">
         <h3 class="breadcrumbs-custom-title">Demande d'admission</h3>
@@ -20,9 +20,10 @@ admission
     </div>
 </section>
 
-<div class=" bg-[#F3F4F6] w-full flex flex-col lg:flex-row ">
 
-    <div class="w-full lg:w-[60%] mt-10 mx-5 p-4 shadow rounded-sm bg-white my-5">
+<div class=" bg-[#F3F4F6]  flex flex-col w-full sm:justify-center  sm:items-center lg:flex-row ">
+
+    <div class="w-[80%] lg:w-[60%] mt-10 mx-5 p-4 shadow rounded-sm bg-white my-5">
 
         <div class="flex justify-center items-center mt-2 p-2 ">
             <h1>Candidatez maintenant</h1>
@@ -143,11 +144,15 @@ admission
 
             </div>
 
+            <div class="col-md-12 ">
+                <button class="button button-lg button-primary button-block" type="submit">Envoyer maintenant</button>
+              </div>
+
         </form>
 
     </div>
 
-    <div class="w-full lg:w-[40%] max-h-[100vh] flex flex-col bg-white mx-5 p-4 my-5">
+    <div class="w-[80%] lg:w-[40%] max-h-[110vh] flex flex-col bg-white mx-5 p-4 my-5">
 
         <div class="flex flex-row mt-2 mb-6">
 

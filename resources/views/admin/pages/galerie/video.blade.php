@@ -5,7 +5,7 @@
 <div class=" flex justify-center items-center">
 
 
-    <form action="{{route('galerie-save')}}" method="POST">
+    <form action="{{route('galerie-save')}}" method="POST" enctype="multipart/form-data" >
 
         @csrf
         
@@ -19,14 +19,30 @@
                     <img src="/landing_assets/assets/icon/video.png" alt="blogging" width="55" height="70" class="m-4">
         
                 </div>
+               
                 
                
                
+            </div>
+            <div class="flex flex-row justify-between items-center mb-2 mt-6">
+                <label for="stokage" class="mx-2 font_title_first lg:w-1/2 ">Stockage</label>
+                <select name="stokage" id="stokage" class="p-2 border-white bg-black rounded-md focus:outline-none  focus:border-[#4287f5] Placeholder" required>
+        
+                    <option value="Local" class="mx-8 Placeholder">Local</option>
+                    <option value="Youtube" class="mx-8 Placeholder">Youtube</option>
+                   
+                </select>
             </div>
 
             <div class="flex flex-row justify-between items-center mb-2 mt-6">
                 <label for="nom" class="mx-2 font_title_first lg:w-1/2">Nom </label>
                 <input type="text" class="form-control" value="{{old('nom')}}" id="nom" name="nom" placeholder="Nom de la video" required="">
+                
+            </div>
+            
+            <div class="hidden">
+                <label for="format" class="mx-2 font_title_first lg:w-1/2">Format</label>
+                <input type="format" class="form-control" value="video" id="nom" name="format">
                 
             </div>
         

@@ -16,7 +16,7 @@ Contact
         </ul>
       </div>
     </div>
-  </section>
+</section>
   <!-- Section Contact-->
   <section class="section section-variant-1 bg-gray-100">
     <div class="container">

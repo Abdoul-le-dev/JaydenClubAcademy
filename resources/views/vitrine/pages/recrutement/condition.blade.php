@@ -1,9 +1,8 @@
 @extends('vitrine.components.app')
 
 @section('page_title')
-A propos
+Condition admission
 @endsection
 
-@section('content')
-
+@section('page_content')
 @endsection

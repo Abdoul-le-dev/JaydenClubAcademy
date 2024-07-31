@@ -49,7 +49,8 @@ Route::get('/nosresultats', [DashboardController::class,'nosResultats'])->name('
 Route::get('/politique_de_confidentialite', [DashboardController::class,'politiqueC'])->name('pc-view');
 
 //recrutement
-Route::get('/recrutement', [RecrutementController::class,'index'])->name('recrutement-view');
+Route::get('/admission', [RecrutementController::class,'index'])->name('recrutement-view');
+Route::get('/condition_admission', [RecrutementController::class,'caView'])->name('recrutementCondition-view');
 
 
 //get data

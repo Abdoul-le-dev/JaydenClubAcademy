@@ -218,4 +218,8 @@ class DashboardController extends Controller
         return view('admin.pages.matches.update_match',['matche'=>$matche]);
     }
 
+    public function chat_view(){
+        return view('admin.pages.chat.index');
+    }
+
 }

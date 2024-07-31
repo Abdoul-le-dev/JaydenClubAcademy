@@ -15,6 +15,7 @@ use App\Http\Controllers\OfficielController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RecrutementController;
 use App\Http\Controllers\VitrineController;
+use App\Http\Controllers\ChatController;
 use App\Models\Equipe;
 use App\Models\Recrutement;
 use Illuminate\Support\Facades\Route;
@@ -142,5 +143,20 @@ Route::prefix('/dashboard')->group(function () {
     Route::put('/equipe/update/{id}', [EquipeController::class, 'update'])->name('equipe.update');
     Route::delete('/equipe/update/{id}', [EquipeController::class, 'delete'])->name('equipe.delete');
 
+    // chat
+    Route::get('/chat', [DashboardController::class, 'chat_view'])->name('chat.view');
+
+
 });
 
+
+// chat
+
+Route::get('/chat/messages/{conversationId}', [ChatController::class, 'getMessages'])->middleware('auth');
+Route::post('/chat/send', [ChatController::class, 'sendMessage'])->middleware('auth');
+Route::get('/chat/conversations/list', [ChatController::class, 'getUserConversations'])->middleware('auth');
+Route::post('/chat/conversations', [ChatController::class, 'createConversation'])->middleware('auth');
+Route::get('/chat/available-users/{userId}', [ChatController::class, 'getAvailableUsers'])->middleware('auth');
+Route::get('/chat/search-users/{keyword}', [ChatController::class, 'searchUsers'])->middleware('auth');
+Route::get('/chat/conversations/{conversationId}/details', [ChatController::class, 'getConversationDetails'])->middleware('auth');
+Route::get('/chat/conversations/{conversationId}/messages', [ChatController::class, 'getConversationMessages'])->middleware('auth');

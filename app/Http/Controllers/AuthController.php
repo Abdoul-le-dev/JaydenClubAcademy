@@ -22,7 +22,7 @@ class AuthController extends Controller
     public function login_view()
     {
         return view("auth.pages.login_register",['isLogin'=>true]);
-        
+
     }
     public function register_view()
     {
@@ -79,8 +79,8 @@ class AuthController extends Controller
         ]);
         if (Auth::attempt($request->only(['email', 'password']))) {
             $request->session()->regenerate();
-            return redirect()->intended(view('admin.pages.dashboard.index'));
 
+            return redirect()->intended('/dashboard');
             // if (auth()->user()->email_verified_at) {
             // } else {
             //     $user = User::find(auth()->user()->id);

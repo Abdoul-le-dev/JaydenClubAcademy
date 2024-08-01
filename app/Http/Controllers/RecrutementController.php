@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Recrutement;
 use App\Http\Requests\StoreRecrutementRequest;
 use App\Http\Requests\UpdateRecrutementRequest;
+use App\Models\Contact;
 
 class RecrutementController extends Controller
 {
@@ -21,7 +22,16 @@ class RecrutementController extends Controller
      */
     public function create()
     {
-        //
+        $post=[];
+
+        return view('admin.pages.contact.index',compact('post'));
+    }
+
+    public function liste() 
+    {
+        $listes= Contact::latest()->take(5)->get();
+
+        return view('admin.pages.contact.index',compact('listes'));
     }
 
     /**

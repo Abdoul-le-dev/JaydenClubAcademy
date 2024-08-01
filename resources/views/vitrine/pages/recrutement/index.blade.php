@@ -29,7 +29,8 @@ Admission
             <h1>Candidatez maintenant</h1>
         </div>
 
-        <form action="">
+        <form action="{{ route('recrutement-create')}}" method="POST">
+            @csrf
 
             <div>
                 <h3>Vous?</h3>
@@ -38,7 +39,7 @@ Admission
                 <div class="col-md-6">
                     <div class="form-wrap">
                     <label class="form-label" for="form-user-name-1">Votre Nom</label>
-                    <input class="form-input" id="form-user-name-1" type="text" name="name" required >
+                    <input class="form-input" id="form-user-name-1" type="text" name="nom" required >
                     
                     </div>
                 </div>
@@ -46,7 +47,7 @@ Admission
                 <div class="col-md-6">
                     <div class="form-wrap">
                     <label class="form-label" for="form-user-name-1">Votre Prénom</label>
-                    <input class="form-input" id="form-user-name-1" type="text" name="name" required >
+                    <input class="form-input" id="form-user-name-1" type="text" name="prenom" required >
                     
                     </div>
                 </div>
@@ -58,7 +59,7 @@ Admission
                 <div class="col-md-6">
                     <div class="form-wrap">
                       <label class="form-label" for="form-user-name-1">Votre Date de naissance</label>
-                      <input class="form-input" id="form-user-name-1" type="text" name="name" required >
+                      <input class="form-input" id="form-user-name-1" type="text" name="date" required >
                      
                     </div>
                 </div>
@@ -66,7 +67,7 @@ Admission
                 <div class="col-md-6">
                     <div class="form-wrap">
                       <label class="form-label" for="form-user-name-1">Votre genre</label>
-                      <input class="form-input" id="form-user-name-1" type="text" name="name" required >
+                      <input class="form-input" id="form-user-name-1" type="text" name="genre" required >
                      
                     </div>
                 </div>
@@ -77,7 +78,7 @@ Admission
                 <div class="col-md-6">
                     <div class="form-wrap">
                       <label class="form-label" for="form-user-name-1">Zone de residence actuel</label>
-                      <input class="form-input" id="form-user-name-1" type="text" name="name" required >
+                      <input class="form-input" id="form-user-name-1" type="text" name="residence" required >
                      
                     </div>
                 </div>
@@ -85,7 +86,7 @@ Admission
                 <div class="col-md-6">
                     <div class="form-wrap">
                       <label class="form-label" for="form-user-name-1">Votre Nationnalité</label>
-                      <input class="form-input" id="form-user-name-1" type="text" name="name" required >
+                      <input class="form-input" id="form-user-name-1" type="text" name="nationnalite" required >
                      
                     </div>
                 </div>
@@ -101,7 +102,7 @@ Admission
                 <div class="form-wrap">
 
                   <label class="form-label" for="form-message">Êtes vous scolarisé ? si oui ou ? votre niveau actuelle</label>
-                  <textarea class="form-input"  id="form-message" name="message" required></textarea>
+                  <textarea class="form-input"  id="form-message" name="message1" required></textarea>
                     
                 </div>
             </div>
@@ -109,7 +110,7 @@ Admission
             <div class="col-md-12 my-4">
                 <div class="form-wrap">
                   <label class="form-label" for="form-user-name-1">Êtes vous disponiblité pour un entretient virtuelle ? si oui quand ?</label>
-                  <textarea class="form-input" id="form-message" name="message" required></textarea>
+                  <textarea class="form-input" id="form-message" name="message2" required></textarea>
                  
                 </div>
             </div>
@@ -117,7 +118,7 @@ Admission
             <div class="col-md-12 my-4">
                 <div class="form-wrap">
                   <label class="form-label" for="form-message">Pourquoi le football ? et pourquoi nous ?</label>
-                  <textarea class="form-input" id="form-message" name="message" required></textarea>
+                  <textarea class="form-input" id="form-message" name="message3" required></textarea>
                  
                 </div>
             </div>
@@ -130,14 +131,14 @@ Admission
                 <div class="col-md-6">
                     <div class="form-wrap">
                       <label class="form-label" for="form-email">Votre mail ou celui de votre titeur légal</label>
-                      <input class="form-input" id="form-email" type="text" name="name" required >
+                      <input class="form-input" id="form-email" type="text" name="email" required >
                      
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-wrap">
                       <label class="form-label" for="form-user-phone">Votre numero de télephone ou celui de votre titeur légal</label>
-                      <input class="form-input" id="form-user-phone" type="text" name="name" required >
+                      <input class="form-input" id="form-user-phone" type="tel" name="telephone" required >
                      
                     </div>
                 </div>

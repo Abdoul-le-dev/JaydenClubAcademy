@@ -28,6 +28,7 @@ Route::get('/', [VitrineController::class,'index'])->name('Home');
 
 //contact
 Route::get('/contact', [ContactController::class,'index'])->name('contact-view');
+Route::post('/contact', [ContactController::class,'create'])->name('contact-create');
 
 //blog
 Route::get('/blog', [BlogController::class,'index'])->name('blog-view');
@@ -50,6 +51,7 @@ Route::get('/politique_de_confidentialite', [DashboardController::class,'politiq
 
 //recrutement
 Route::get('/admission', [RecrutementController::class,'index'])->name('recrutement-view');
+Route::post('/admission', [RecrutementController::class,'create'])->name('recrutement-create');
 Route::get('/condition_admission', [RecrutementController::class,'caView'])->name('recrutementCondition-view');
 
 
@@ -74,9 +76,8 @@ Route::prefix('/dashboard')->group(function () {
     Route::post('/blog/update/{id}', [DashboardController::class,'update'])->name('admin-blog-update');
     Route::get('/blog/delete/{id}', [DashboardController::class,'delete'])->name('admin-blog-delete');
 
-    //albums
-    Route::get('/album/add', [DashboardController::class,'addAlbums'])->name('album-add');
-    Route::get('/albums', [DashboardController::class,'albums'])->name('album-view');
+    Route::get('/recrutement', [RecrutementController::class,'liste'])->name('recrutement-liste');
+    Route::get('/contact', [ContactController::class,'liste'])->name('contact-liste');
 
     //galerie
     Route::get('/galerie', [DashboardController::class,'galerie'])->name('galerie-view');

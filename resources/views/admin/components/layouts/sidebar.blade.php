@@ -55,19 +55,12 @@
 
                     </ul>
                 </li>
+                
                 <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>Album</span></a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href='{{route('album-add')}}'>Ajouter un album</a></li>
-                        <li><a href='{{route('album-view')}}'>Liste des albums</a></li>
-
-                    </ul>
+                    <a class='waves-effect' href='{{route('recrutement-liste')}}'><i class="mdi mdi-account"></i><span>Recrutement</span></a>
                 </li>
                 <li>
-                    <a class='waves-effect' href='{{route('blog-view')}}'><i class="mdi mdi-account"></i><span>Recrutement</span></a>
-                </li>
-                <li>
-                    <a class='waves-effect' href='{{route('blog-view')}}'><i class="mdi mdi-account"></i><span>Contact</span></a>
+                    <a class='waves-effect' href='{{route('contact-liste')}}'><i class="mdi mdi-account"></i><span>Contact</span></a>
                 </li>
 
 

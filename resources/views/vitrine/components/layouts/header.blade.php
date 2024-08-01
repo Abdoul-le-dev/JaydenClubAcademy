@@ -98,22 +98,7 @@
               <!-- RD Navbar Nav-->
                                 <ul class="rd-navbar-nav">
                                     <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">JAYDEN FOOTBALL ACADEMY</a>
-                                                        <ul class="rd-menu rd-navbar-dropdown">
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Notre approche pédagogie</a>
-                                                                              <ul class="rd-menu rd-navbar-dropdown">
-                                                                              
-                                                                                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="../rugby">Rugby</a>
-                                                                                </li>
-                                                                              </ul>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Programe Sportif</a>
-                                                                              <ul class="rd-menu rd-navbar-dropdown">
-                                                                                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="index.html">Home Soccer</a>
-                                                                                </li>
-                                                                              
-                                                                              </ul>
-                                                          </li>
-                                                        </ul>
+                                                       
                                     </li>
                                     <li class="rd-nav-item"><a class="rd-nav-link" href="#">Blog</a>
                                                                           <article class="rd-menu rd-navbar-megamenu rd-megamenu-2-columns context-light">
@@ -159,7 +144,7 @@
                                                                                   <div class="col-lg-6">
                                                                                           <!-- Post Classic-->
                                                                                           <article class="post-classic">
-                                                                                            <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/megamenu-post-1-93x94.jpg" alt="" width="93" height="94"></a></div>
+                                                                                            <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="" alt="" width="93" height="94"></a></div>
                                                                                             <div class="post-classic-main">
                                                                                               <!-- Badge-->
                                                                                               <div class="badge badge-secondary">The Team
@@ -174,7 +159,7 @@
                                                                                   <div class="col-lg-6">
                                                                                           <!-- Post Classic-->
                                                                                           <article class="post-classic">
-                                                                                            <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/megamenu-post-2-93x94.jpg" alt="" width="93" height="94"></a></div>
+                                                                                            <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="" alt="" width="93" height="94"></a></div>
                                                                                             <div class="post-classic-main">
                                                                                               <!-- Badge-->
                                                                                               <div class="badge badge-primary">The League
@@ -189,7 +174,7 @@
                                                                                   <div class="col-lg-6">
                                                                                           <!-- Post Classic-->
                                                                                           <article class="post-classic">
-                                                                                            <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/megamenu-post-3-93x94.jpg" alt="" width="93" height="94"></a></div>
+                                                                                            <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="" alt="" width="93" height="94"></a></div>
                                                                                             <div class="post-classic-main">
                                                                                               <!-- Badge-->
                                                                                               <div class="badge badge-primary">The League
@@ -204,7 +189,7 @@
                                                                                   <div class="col-lg-6">
                                                                                           <!-- Post Classic-->
                                                                                           <article class="post-classic">
-                                                                                            <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="images/megamenu-post-4-93x94.jpg" alt="" width="93" height="94"></a></div>
+                                                                                            <div class="post-classic-aside"><a class="post-classic-figure" href="blog-post.html"><img src="" alt="" width="93" height="94"></a></div>
                                                                                             <div class="post-classic-main">
                                                                                               <!-- Badge-->
                                                                                               <div class="badge badge-primary">The League
@@ -229,7 +214,7 @@
                                                                                                   <div class="event-teaser-teams">
                                                                                                     <div class="event-teaser-team">
                                                                                                       <div class="unit unit-spacing-xs unit-horizontal align-items-center">
-                                                                                                        <div class="unit-left"><img class="event-teaser-team-image" src="images/team-bavaria-fc-38x50.png" alt="" width="38" height="50">
+                                                                                                        <div class="unit-left"><img class="event-teaser-team-image" src="" alt="" width="38" height="50">
                                                                                                         </div>
                                                                                                         <div class="unit-body">
                                                                                                           <p class="heading-7">Bavaria</p>
@@ -240,7 +225,7 @@
                                                                                                     <div class="event-teaser-team-divider"><span class="event-teaser-team-divider-text">VS</span></div>
                                                                                                     <div class="event-teaser-team">
                                                                                                       <div class="unit unit-spacing-xs unit-horizontal align-items-center">
-                                                                                                        <div class="unit-left"><img class="event-teaser-team-image" src="images/team-sportland-41x55.png" alt="" width="41" height="55">
+                                                                                                        <div class="unit-left"><img class="event-teaser-team-image" src="" alt="" width="41" height="55">
                                                                                                         </div>
                                                                                                         <div class="unit-body">
                                                                                                           <p class="heading-7">sportland</p>
@@ -258,62 +243,15 @@
                                                                                               </article>
                                                                           </article>
                                     </li>
-                                    <li class="rd-nav-item"><a class="rd-nav-link" href="#">Gallery</a>
-                                                        <ul class="rd-menu rd-navbar-dropdown">
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-elements.html">Blog Elements</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="news-1.html">News 1</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="news-2.html">News 2</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="news-3.html">News 3</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="news-4.html">News 4</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="news-5.html">News 5</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Blog post</a>
-                                                          </li>
-                                                        </ul>
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('galerie-view')}}">Gallery</a>
+                                                        
                                     </li>
-                                    <li class="rd-nav-item"><a class="rd-nav-link" href="#">Joueurs</a>
-                                                        <ul class="rd-menu rd-navbar-dropdown">
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="sport-elements.html">Sport Elements</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="game-overview.html">Game Overview</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="roster.html">Roster</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="standings.html">Standings</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="latest-results-1.html">Latest Results 1</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="latest-results-2.html">Latest Results 2</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="game-schedule.html">Game schedule</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="player-page.html">Player Page</a>
-                                                          </li>
-                                                        </ul>
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('joueur-view')}}">Joueurs</a>
+                                                       
                                     </li>
 
-                                    <li class="rd-nav-item"><a class="rd-nav-link" href="#">Qui sommes nous ?</a>
-                                                        <ul class="rd-menu rd-navbar-dropdown">
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="shop-elements.html">Shop Elements</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-shop.html">Grid Shop</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="list-shop.html">List Shop</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="fullwidth-shop.html">Fullwidth Shop</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="product-page.html">Product Page</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="shopping-cart.html">Shopping Cart</a>
-                                                          </li>
-                                                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="checkout.html">Checkout</a>
-                                                          </li>
-                                                        </ul>
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('apropos-view')}}">Qui sommes nous ?</a>
+                                                        
                                     </li>
                                     
                                    
@@ -325,7 +263,7 @@
                                   </li>
                                 </ul>
               <div class="">
-                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Recrutement</a>
+                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('recrutement-view')}}">Recrutement</a>
                   <ul class="rd-menu rd-navbar-dropdown">
                     <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="checkout.html">Admission</a>
                     </li>

@@ -27,4 +27,5 @@
       <button class="button button-lg button-primary button-block" type="submit">Sign in</button>
     </form>
     <div class="group-sm group-sm-justify group-middle"><a class="button button-google button-icon button-icon-left button-round" href="#"><span class="icon fa fa-google-plus"></span><span>Google+</span></a><a class="button button-twitter button-icon button-icon-left button-round" href="#"><span class="icon fa fa-twitter"></span><span>Twitter</span></a><a class="button button-facebook button-icon button-icon-left button-round" href="#"><span class="icon fa fa-facebook"></span><span>Facebook</span></a></div>
+    <a class="my-6" href="{{route('password_reset.view')}}">J'ai oublié mon mot de passe</a>
   </div>

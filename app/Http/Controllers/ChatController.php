@@ -138,6 +138,7 @@ public function getConversationDetails($conversationId)
         ->join('users', 'chat_participation.messageable_id', '=', 'users.id')
         ->where('chat_messages.conversation_id', $conversationId)
         ->select('chat_messages.*','chat_participation.messageable_id')
+        ->orderBy('created_at','asc')
         ->get();
 
     return response()->json([
@@ -166,6 +167,7 @@ public function getConversationMessages($conversationId)
         ->join('users', 'chat_participation.messageable_id', '=', 'users.id')
         ->where('chat_messages.conversation_id', $conversationId)
         ->select('chat_messages.*','chat_participation.messageable_id')
+        ->orderBy('created_at','asc')
         ->get();
 
     return response()->json([
@@ -175,6 +177,41 @@ public function getConversationMessages($conversationId)
     ]);
 }
 
+
+public function checkForNewMessages(Request $request)
+{
+    $user = auth()->user(); // Obtenez l'utilisateur authentifié
+    $user=User::find($user->id);
+
+
+
+    if (is_null($user->last_checked_at)) {
+        $user->last_checked_at = $user->created_at;
+    }
+
+    // Obtenez les conversations de l'utilisateur
+    $conversations = Conversation::whereHas('participants', function ($query) use ($user) {
+        $query->where('messageable_id', $user->id);
+    })->get();
+
+    $newMessagesExist = false;
+
+    // Vérifiez chaque conversation pour de nouveaux messages
+    foreach ($conversations as $conversation) {
+        $lastMessage = $conversation->messages()->orderBy('created_at', 'desc')->first();
+        if ($lastMessage && $lastMessage->created_at->gte($user->last_checked_at)) {
+            $newMessagesExist = true;
+            break;
+        }
+    }
+
+    // Mettez à jour l'heure de la dernière vérification
+    $user->last_checked_at = now();
+    $user->save();
+
+
+    return response()->json(['new_messages' => $newMessagesExist,'user_id'=>$user->id]);
+}
 
 
 

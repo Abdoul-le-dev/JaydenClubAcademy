@@ -4,6 +4,8 @@
 @section('page_css')
         <!-- Dropify css -->
         <link href="/admin_assets/plugins/dropify/dropify.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/admin_assets/editor/summernote-bs4.css">
+
 @endsection
 @section('page_content')
 <div class="container-fluid">
@@ -89,6 +91,13 @@
                               Bon travail!
                             </div>
                           </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea name="description" class="editor" >{{$officiel->description}}</textarea>
+                                {{-- <div class="editor" ></div> --}}
+                            </div>
+                          </div>
 
 
 
@@ -129,5 +138,22 @@
 
 <!-- Init js-->
 <script src="/admin_assets/assets/pages/fileuploads-demo.js"></script>
+
+<script src="/admin_assets/editor/summernote-bs4.min.js"></script>
+<script>
+$('.editor').summernote({
+    fontSizes: ['10', '14'],
+    toolbar: [
+        // [groupName, [list of button]]
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['font', ['strikethrough']],
+        ['fontsize', ['fontsize']],
+        ['para', ['ul', 'ol', 'paragraph']]
+    ],
+    placeholder: 'Write here ....',
+    tabsize: 2,
+    height: 200
+});
+</script>
 
 @endsection

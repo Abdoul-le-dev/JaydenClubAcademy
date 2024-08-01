@@ -1,5 +1,9 @@
 @extends('admin.components.app')
 
+@section('page_css')
+
+@endsection
+
 @section('page_content')
 <div class="container-fluid">
 
@@ -106,3 +110,4 @@
 
 </div> <!-- container-fluid -->
 @endsection
+

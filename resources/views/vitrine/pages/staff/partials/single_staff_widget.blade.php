@@ -45,18 +45,7 @@
           </div>
           <!--  Block Player Info-->
           <div class="block-player-info">
-            <h4>Biography</h4>
-            <!-- Quote Modern-->
-            <article class="quote-modern">
-              <div class="quote-modern-text">
-                <p>Jack Windsor is the best player in our team. Technically perfect, he brings together unselfishness, pace, composure and goals, which make him number one.</p>
-              </div>
-            </article>
-            <div class="block-player-info-content">
-              <p>Jack Windsor's footballing career started in 1995 at Newell's Old Boys, where he played until the year 2000. At the age of 13, Jack crossed the Atlantic to try his luck in Barcelona, and joined the Under 14s. He made spectacular progress at each of the different age levels, climbing through the ranks to Atletico C, followed by Atletico B and the first team in record time.</p>
-              <p>As of 2024 Jack Windsor is worth an estimated $80 million, taking into account his salary plus bonuses and endorsements, according to Forbes.com. That makes him the second highest-paid soccer player and the third highest-paid athlete in the world.</p>
-              <p>At the Under 20 World Cup in Holland, Windsor not only won the title with USA, but was also the leading goalscorer and was voted best player in the tournament.</p>
-            </div>
+            {!! $officiel->description !!}
 
         </div>
     </div>

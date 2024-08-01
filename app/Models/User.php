@@ -46,7 +46,29 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
+            'last_checked_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Get the user's role as a string.
+     *
+     * @return string
+     */
+    public function getRole()
+    {
+        switch ($this->role) {
+            case 1:
+                return 'Joueur';
+            case 2:
+                return 'Entraineur';
+            case 3:
+                return 'Admin';
+            case 0:
+                return 'Anonyme';
+            default:
+                return 'Inconnu';
+        }
     }
 }

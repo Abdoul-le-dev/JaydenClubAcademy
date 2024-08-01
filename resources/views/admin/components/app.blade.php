@@ -20,6 +20,11 @@
         <link href="/admin_assets/assets/css/theme.min.css" rel="stylesheet" type="text/css">
         <script src="https://cdn.tailwindcss.com"></script>
         @yield('page_css')
+        <style>
+            .select2{
+                display: none;
+            }
+        </style>
 
     </head>
 

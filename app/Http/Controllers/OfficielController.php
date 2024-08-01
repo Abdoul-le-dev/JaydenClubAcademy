@@ -27,6 +27,7 @@ class OfficielController extends Controller
     public function create(Request $request)
     {
 
+
         //
         $credentials = $request->validate([
             'email' => ['required', 'email', 'unique:officiels'],
@@ -53,6 +54,7 @@ class OfficielController extends Controller
             'email' => $request->email,
             'fonction' => $request->fonction,
             'telephone' => $request->telephone,
+            'description' => $request->description,
             'photo' => $request->file('photo')!=null ? $request->file('photo')->store('public/officiels_photos') : null
         ]);
 
@@ -116,6 +118,7 @@ class OfficielController extends Controller
             'email' => $request->email,
             'fonction' => $request->fonction,
             'telephone' => $request->telephone,
+            'description' => $request->description,
 
         ]);
 

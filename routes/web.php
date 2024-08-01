@@ -16,6 +16,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\RecrutementController;
 use App\Http\Controllers\VitrineController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\UserController;
 use App\Models\Equipe;
 use App\Models\Recrutement;
 use Illuminate\Support\Facades\Route;
@@ -146,7 +147,16 @@ Route::prefix('/dashboard')->group(function () {
     Route::delete('/equipe/update/{id}', [EquipeController::class, 'delete'])->name('equipe.delete');
 
     // chat
-    Route::get('/chat', [DashboardController::class, 'chat_view'])->name('chat.view');
+    Route::get('/chat', [DashboardController::class, 'chat_view'])->name('dashboard.chat.view')->middleware('auth');
+
+      // account
+    Route::get('/profil', [DashboardController::class, 'profil_view'])->name('dashboard.profil.view')->middleware('auth');
+    Route::post('/profil/password', [UserController::class, 'update_password'])->name('dashboard.profil.update.password')->middleware('auth');
+    Route::post('/profil/update', [UserController::class, 'update_profil'])->name('dashboard.profil.update')->middleware('auth');
+    Route::get('/accounts', [DashboardController::class, 'accounts_view'])->name('dashboard.accounts.view')->middleware('auth');
+    Route::post('/accounts/new', [UserController::class, 'add_user'])->name('dashboard.accounts.create')->middleware('auth');
+    Route::post('/accounts/{id}/update', [UserController::class, 'update_user'])->name('dashboard.accounts.update')->middleware('auth');
+    Route::delete('/accounts/{id}/delete', [UserController::class, 'delete_user'])->name('dashboard.accounts.delete')->middleware('auth');
 
 
 });
@@ -162,3 +172,4 @@ Route::get('/chat/available-users/{userId}', [ChatController::class, 'getAvailab
 Route::get('/chat/search-users/{keyword}', [ChatController::class, 'searchUsers'])->middleware('auth');
 Route::get('/chat/conversations/{conversationId}/details', [ChatController::class, 'getConversationDetails'])->middleware('auth');
 Route::get('/chat/conversations/{conversationId}/messages', [ChatController::class, 'getConversationMessages'])->middleware('auth');
+Route::get('/chat/conversations/messages/latest', [ChatController::class, 'checkForNewMessages'])->middleware('auth');

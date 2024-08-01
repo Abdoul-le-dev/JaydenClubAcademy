@@ -17,6 +17,7 @@ class Officiel extends Model
         'email',
         'telephone',
         'fonction',
-        'photo'
+        'photo',
+        'description',
     ];
 }

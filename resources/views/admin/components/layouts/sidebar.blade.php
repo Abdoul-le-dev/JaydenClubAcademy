@@ -63,6 +63,17 @@
                     <a class='waves-effect' href='{{route('contact-liste')}}'><i class="mdi mdi-account"></i><span>Contact</span></a>
                 </li>
 
+                <li>
+                    <a class='waves-effect' href='{{route('dashboard.chat.view')}}'><i class="mdi mdi-chat"></i><span>Messagerie</span></a>
+                </li>
+
+                <li>
+                    <a class='waves-effect' href='{{route('dashboard.accounts.view')}}'><i class="mdi mdi-account-group"></i><span>Comptes</span></a>
+                </li>
+                <li>
+                    <a class='waves-effect' href='{{route('dashboard.profil.view')}}'><i class="mdi mdi-account"></i><span>Profil</span></a>
+                </li>
+
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect"><i class="mdi mdi-diamond-stone"></i><span>UI Elements</span></a>

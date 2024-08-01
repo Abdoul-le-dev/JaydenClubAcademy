@@ -7,6 +7,7 @@ use App\Models\Joueur;
 use App\Models\Matche;
 use App\Models\Officiel;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -220,6 +221,16 @@ class DashboardController extends Controller
 
     public function chat_view(){
         return view('admin.pages.chat.index');
+    }
+
+
+    public function accounts_view(){
+        $users=User::all();
+        return view('admin.pages.accounts.index',['users'=>$users]);
+    }
+
+    public function profil_view(){
+        return view('admin.pages.profil.index');
     }
 
 }

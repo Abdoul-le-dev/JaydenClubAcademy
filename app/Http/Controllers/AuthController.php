@@ -147,7 +147,7 @@ class AuthController extends Controller
 
         //envoie mail
         $user = User::where('email', $request->email)->first();
-       // $user->notify(new ForgetPasswordNotification($token));
+       $user->notify(new ForgetPasswordNotification($token));
         return view('auth.pages.password_forget_message',['email'=>$request->email ]);
     }
     public function change_password_view($token)

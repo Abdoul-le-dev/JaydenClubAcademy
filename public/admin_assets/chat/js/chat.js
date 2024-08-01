@@ -38,7 +38,6 @@ $(document).ready(function () {
                 _token: $('meta[name="csrf-token"]').attr('content') // CSRF token pour les requêtes POST
             },
             success: function (data) {
-                console.log('créer avec succès')
                 loadConversations();
             },
             error: function (e){
@@ -54,7 +53,6 @@ $(document).ready(function () {
             method: 'GET',
             success: function(data) {
                 $('#conversation-list').empty();
-                console.log('data',data,'user_id',userId)
                 data.forEach(conversation => {
                     let friend = conversation.participants.find(p => p.id != userId);
 
@@ -86,7 +84,6 @@ $(document).ready(function () {
                     // Add 'active' class to the clicked chat-contact-item element
                      $(this).addClass('active');
                      active_conversation_id=conversationId;
-                    console.log('conversations_id',conversationId);
                     loadConversationDetails(conversationId);
                 });
             }
@@ -103,7 +100,7 @@ $(document).ready(function () {
             success: function(data) {
                 let friend = data.participants.find(p => p.id != userId);
                 let user = data.participants.find(p => p.id == userId);
-                console.log('message id',data,userId);
+
 
                 $('#chat-container').html(`
                         <div class="tab-pane card-chat-pane active" id="chat-${conversationId}" role="tabpanel" aria-labelledby="chat-link-${conversationId}">
@@ -133,7 +130,7 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <form class="chat-editor-area" data-conversation-id="${conversationId}">
-                            <div class="emojiarea-editor outline-none scrollbar" contenteditable="true"></div>
+                            <div class="emojiarea-editor outline-none scrollbar" placeholder="Ecrire ton message ici" contenteditable="true"></div>
                             <input class="d-none" type="file" id="chat-file-upload" />
                             <label class="chat-file-upload cursor-pointer" for="chat-file-upload">
                                 <span class="fas fa-paperclip"></span>
@@ -171,7 +168,7 @@ $(document).ready(function () {
             },
             success: function() {
                 loadConvMessages(conversationId);
-                loadConversations();
+                // loadConversations();
             }
         });
     }
@@ -294,35 +291,36 @@ $(document).ready(function () {
                 },
                 success: function (data) {
                     $('#message').val('');
-                    loadMessages(conversationId);
+                    loadConvMessages(conversationId);
                 }
             });
         }
     });
 
     // Vérifier les nouveaux messages toutes les secondes
-    function checkNewMessages() {
-        var conversationId = $('#conversation-id').val();
+    function checkForNewMessages() {
         $.ajax({
-            url: '/chat/conversations/' + userId,
+            url: '/chat/conversations/messages/latest',
             method: 'GET',
-            success: function (data) {
-                var hasNewMessage = false;
-                data.forEach(function (conversation) {
-                    if (conversation.latest_message && conversation.latest_message.is_new) {
-                        hasNewMessage = true;
-                    }
-                });
-
-                if (hasNewMessage) {
+            success: function(data) {
+                if (data.new_messages) {
                     loadConversations();
-                    if (conversationId) {
-                        loadMessages(conversationId);
+                    let activeConversationId = $('.chat-contact-item.active').data('conversation-id');
+                       console.log('convçid',activeConversationId);
+                    if (activeConversationId) {
+                        loadConvMessages(activeConversationId);
                     }
                 }
+            },
+            error: function (params) {
+                console.log(params);
             }
         });
     }
+
+    setInterval(function() {
+        checkForNewMessages();
+    }, 1000);
 
     // setInterval(checkNewMessages, 1000); // Vérifier les nouveaux messages toutes les secondes
 

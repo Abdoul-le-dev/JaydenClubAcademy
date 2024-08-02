@@ -38,7 +38,7 @@ Route::get('/article', [PostController::class,'show'])->name('model-article');
 
 
 //galerie
-Route::get('/galerie', [DashboardController::class,'galeries'])->name('galerie-view');
+Route::get('/galerie', [DashboardController::class,'galeries'])->name('galerie-views');
 
 //joueur
 Route::get('/nos_joueurs', [JoueurController::class,'index'])->name('nosJoueurs-view');
@@ -79,6 +79,8 @@ Route::prefix('/dashboard')->group(function () {
 
     Route::get('/recrutement', [RecrutementController::class,'liste'])->name('recrutement-liste');
     Route::get('/contact', [ContactController::class,'liste'])->name('contact-liste');
+    Route::get('/recrutement/see/{id}', [RecrutementController::class,'voir'])->name('recrutement-voir');
+  
 
     //galerie
     Route::get('/galerie', [DashboardController::class,'galerie'])->name('galerie-view');

@@ -243,7 +243,7 @@
                                                                                               </article>
                                                                           </article>
                                     </li>
-                                    <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('galerie-view')}}">Gallery</a>
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('galerie-views')}}">Gallery</a>
                                                         
                                     </li>
                                     <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('joueur-view')}}">Joueurs</a>

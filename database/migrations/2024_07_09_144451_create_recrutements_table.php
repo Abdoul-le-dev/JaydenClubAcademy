@@ -12,19 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('recrutements', function (Blueprint $table) {
-            $table->id('id');
-            $table->string('nom_joueur');
-            $table->date('date_naissance');
-            $table->string('position');
-            $table->integer('taille');
-            $table->integer('poids');
-            $table->string('email_contact');
-            $table->string('telephone_contact');
-            $table->string('adresse');
-            $table->string('ville');
-            $table->string('pays');
-            $table->string('club_precedent')->nullable();
-            $table->text('objectif_et_details')->nullable();
+            $table->id();
+            $table->string('nom');
+            $table->string('prenom');
+            $table->string('date'); // Assuming this is a date field
+            $table->string('genre');
+            $table->string('residence');
+            $table->string('nationnalite');
+            $table->text('message1');
+            $table->text('message2');
+            $table->text('message3');
+            $table->string('email');
+            $table->string('telephone');
             $table->timestamps();
         });
     }

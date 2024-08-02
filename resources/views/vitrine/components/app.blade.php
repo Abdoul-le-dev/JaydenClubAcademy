@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
     <link rel="stylesheet" href="/landing_assets/css/bootstrap.css">
     <link rel="stylesheet" href="/landing_assets/css/fonts.css">
+    <link rel="stylesheet" href="/landing_assets/css/font.css">
+    <link rel="stylesheet" href="/landing_assets/css/tailwindcss.css">
     <link rel="stylesheet" href="/landing_assets/css/style.css" id="main-styles-link">
     <script src="https://cdn.tailwindcss.com"></script>
     @yield('page_css')

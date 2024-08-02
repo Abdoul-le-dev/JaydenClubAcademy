@@ -1,0 +1,14 @@
+@font-face {
+    font-family:'paragrah';
+    src: url('../font/titi/TitilliumWeb-Regular.ttf') format(truetype);
+}
+.paragraph
+{
+    font-family: paragrah 
+    
+}
+p
+{
+    font-family: paragrah 
+
+}

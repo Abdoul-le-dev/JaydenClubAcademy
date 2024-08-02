@@ -20,8 +20,35 @@ Admission
     </div>
 </section>
 
+<div class="flex w-full bg-[#F3F4F6] ">
+    @if (session('success'))
+      <div class="bg-green-100 border-t-4 border-green-500 rounded-b text-green-900 px-4 py-3 shadow-md mb-5 w-full" role="alert">
+          <div class="flex">
+              <div class="py-1"><svg class="fill-current h-6 w-6 text-green-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+              <div>
+            
+              <p class="text-sm Placeholder ">{{ session('success') }}</p>
+              </div>
+          </div>
+      </div>
+    @endif
+    @if (session('error'))
+        <div class="bg-red-100 border-t-4 border-green-500 rounded-b text-green-900 px-4 py-3 shadow-md mb-5" role="alert">
+            <div class="flex">
+                <div class="py-1"><svg class="fill-current h-6 w-6 text-gred-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+                <div>
+              
+                <p class="text-sm Placeholder">{{ session('error') }}</p>
+                </div>
+            </div>
+        </div>
+    @endif
+</div>
+
 
 <div class=" bg-[#F3F4F6]  flex flex-col w-full sm:justify-center  sm:items-center lg:flex-row ">
+
+    
 
     <div class="w-[80%] lg:w-[60%] mt-10 mx-5 p-4 shadow rounded-sm bg-white my-5">
 
@@ -46,8 +73,8 @@ Admission
 
                 <div class="col-md-6">
                     <div class="form-wrap">
-                    <label class="form-label" for="form-user-name-1">Votre Prénom</label>
-                    <input class="form-input" id="form-user-name-1" type="text" name="prenom" required >
+                    <label class="form-label" for="form-user-name-2">Votre Prénom</label>
+                    <input class="form-input" id="form-user-name-2" type="text" name="prenom" required >
                     
                     </div>
                 </div>
@@ -58,16 +85,16 @@ Admission
 
                 <div class="col-md-6">
                     <div class="form-wrap">
-                      <label class="form-label" for="form-user-name-1">Votre Date de naissance</label>
-                      <input class="form-input" id="form-user-name-1" type="text" name="date" required >
+                      <label class="form-label" for="form-user-name-3">Votre Date de naissance</label>
+                      <input class="form-input" id="form-user-name-3" type="text" name="date" required >
                      
                     </div>
                 </div>
     
                 <div class="col-md-6">
                     <div class="form-wrap">
-                      <label class="form-label" for="form-user-name-1">Votre genre</label>
-                      <input class="form-input" id="form-user-name-1" type="text" name="genre" required >
+                      <label class="form-label" for="form-user-name-4">Votre genre</label>
+                      <input class="form-input" id="form-user-name-4" type="text" name="genre" required >
                      
                     </div>
                 </div>
@@ -77,16 +104,16 @@ Admission
 
                 <div class="col-md-6">
                     <div class="form-wrap">
-                      <label class="form-label" for="form-user-name-1">Zone de residence actuel</label>
-                      <input class="form-input" id="form-user-name-1" type="text" name="residence" required >
+                      <label class="form-label" for="form-user-name-5">Zone de residence actuel</label>
+                      <input class="form-input" id="form-user-name-5" type="text" name="residence" required >
                      
                     </div>
                 </div>
     
                 <div class="col-md-6">
                     <div class="form-wrap">
-                      <label class="form-label" for="form-user-name-1">Votre Nationnalité</label>
-                      <input class="form-input" id="form-user-name-1" type="text" name="nationnalite" required >
+                      <label class="form-label" for="form-user-name-6">Votre Nationnalité</label>
+                      <input class="form-input" id="form-user-name-6" type="text" name="nationnalite" required >
                      
                     </div>
                 </div>
@@ -109,16 +136,16 @@ Admission
 
             <div class="col-md-12 my-4">
                 <div class="form-wrap">
-                  <label class="form-label" for="form-user-name-1">Êtes vous disponiblité pour un entretient virtuelle ? si oui quand ?</label>
-                  <textarea class="form-input" id="form-message" name="message2" required></textarea>
+                  <label class="form-label" for="form-user-name-7">Êtes vous disponiblité pour un entretient virtuelle ? si oui quand ?</label>
+                  <textarea class="form-input" id="form-user-name-7" name="message2" required></textarea>
                  
                 </div>
             </div>
 
             <div class="col-md-12 my-4">
                 <div class="form-wrap">
-                  <label class="form-label" for="form-message">Pourquoi le football ? et pourquoi nous ?</label>
-                  <textarea class="form-input" id="form-message" name="message3" required></textarea>
+                  <label class="form-label" for="form-messages">Pourquoi le football ? et pourquoi nous ?</label>
+                  <textarea class="form-input" id="form-messages" name="message3" required></textarea>
                  
                 </div>
             </div>

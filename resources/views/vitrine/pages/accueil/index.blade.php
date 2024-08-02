@@ -83,7 +83,7 @@ Acceuil
 
  <div class="flex flex-col justify-center items-center w-[40%] ">
     <h3 class="text-3xl font-semibold mb-4">JAYDEN FOOTBALL ACADEMY</h3>
-    <p class="text-gray-700 mb-4 p-2">
+    <p class="text-gray-700 mb-4 p-2 paragraph">
       Fondée en mars 2024 et basée au Bénin, Jayden Football Academy se consacre à la formation et au développement des talents footballistiques. Notre objectif est d'offrir à chaque jeune talent la possibilité de s'épanouir, quel que soit son contexte financier. Nous recrutons des joueurs prometteurs à travers l'Afrique, leur fournissant une formation de qualité et des opportunités de développement professionnel dans le monde du football.
     </p>
     <a href="our-club/index.htm" class="mt-4 inline-block px-6 py-3 hover:text-white hover:bg-black border border-gray-300 text-gray-700 rounded-md ">

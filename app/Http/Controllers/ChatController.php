@@ -28,12 +28,30 @@ class ChatController extends Controller
         $conversation = Chat::conversations()->getById($conversationId);
         $user = User::find($userId);
 
-        $message = Chat::message($messageText)
+        if ($request->hasFile('files')) {
+            $my_files=[];
+            foreach ($request->file('files') as $file) {
+                $path = $file->store('public/messages_attachment');
+                $my_files[]=[
+                    'file_url' => $path,
+                    'file_name' => $file->getClientOriginalName()
+                ];
+            }
+             Chat::message($messageText!=null ? $messageText : '')
+                ->type('attachment')
+                ->data($my_files)
+                ->from($user)
+                ->to($conversation)
+                ->send();
+
+        }else{
+            Chat::message($messageText)
             ->from($user)
             ->to($conversation)
             ->send();
+        }
 
-        return response()->json($message);
+        return response()->json($messageText);
     }
 
     public function getUserConversations()

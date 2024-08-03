@@ -5,6 +5,6 @@
 */
 
 
-$(function () {
-  $('[data-plugin="knob"]').knob();
-});
+// $(function () {
+//   $('[data-plugin="knob"]').knob();
+// });

@@ -333,7 +333,7 @@
 				})
 			}
 		}
-		
+
 		/**
 		 * toggleSwiperCaptionAnimation
 		 * @description  toggle swiper animations on active slides
@@ -341,7 +341,7 @@
 		function toggleSwiperCaptionAnimation(swiper) {
 			let prevSlide = $(swiper.$el[0]),
 				nextSlide = $(swiper.slides[swiper.activeIndex]);
-			
+
 			prevSlide
 				.find("[data-caption-animate]")
 				.each(function () {
@@ -351,14 +351,14 @@
 						.removeClass($this.attr("data-caption-animate"))
 						.addClass("not-animated");
 				});
-			
+
 			nextSlide
 				.find("[data-caption-animate]")
 				.each(function () {
 					let $this = $(this),
 						delay = $this.attr("data-caption-delay");
-					
-					
+
+
 					if (!isNoviBuilder) {
 						setTimeout(function () {
 							$this
@@ -1300,7 +1300,7 @@
 						init: function () {
 							setBackgrounds(this);
 							setHoverAutoplay(this);
-							
+
 							toggleSwiperCaptionAnimation(this);
 							initLightGalleryItem($(node).find('[data-lightgallery="item"]'), 'lightGallery-in-carousel');
 
@@ -1886,37 +1886,37 @@
 				}
 			});
 
-			document.documentElement.addEventListener('theme-color-change', function (event) {
-				document.querySelector(event.switcher.selectors.color + '[name="' + event.variable + '"]').style.backgroundColor = event.value;
-			});
+			// document.documentElement.addEventListener('theme-color-change', function (event) {
+			// 	document.querySelector(event.switcher.selectors.color + '[name="' + event.variable + '"]').style.backgroundColor = event.value;
+			// });
 
-			var switcher = themeSwitcherInit({
-				variablesFallback: isIE,
-				cookie:            false,
-				themes:            {
-					"soccer":     {
-						styles: 'css/style.css'
-					},
-					"baseball":   {
-						styles: 'css/style-baseball.css'
-					},
-					"basketball": {
-						styles: 'css/style-basketball.css'
-					},
-					"billiards":  {
-						styles: 'css/style-billiards.css'
-					},
-					"bowling":    {
-						styles: 'css/style-bowling.css'
-					},
-					"rugby":      {
-						styles: 'css/style-rugby.css'
-					},
-					"tennis":      {
-						styles: 'css/style-tennis.css'
-					}
-				}
-			});
+			// var switcher = themeSwitcherInit({
+			// 	variablesFallback: isIE,
+			// 	cookie:            false,
+			// 	themes:            {
+			// 		"soccer":     {
+			// 			styles: 'css/style.css'
+			// 		},
+			// 		"baseball":   {
+			// 			styles: 'css/style-baseball.css'
+			// 		},
+			// 		"basketball": {
+			// 			styles: 'css/style-basketball.css'
+			// 		},
+			// 		"billiards":  {
+			// 			styles: 'css/style-billiards.css'
+			// 		},
+			// 		"bowling":    {
+			// 			styles: 'css/style-bowling.css'
+			// 		},
+			// 		"rugby":      {
+			// 			styles: 'css/style-rugby.css'
+			// 		},
+			// 		"tennis":      {
+			// 			styles: 'css/style-tennis.css'
+			// 		}
+			// 	}
+			// });
 		}
 	});
 }());

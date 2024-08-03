@@ -12,7 +12,7 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    use Messageable;
+    //use Messageable;
 
     /**
      * The attributes that are mass assignable.

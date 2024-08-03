@@ -15,8 +15,10 @@ class BlogController extends Controller
     public function create(StorePostRequest $request)
     {
 
+        dd($request);
         $titre = $request->titre;
         $contenu = $request->description;
+        $news =$request->entete;
         $format = $request->format;
         $video_link = $request->video_link ;
 
@@ -30,7 +32,7 @@ class BlogController extends Controller
             
             $post = Post::create([
                     'titre'=>$request->titre,
-                    'entete'=> 'news',
+                    'entete'=> $news,
                     'description' =>$contenu,
                     'fichier_image'=>$fichier,
                     'type_article'=>$format,

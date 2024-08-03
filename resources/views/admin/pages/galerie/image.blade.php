@@ -9,7 +9,7 @@
 
         @csrf
         
-        <div class="bg-white rounded-md   mt-10 flex flex-col flex-wrap p-10 justify-center items-center " style="min-height: 60vh">
+        <div class="bg-white rounded-md   mt-2 flex flex-col flex-wrap p-5 justify-center items-center " style="min-height: 60vh">
             
             <div class=" flex flex-row">
         
@@ -23,21 +23,21 @@
                
             </div>
             <div class="hidden">
-                <label for="format" class="mx-2 font_title_first lg:w-1/2">Format</label>
+                <label for="format" class="mx-2 font_title_first lg:w-1/2 titre3">Format</label>
                 <input type="format" class="form-control" value="image" id="nom" name="format">
                 
             </div>
 
-            <div class="flex flex-row justify-between items-center mb-2 mt-6">
-                <label for="nom" class="mx-2 font_title_first lg:w-1/2">Nom </label>
-                <input type="text" class="form-control" value="{{old('nom')}}" id="nom" name="nom" placeholder="Nom de l'image" required="">
+            <div class="flex flex-row justify-between items-center mb-2 mt-4">
+                <label for="nom" class="mx-2 font_title_first lg:w-1/2 titre3">Nom </label>
+                <input type="text" class="form-control titre3" value="{{old('nom')}}" id="nom" name="nom" placeholder="Nom de l'image" required="">
                 
             </div>
         
-            <div class="flex flex-row justify-between items-center mb-2 mt-6" required>
-                <label for="file" class="mx-2 font_title_first lg:w-1/2" required>Fichier image</label>
+            <div class="flex flex-row justify-between items-center mb-2 mt-4" required>
+                <label for="file" class="mx-2 font_title_first lg:w-1/2 titre3 mt-2" required>Fichier image</label>
                 
-                <input name="file" type="file" class="Upload border Placeholder">
+                <input name="file" type="file" class="Upload border Placeholder titre3">
             </div>
            <div class="flex flex-row">
             <div class="flex flex-row justify-between items-center mb-2 mt-6" required>
@@ -62,10 +62,13 @@
             </div>
            </div>
 
-           <div class="w-full flex flex-row justify-center mt-4">
-            <button class="p-2 text-white bg-green-400 border-2 w-[600px] border-green-400 font_title_first" type="submit">
+           <div class="w-full flex flex-col items-center justify-center mt-2">
+            <button class="p-2 my-2 text-white bg-green-400 border-2 w-[600px] border-green-400 font_title_first titre2" type="submit">
                 Ajouter l'image
             </button>
+            <a href="/dashboard/galerie/add" class="p-2 my-2 text-white flex justify-center bg-red-400 border-2 w-[600px] border-red-400 font_title_first titre2">
+                Annuler
+            </a>
         </div>  
         
         

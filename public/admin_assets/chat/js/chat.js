@@ -204,6 +204,15 @@ $(document).ready(function () {
                     }
                 });
 
+                //togle for mobile
+                $('.contacts-list-show').on('click',function (){
+                    console.log('toggle')
+                    $('#chat-container').empty();
+                    $('.chat-contact-item').removeClass('active');
+                    document.querySelector('.chat-sidebar').style.left="0%";
+
+                });
+
                 $('.uploaded-files').on('click', '.remove-file', function(e) {
                     e.preventDefault();
                     let fileDiv = $(this).closest('.uploaded-file');
@@ -450,9 +459,6 @@ $(document).ready(function () {
         }
     });
 
-    $('.contacts-list-show').on('click',function (){
-        console.log('toggle')
-         $('chat-sidebar').toggleClass('show-contact');
-    });
+
 
 });

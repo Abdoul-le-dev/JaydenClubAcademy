@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var userId = $('#userId').val();
     var active_conversation_id=null;
+    let uploadedFiles = [];
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -100,6 +101,7 @@ $(document).ready(function () {
             success: function(data) {
                 let friend = data.participants.find(p => p.id != userId);
                 let user = data.participants.find(p => p.id == userId);
+                console.log('messages',data.messages)
 
 
                 $('#chat-container').html(`
@@ -129,8 +131,10 @@ $(document).ready(function () {
                                 </div>
                             </div>
                         </div>
+                        <div class="uploaded-files" style="display: flex; flex-wrap: wrap; margin-bottom: 10px;"></div>
                         <form class="chat-editor-area" data-conversation-id="${conversationId}">
-                            <div class="emojiarea-editor outline-none scrollbar" placeholder="Ecrire ton message ici" contenteditable="true"></div>
+
+                         <div class="emojiarea-editor outline-none scrollbar" placeholder="Ecrire ton message ici" contenteditable="true"></div>
                             <input class="d-none" type="file" id="chat-file-upload" />
                             <label class="chat-file-upload cursor-pointer" for="chat-file-upload">
                                 <span class="fas fa-paperclip"></span>
@@ -148,27 +152,96 @@ $(document).ready(function () {
                     event.preventDefault();
                     let conversationId = $(this).data('conversation-id');
                     let messageBody = $(this).find('.emojiarea-editor').text();
-
-                    sendMessage(conversationId, messageBody);
-                    $(this).find('.emojiarea-editor').empty()
-
+                    if (messageBody.length > 0 || uploadedFiles.length > 0) {
+                        sendMessage(conversationId, messageBody,uploadedFiles);
+                        $(this).find('.emojiarea-editor').empty()
+                    }
                 });
+
+                //event for add with enter
+                $('.emojiarea-editor').on('keypress', function(e) {
+
+                    if (e.which == 13 && !e.shiftKey) { // Enter key pressed
+                        e.preventDefault(); // Prevent the default form submission
+                        let message = $(this).text().trim();
+                        if (message.length > 0 || uploadedFiles.length > 0) {
+                            let activeConversationId = $('.chat-contact-item.active').data('conversation-id');
+                            if (activeConversationId) {
+                                sendMessage(activeConversationId, message,uploadedFiles);
+                                $('.emojiarea-editor').empty();
+                            }
+                        }
+                    }
+                });
+
+                //upload file
+                $('#chat-file-upload').on('change', function(e) {
+                    let files = e.target.files;
+                    let filesContainer = $('.uploaded-files');
+
+                    for (let i = 0; i < files.length; i++) {
+                        uploadedFiles.push(files[i]);
+                        let file = files[i];
+                        let fileHtml;
+
+                        if (file.type.startsWith('image/')) {
+                            let reader = new FileReader();
+                            reader.onload = function(e) {
+                                fileHtml = `<div class="uploaded-file" style="width: 50px; height: 50px; margin-right: 5px; position: relative;">
+                                                <img src="${e.target.result}" style="width: 100%; height: 100%;" />
+                                                <button class="remove-file" style="position: absolute; top: 0; right: 0; background: red; color: white;">X</button>
+                                            </div>`;
+                                filesContainer.append(fileHtml);
+                            };
+                            reader.readAsDataURL(file);
+                        } else {
+                            fileHtml = `<div class="uploaded-file" style="width: 50px; height: 50px; margin-right: 5px; display: flex; align-items: center; justify-content: center; position: relative;">
+                                            <span>${file.name}</span>
+                                            <button class="remove-file" style="position: absolute; top: 0; right: 0; background: red; color: white;">X</button>
+                                        </div>`;
+                            filesContainer.append(fileHtml);
+                        }
+                    }
+                });
+
+                $('.uploaded-files').on('click', '.remove-file', function(e) {
+                    e.preventDefault();
+                    let fileDiv = $(this).closest('.uploaded-file');
+                    let index = fileDiv.index();
+                    uploadedFiles.splice(index, 1); // Remove the file from the array
+                    fileDiv.remove(); // Remove the file from the display
+                });
+
+                //scroll to bottom
+                let message_container=$(`#chat-messages-${conversationId}`)
+                message_container.scrollTop(message_container[0].scrollHeight);
             }
         });
     }
 
-    function sendMessage(conversationId, messageBody) {
+    function sendMessage(conversationId, messageBody,files=[]) {
+        let formData = new FormData();
+        formData.append('message', messageBody);
+        formData.append('conversation_id', conversationId);
+        formData.append('user_id', userId);
+        files.forEach(file => {
+            formData.append('files[]', file);
+        });
         $.ajax({
             url: '/chat/send',
             method: 'POST',
-            data: {
-                user_id: userId,
-                message: messageBody,
-                conversation_id: conversationId,
-            },
+            data: formData,
+            processData: false, // Empêche jQuery de transformer automatiquement les données en chaîne de requête
+            contentType: false,
             success: function() {
                 loadConvMessages(conversationId);
-                // loadConversations();
+                $('.emojiarea-editor').text(''); // Clear the input field after sending the message
+                $('.uploaded-files').empty(); // Clear the uploaded files display
+                uploadedFiles = [];
+            },
+            error: function (e){
+                console.log('e',e);
+
             }
         });
     }
@@ -183,8 +256,17 @@ $(document).ready(function () {
                 let user = data.participants.find(p => p.id == userId);
                 let messagesHtml = data.messages.map(message => message.messageable_id == userId ? rightMessage(message,user,friend): leftMessage(message,user,friend) ).join('');
                 $(`#chat-messages-${conversationId}`).html(messagesHtml);
+                let message_container=$(`#chat-messages-${conversationId}`)
+                message_container.scrollTop(message_container[0].scrollHeight);
             }
         });
+    }
+
+    function messagesImages(images=[]){
+
+        return `  <div class="row mx-n1">
+                ${images.map((my_image)=>`<div class="col-6 col-md-4 px-1" style="min-width: 50px;"><a href="/storage/${my_image.file_url}" data-gallery="gallery-1"><img src="/storage/${my_image.file_url}" alt="" class="img-fluid rounded mb-2"></a></div>`)}
+                                </div>`;
     }
 
     function leftMessage(message,user,friend){
@@ -198,7 +280,10 @@ $(document).ready(function () {
                         <div class="flex-1">
                             <div class="w-xxl-75">
                                 <div class="hover-actions-trigger d-flex align-items-center">
-                                    <div class="chat-message bg-200 p-2 rounded-2">${message.body}</div>
+                                    <div class="chat-message bg-200 p-2 rounded-2">
+                                     <p class="mb-0">${message.body}</p>
+                                     ${message.type=='attachment' ? messagesImages(JSON.parse(message.data)) : ''}
+                                    </div>
                                     <ul class="hover-actions position-relative list-inline mb-0 text-400 ms-2">
                                         <li class="list-inline-item">
                                             <a class="chat-option" href="#!" data-bs-toggle="tooltip" data-bs-placement="top" title="Forward">
@@ -244,6 +329,7 @@ $(document).ready(function () {
                   </ul>
                   <div class="bg-primary text-white p-2 rounded-2 chat-message" data-bs-theme="light">
                     <p class="mb-0">${message.body}</p>
+                    ${message.type=='attachment' ? messagesImages(JSON.parse(message.data)) : ''}
                   </div>
                 </div>
                 <div class="text-400 fs-11 text-end">${message.created_at}<span class="fas fa-check ms-2 text-success"></span></div>
@@ -367,5 +453,6 @@ $(document).ready(function () {
     $('.contacts-list-show').on('click',function (){
         console.log('toggle')
          $('chat-sidebar').toggleClass('show-contact');
-    })
+    });
+
 });

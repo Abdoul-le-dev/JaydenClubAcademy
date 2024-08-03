@@ -19,9 +19,23 @@ class ContactController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create( StoreContactRequest $request)
     {
-        //
+        Contact::create(
+            [
+                'nom'=> $request->name,
+                'phone'=> $request->phone,
+                'object'=> $request->message,
+                'mail'=> $request->email,
+            ]);
+
+        return redirect()->route('contact-view')->with('success',"Votre demande a été transmise avec succès "); 
+    }
+    public function liste()
+    {
+        $listes= Contact::latest()->take(5)->get();
+
+        return view('admin.pages.contact.index',compact('listes'));
     }
 
     /**

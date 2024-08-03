@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Recrutement;
 use App\Http\Requests\StoreRecrutementRequest;
 use App\Http\Requests\UpdateRecrutementRequest;
+use App\Models\Contact;
+use Illuminate\Support\Facades\Request;
 
 class RecrutementController extends Controller
 {
@@ -15,13 +17,42 @@ class RecrutementController extends Controller
     {
         return view('vitrine.pages.recrutement.index');
     }
+    public function voir($id)
+    {
+        $listes= Recrutement::where('id',$id)->get();
+
+        return view('admin.pages.recrutement.see',compact('listes'));
+    }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(StoreRecrutementRequest $request)
     {
-        //
+        $recrutement = Recrutement::create([
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'date' => $request->date,
+            'genre' => $request->genre,
+            'residence' => $request->residence,
+            'nationnalite' => $request->nationnalite,
+            'message1' => $request->message1,
+            'message2' => $request->message2,
+            'message3' => $request->message3,
+            'email' => $request-> email,
+            'telephone' => $request-> telephone,
+        ]);
+
+        return redirect()->route('recrutement-view')->with('success',"Votre demande a été transmise avec succès ");
+
+        
+    }
+
+    public function liste() 
+    {
+        $listes= Recrutement::latest()->take(5)->get();
+
+        return view('admin.pages.recrutement.index',compact('listes'));
     }
 
     /**

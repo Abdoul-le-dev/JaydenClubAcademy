@@ -1,0 +1,42 @@
+@font-face {
+    font-family:'paragrah';
+    src: url('../font/titi/TitilliumWeb-Regular.ttf') format(truetype);
+}
+.paragraph
+{
+    font-family: paragrah 
+    
+}
+p
+{
+    font-family: paragrah 
+
+}
+@font-face {
+    font-family:'titre';
+    src: url('../font/titre/Roboto/Roboto-Regular.ttf') format(truetype);
+}
+@font-face {
+    font-family:'titre1';
+    src: url('../font/titre/Satisfy/Satisfy-Regular.ttf') format(truetype);
+}
+@font-face {
+    font-family:'titre2';
+    src: url('../font/titre/autre/ConcertOne-Regular.ttf') format(truetype);
+}
+.titre
+{
+    font-family: titre 
+    
+}
+.titre1
+{
+    font-family: titre1 
+    
+}
+
+.titre2
+{
+    font-family: titre2
+    
+}

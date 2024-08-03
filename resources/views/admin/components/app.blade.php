@@ -16,6 +16,8 @@
 
         <!-- App css -->
         <link href="/admin_assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/landing_assets/css/font.css">
+        <link rel="stylesheet" href="/landing_assets/css/tailwindcss.css">
         <link href="/admin_assets/assets/css/icons.min.css" rel="stylesheet" type="text/css">
         <link href="/admin_assets/assets/css/theme.min.css" rel="stylesheet" type="text/css">
         <script src="https://cdn.tailwindcss.com"></script>

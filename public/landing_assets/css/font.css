@@ -29,6 +29,15 @@ p
     font-family: titre 
     
 }
+@font-face {
+    font-family:'titre3';
+    src: url('../font/titre/autre2/static/JosefinSans-Regular.ttf') format(truetype);
+}
+.titre3
+{
+    font-family: titre3 
+    
+}
 .titre1
 {
     font-family: titre1 

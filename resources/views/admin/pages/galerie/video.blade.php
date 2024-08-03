@@ -9,7 +9,7 @@
 
         @csrf
         
-        <div class="bg-white rounded-md   mt-10 flex flex-col flex-wrap p-10 justify-center items-center " style="min-height: 60vh">
+        <div class="bg-white rounded-md   mt-2 flex flex-col flex-wrap p-10 justify-center items-center " style="min-height: 60vh">
             
 
             <div class=" flex flex-row">
@@ -24,19 +24,11 @@
                
                
             </div>
-            <div class="flex flex-row justify-between items-center mb-2 mt-6">
-                <label for="stokage" class="mx-2 font_title_first lg:w-1/2 ">Stockage</label>
-                <select name="stokage" id="stokage" class="p-2 border-white bg-black rounded-md focus:outline-none  focus:border-[#4287f5] Placeholder" required>
-        
-                    <option value="Local" class="mx-8 Placeholder">Local</option>
-                    <option value="Youtube" class="mx-8 Placeholder">Youtube</option>
-                   
-                </select>
-            </div>
+           
 
             <div class="flex flex-row justify-between items-center mb-2 mt-6">
-                <label for="nom" class="mx-2 font_title_first lg:w-1/2">Nom </label>
-                <input type="text" class="form-control" value="{{old('nom')}}" id="nom" name="nom" placeholder="Nom de la video" required="">
+                <label for="nom" class="mx-2 font_title_first lg:w-1/2 titre3">Nom </label>
+                <input type="text" class="form-control titre3" value="{{old('nom')}}" id="nom" name="nom" placeholder="Nom de la video" required="">
                 
             </div>
             
@@ -47,9 +39,9 @@
             </div>
         
             <div class="flex flex-row justify-between items-center mb-2 mt-6" required>
-                <label for="file" class="mx-2 font_title_first lg:w-1/2" required>Fichier video</label>
+                <label for="file" class="mx-2 font_title_first lg:w-1/2 titre3" required>Fichier video</label>
                 
-                <input name="file" type="file" class="Uploads border Placeholder">
+                <input name="file" type="file" class="Uploads border Placeholder titre3">
             </div>
            <div class="flex flex-row">
             <div class="flex flex-row justify-between items-center mb-2 mt-6" required>
@@ -74,10 +66,13 @@
             </div>
            </div>
 
-           <div class="w-full flex flex-row justify-center mt-4">
-            <button class="p-2 text-white bg-green-400 border-2 w-[600px] border-green-400 font_title_first" type="submit">
+           <div class="w-full flex flex-col justify-center mt-4">
+            <button class="p-2 text-white bg-green-400 border-2 w-[600px] border-green-400 font_title_first titre3" type="submit">
                 Ajouter la video
             </button>
+            <a href="/dashboard/galerie/add" class="p-2 my-2 text-white flex justify-center bg-red-400 border-2 w-[600px] border-red-400 font_title_first titre2">
+                Annuler
+            </a>
         </div>  
         
         

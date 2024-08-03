@@ -31,7 +31,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect titre2 "><i class="mdi mdi-diamond-stone"></i><span>Match</span></a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href='{{route('dashboard.match.new.view')}}' class="titre1">Ajouter un match</a></li>
+                        <li><a href='{{route('dashboard.match.new.view')}}' class="titre3">Ajouter un match</a></li>
                         <li><a href='{{route('dashboard.match.view')}}' class="titre3">Liste des matches</a></li>
 
                     </ul>
@@ -42,16 +42,16 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect titre2 "><i class="mdi mdi-diamond-stone"></i><span>Blog</span></a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href='{{route('admin-blog-add')}}'>Ajouter un article</a></li>
-                        <li><a href='{{route('admin-blog')}}'>Liste des article</a></li>
+                        <li><a href='{{route('admin-blog-add')}}' class="titre3">Ajouter un article</a></li>
+                        <li><a href='{{route('admin-blog')}}' class="titre3">Liste des article</a></li>
 
                     </ul>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect titre2"><i class="mdi mdi-diamond-stone"></i><span>Galerie</span></a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href='{{route('galerie-add')}}'>Ajouter </a></li>
-                        <li><a href='{{route('galerie-view')}}'>Photo Video</a></li>
+                        <li><a href='{{route('galerie-add')}}' class="titre3">Ajouter </a></li>
+                        <li><a href='{{route('galerie-view')}}' class="titre3">Photo Video</a></li>
 
                     </ul>
                 </li>

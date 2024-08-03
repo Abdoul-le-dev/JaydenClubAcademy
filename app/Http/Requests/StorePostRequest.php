@@ -47,6 +47,7 @@ class StorePostRequest extends FormRequest
             'video_link.required' => 'Le lien de la vidéo est obligatoire si le format est Video.',
             'video_link.string' => 'Le lien de la vidéo doit être une chaîne de caractères.',
             'format.required' => 'Le format de l\'article est obligatoire.',
+            'entete.required' => "L'entete de l'article est obligatoire.",
             'format.string' => 'Le format de l\'article doit être une chaîne de caractères.',
             'format.in' => 'Le format de l\'article doit être soit Image, soit Video.',
         

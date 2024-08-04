@@ -74,7 +74,7 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/blog/article/{id}', [DashboardController::class,'article'])->name('admin-blog-article');
     Route::post('/blog', [BlogController::class,'create'])->name('create');
     Route::get('/blog/update/{id}', [DashboardController::class,'update'])->name('admin-blog-update');
-    Route::post('/blog/update/{id}', [DashboardController::class,'update'])->name('admin-blog-update');
+    Route::post('/blog/update/{id}', [PostController::class,'edit'])->name('admin-blog-updates');
     Route::get('/blog/delete/{id}', [DashboardController::class,'delete'])->name('admin-blog-delete');
 
     Route::get('/recrutement', [RecrutementController::class,'liste'])->name('recrutement-liste');
@@ -87,6 +87,7 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/galerie/add', [DashboardController::class,'addData'])->name('galerie-add');
     Route::get('/galerie/image', [DashboardController::class,'image'])->name('galerie-image');
     Route::post('/galerie/fichier', [GallerieController::class,'create'])->name('galerie-save');
+    Route::get('/galerie/delete/{id}', [GallerieController::class,'delete'])->name('galerie-delete');
     Route::get('/galerie/video', [DashboardController::class,'video'])->name('galerie-video');
 
 

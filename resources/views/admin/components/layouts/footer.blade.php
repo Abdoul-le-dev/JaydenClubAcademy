@@ -6,7 +6,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-right d-none d-sm-block titre2">
-                    Design & Develop by Myra
+                    Design & Develop by <a href="">Abdoul Le Dev</a>
                 </div>
             </div>
         </div>

@@ -13,10 +13,10 @@
        
           <div class="col-xs-8 col-sm-6 col-lg-4 shadow flex flex-col justify-between items-center my-4 ">
           
-           <div>
+           <div class="">
             <article class="thumbnail-classic ">
 
-              <a class="thumbnail-classic-figure" href="{{asset('storage/'.$data->fichier_image)}}" data-lightgallery="item">
+              <a class="thumbnail-classic-figure paragraph" href="{{asset('storage/'.$data->fichier_image)}}" data-lightgallery="item">
                 
                 <img src="{{  asset('storage/'.$data->fichier_image) }}" alt="{{ $data->nom }}" width="370" height="340">
               
@@ -27,8 +27,12 @@
             </article>
            </div>
            <div class=" bg-blue-400 w-full">
-            <h3>{{ $data->nom }}</h3>
+            <h3 class="paragraph">{{ $data->nom }}</h3>
            </div>
+           <div class="mt-2 flex :flex-row justify-between items-center">
+           
+            <a href="{{route('galerie-delete',['id'=> $data->id])}}" class="rounded bg-red-500 border-red-500  p-2 text-white titre2 text-xs my-2 titre2 ">Supprimer </a>
+        </div>
            
             
         </div>

@@ -15,10 +15,11 @@ class BlogController extends Controller
     public function create(StorePostRequest $request)
     {
 
-        dd($request);
+        
         $titre = $request->titre;
         $contenu = $request->description;
         $news =$request->entete;
+        
         $format = $request->format;
         $video_link = $request->video_link ;
 
@@ -64,6 +65,7 @@ class BlogController extends Controller
             $video_id = "https://www.youtube-nocookie.com/embed/".$video_id."?si=sutV20EDxIDLzQLy&amp;controls=0&amp;start=68";
             $post = Post::create([
                 'titre'=>$titre,
+                'entete'=> $news,
                 'description' =>$contenu,
                 'type_article'=>$format,
                 'fichier_link'=>$video_id,

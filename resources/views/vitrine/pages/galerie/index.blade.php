@@ -7,12 +7,12 @@ Gallerie
 @section('content')
 
  <!-- Section Breadcrumbs-->
- <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="images/bg-breadcrumbs-1-1920x726.jpg">
+ <section class="section parallax-container breadcrumbs-wrap" >
     <div class="parallax-content breadcrumbs-custom context-dark">
       <div class="container">
         <h3 class="breadcrumbs-custom-title">Gallerie</h3>
         <ul class="breadcrumbs-custom-path">
-          <li><a href="index.html">JAYDEN FOOTBALL ACADEMY</a></li>
+          <li><a href="/">JAYDEN FOOTBALL ACADEMY</a></li>
           <li class="active">Gallerie</li>
         </ul>
       </div>
@@ -22,9 +22,49 @@ Gallerie
   <section class="section section-variant-1 bg-gray-100 text-center">
     <div class="container">
       <div class="row row-30" data-lightgallery="group">
+        
+        @forelse ($datas as $data )
+
         <div class="col-xs-8 col-sm-6 col-lg-4">
           <!-- Thumbnail Classic-->
-          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="images/gallery-image-1-1055x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-1-370x340.jpg" alt="" width="370" height="340"></a>
+          <article class="thumbnail-classic">
+
+            <a class="" href="{{  asset('storage/'.$data->fichier_image) }}" data-lightgallery="item">
+              <img src="{{  asset('storage/'.$data->fichier_image) }}" alt="" width="370" height="340">
+            </a>
+            <div class="thumbnail-classic-caption">
+              <div class="thumbnail-classic-panel-right"><span class="thumbnail-classic-panel-toggle mdi mdi-share-variant"></span>
+                <ul class="thumbnail-classic-list list-inline list-inline-xs">
+                  <li><a class="fa fa-facebook" href="#"></a></li>
+                  <li><a class="fa fa-twitter" href="#"></a></li>
+                  <li><a class="fa fa-instagram" href="#"></a></li>
+                  <li><a class="fa fa-pinterest-p" href="#"></a></li>
+                </ul>
+              </div>
+              <div class="thumbnail-classic-panel-left">
+                <h6 class="thumbnail-classic-title">Photo #1</h6><span class="thumbnail-classic-subtitle">Share Photo</span>
+              </div>
+            </div>
+          </article>
+        </div>
+          
+        @empty
+
+        <div>
+          <h3></h3>
+        </div>
+          
+        @endforelse
+       
+      </div><a class="button button-lg button-primary" href="#">load more photos</a>
+    </div>
+</section>
+  <section class="section section-variant-1 bg-gray-100 text-center">
+    <div class="container">
+      <div class="row row-30" data-lightgallery="group">
+        <div class="col-xs-8 col-sm-6 col-lg-4">
+          <!-- Thumbnail Classic-->
+          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="/landing_assets/images/gallery-image-1-1055x800-original.jpg" data-lightgallery="item"><img src="/landing_assets/images/gallery-image-1-370x340.jpg" alt="" width="370" height="340"></a>
             <div class="thumbnail-classic-caption">
               <div class="thumbnail-classic-panel-right"><span class="thumbnail-classic-panel-toggle mdi mdi-share-variant"></span>
                 <ul class="thumbnail-classic-list list-inline list-inline-xs">
@@ -42,7 +82,7 @@ Gallerie
         </div>
         <div class="col-xs-8 col-sm-6 col-lg-4">
           <!-- Thumbnail Classic-->
-          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="images/gallery-image-2-1199x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-2-370x340.jpg" alt="" width="370" height="340"></a>
+          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="/landing_assets/images/gallery-image-2-1199x800-original.jpg" data-lightgallery="item"><img src="/landing_assets/images/gallery-image-2-370x340.jpg" alt="" width="370" height="340"></a>
             <div class="thumbnail-classic-caption">
               <div class="thumbnail-classic-panel-right"><span class="thumbnail-classic-panel-toggle mdi mdi-share-variant"></span>
                 <ul class="thumbnail-classic-list list-inline list-inline-xs">
@@ -60,7 +100,7 @@ Gallerie
         </div>
         <div class="col-xs-8 col-sm-6 col-lg-4">
           <!-- Thumbnail Classic-->
-          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="images/gallery-image-3-1195x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-3-370x340.jpg" alt="" width="370" height="340"></a>
+          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="/landing_assets/images/gallery-image-3-1195x800-original.jpg" data-lightgallery="item"><img src="/landing_assets/images/gallery-image-3-370x340.jpg" alt="" width="370" height="340"></a>
             <div class="thumbnail-classic-caption">
               <div class="thumbnail-classic-panel-right"><span class="thumbnail-classic-panel-toggle mdi mdi-share-variant"></span>
                 <ul class="thumbnail-classic-list list-inline list-inline-xs">
@@ -78,7 +118,7 @@ Gallerie
         </div>
         <div class="col-xs-8 col-sm-6 col-lg-4">
           <!-- Thumbnail Classic-->
-          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="images/gallery-image-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-4-370x340.jpg" alt="" width="370" height="340"></a>
+          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="/landing_assets/images/gallery-image-4-1200x800-original.jpg" data-lightgallery="item"><img src="/landing_assets/images/gallery-image-4-370x340.jpg" alt="" width="370" height="340"></a>
             <div class="thumbnail-classic-caption">
               <div class="thumbnail-classic-panel-right"><span class="thumbnail-classic-panel-toggle mdi mdi-share-variant"></span>
                 <ul class="thumbnail-classic-list list-inline list-inline-xs">
@@ -96,7 +136,7 @@ Gallerie
         </div>
         <div class="col-xs-8 col-sm-6 col-lg-4">
           <!-- Thumbnail Classic-->
-          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="images/gallery-image-5-1199x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-5-370x340.jpg" alt="" width="370" height="340"></a>
+          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="/landing_assets/images/gallery-image-5-1199x800-original.jpg" data-lightgallery="item"><img src="/landing_assets/images/gallery-image-5-370x340.jpg" alt="" width="370" height="340"></a>
             <div class="thumbnail-classic-caption">
               <div class="thumbnail-classic-panel-right"><span class="thumbnail-classic-panel-toggle mdi mdi-share-variant"></span>
                 <ul class="thumbnail-classic-list list-inline list-inline-xs">
@@ -114,7 +154,7 @@ Gallerie
         </div>
         <div class="col-xs-8 col-sm-6 col-lg-4">
           <!-- Thumbnail Classic-->
-          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="images/gallery-image-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-6-370x340.jpg" alt="" width="370" height="340"></a>
+          <article class="thumbnail-classic"><a class="thumbnail-classic-figure" href="/landing_assets/images/gallery-image-6-1200x800-original.jpg" data-lightgallery="item"><img src="/landing_assets/images/gallery-image-6-370x340.jpg" alt="" width="370" height="340"></a>
             <div class="thumbnail-classic-caption">
               <div class="thumbnail-classic-panel-right"><span class="thumbnail-classic-panel-toggle mdi mdi-share-variant"></span>
                 <ul class="thumbnail-classic-list list-inline list-inline-xs">

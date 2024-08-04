@@ -50,9 +50,50 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Post $post)
+    public function edit(StorePostRequest $request,$id)
     {
-        //
+        $titre = $request->titre;
+        $contenu = $request->description;
+        $news =$request->entete;
+        
+        $format = $request->format;
+        $video_link = $request->video_link ;
+        
+        $update =[];
+
+        if( $titre)
+        {
+            $update = array_merge($update,['titre'=> $titre]);
+
+        }
+        if($contenu)
+        {
+            $update = array_merge($update,['description'=>$contenu]);
+
+        }
+        if(  $format =='Image' )
+        {
+                 $fichier = $request->file->store('fichier');
+            
+                $update = array_merge($update,['fichier_image'=>$fichier]);
+    
+            
+        }
+        else
+        {
+            $update = array_merge($update,['fichier_link'=>$video_link]);
+        }
+        if($news)
+        {
+            $update = array_merge($update,['entete'=>$news]);
+
+        }
+        
+            $article= Post::findOrFail($id);
+            $article->update($update);
+
+            return redirect()->route('admin-blog')->with('success',"L'article à été mise à jour avec succès");
+        
     }
 
     /**

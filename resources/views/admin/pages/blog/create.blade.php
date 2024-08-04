@@ -1,5 +1,11 @@
 @extends('admin.components.app')
 
+@section('page_css')
+        <!-- Dropify css -->
+        <link href="/admin_assets/plugins/dropify/dropify.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/admin_assets/editor/summernote-bs4.css">
+
+@endsection
 @section('page_content')
 <div class=" flex flex-col  items-center  ">
 
@@ -39,12 +45,12 @@
             <label for="entete" class="mx-2 font_title_first lg:w-1/2 titre3">Entête</label>
             <textarea name="entete" id="" cols="30" placeholder="Entete"  rows="2" class="titre3 border-2 Placeholder p-2 rounded-md focus:outline-none  focus:border-[#4287f5]" required></textarea>
         </div>
-        <div class="flex flex-row  justify-between items-center mb-2 mt-6 ">
+        <div class="flex flex-col  justify-between items-center mb-2 mt-6 ">
             
-            <label for="description" class="mx-2 font_title_first lg:w-1/2 titre3">Description</label>
+            <label for="description" class="mx-2 font_title_first  titre3">Description</label>
             
             
-            <textarea name="description" id="" placeholder="contenu de l'article" cols="30" rows="3" class="titre3 border-2 Placeholder p-2 rounded-md focus:outline-none  focus:border-[#4287f5]" required ></textarea>
+            <textarea name="description" id="" placeholder="contenu de l'article"  class="titre3 editor border-2 Placeholder p-2 rounded-md focus:outline-none  focus:border-[#4287f5] " required ></textarea>
         </div>
 
     
@@ -122,7 +128,7 @@
             <label for="description" class="mx-2 font_title_first lg:w-1/2 titre3">Description</label>
             
             
-            <textarea name="description" id="" cols="30" rows="3" placeholder="contenu de l'article" class="titre3 border-2 rounded-md focus:outline-none  focus:border-[#4287f5] Placeholder p-2" required ></textarea>
+            <textarea name="description" id="" cols="30" rows="3" placeholder="contenu de l'article" class="titre3 editor border-2 rounded-md focus:outline-none  focus:border-[#4287f5] Placeholder p-2" required ></textarea>
         </div>
 
         <div class="flex flex-row justify-between items-center mb-2" >
@@ -159,4 +165,22 @@
 
 
 </div>
+@endsection
+@section('page_script')
+<script src="/admin_assets/editor/summernote-bs4.min.js"></script>
+<script>
+$('.editor').summernote({
+    fontSizes: ['10', '14'],
+    toolbar: [
+        // [groupName, [list of button]]
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['font', ['strikethrough']],
+        ['fontsize', ['fontsize']],
+        ['para', ['ul', 'ol', 'paragraph']]
+    ],
+    placeholder: 'Write here ....',
+    tabsize: 2,
+    height: 200
+});
+</script>
 @endsection

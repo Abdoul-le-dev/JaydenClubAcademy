@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Matche;
 use App\Models\Officiel;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -28,4 +29,13 @@ class VitrineController extends Controller
 
         return view('vitrine.pages.staff.index',compact('officiels'));
     }
+
+
+   public function matches_view(){
+    $matches = Matche::all();
+
+    return view('vitrine.pages.matches.index',compact('matches'));
+
+
+   }
 }

@@ -64,6 +64,8 @@ Route::get('/get_image_joueur', [GetData::class,'getJoueur']);
 Route::get('/staffs', [VitrineController::class,'staffs_view'])->name('staffs.view');
 Route::get('/staffs/{id}', [OfficielController::class,'staff_view'])->name('staffs.single.view');
 
+//matches liste
+Route::get('/calendrier-resultats', [VitrineController::class,'matches_view'])->name('matches.view');
 
 
 //admin
@@ -80,7 +82,7 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/recrutement', [RecrutementController::class,'liste'])->name('recrutement-liste');
     Route::get('/contact', [ContactController::class,'liste'])->name('contact-liste');
     Route::get('/recrutement/see/{id}', [RecrutementController::class,'voir'])->name('recrutement-voir');
-  
+
 
     //galerie
     Route::get('/galerie', [DashboardController::class,'galerie'])->name('galerie-view');

@@ -333,20 +333,19 @@
                             <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('apropos-view')}}">Qui sommes nous ?</a></li>
                         </ul>
 
-                        <ul class="rd-menu rd-navbar-dropdown">
-                            <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="checkout.html">Admission</a>
-                            </li>
-                        </ul>
-                        <div class="">
-                            <li class="rd-nav-item"><a class="rd-nav-link"
-                                    href="{{route('recrutement-view')}}">Recrutement</a>
+                                <ul class="rd-menu rd-navbar-dropdown">
+                                  <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="checkout.html">Admission</a>
+                                  </li>
+                                </ul>
+              <div class="">
+                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('recrutement-view')}}">Recrutement</a>
 
-                            </li>
+                 </li>
 
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </div>
 </header>

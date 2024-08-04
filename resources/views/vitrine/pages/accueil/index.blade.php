@@ -15,8 +15,8 @@ Acceuil
           <div class="row justify-content-center">
             <div class="col-xl-6">
               <div class="swiper-slide-caption">
-                <h1 data-caption-animate="fadeInUp" data-caption-delay="100">We play Soccer</h1>
-                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">like no one else in the united states</h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Read More</a>
+                <h1 data-caption-animate="fadeInUp" data-caption-delay="100" class="">Nous jouons au football</h1>
+                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">De façon exceptionnelle </h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Read More</a>
               </div>
             </div>
           </div>
@@ -27,8 +27,8 @@ Acceuil
           <div class="row justify-content-end">
             <div class="col-xl-5">
               <div class="swiper-slide-caption">
-                <h1 data-caption-animate="fadeInUp" data-caption-delay="100">We Are Pros</h1>
-                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">in Everything Concerning Soccer</h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Read More</a>
+                <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Nous sommes des pros</h1>
+                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">dans Tout ce qui concerne le football</h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Read More</a>
               </div>
             </div>
           </div>
@@ -39,8 +39,8 @@ Acceuil
           <div class="row">
             <div class="col-xl-5">
               <div class="swiper-slide-caption">
-                <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Best Website</h1>
-                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">for soccer news, updates, <br class="d-none d-xl-block"> and game results</h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Read More</a>
+                <span data-caption-animate="fadeInUp" data-caption-delay="100" class="font-semibold">Meilleure Académie</span>
+                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">pour une formation <br class="d-none d-xl-block"> footballistiqe</h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Read More</a>
               </div>
             </div>
           </div>
@@ -52,9 +52,9 @@ Acceuil
     <div class="swiper-pagination"></div>
 </section>
 
-<section class="bg-[#F3F4F6] flex flex-row   w-full h-[600px]">
+<section class="bg-[#F3F4F6] flex flex-col lg:flex-row   w-full min-h-[600px]">
 
-  <div class="flex flex-col  w-[60%] h-[300px] ">
+  <div class="flex flex-col w-full lg:w-[60%] min-h-[300px] hidden lg:block ">
       
     <div class="flex flex-row w-full">
       <div class="p-4">
@@ -81,17 +81,25 @@ Acceuil
     
   </div>
 
- <div class="flex flex-col justify-center items-center w-[40%] ">
-    <h3 class="text-3xl font-semibold mb-4">JAYDEN FOOTBALL ACADEMY</h3>
-    <p class="text-gray-700 mb-4 p-2 paragraph">
+ <div class="flex flex-col justify-center items-center w-full lg:w-[40%] mx-2">
+    <h3 class="text-3xl font-semibold my-4 titre2">JAYDEN FOOTBALL ACADEMY</h3>
+    <p class="text-gray-700 mb-4 p-2 titre3 ">
       Fondée en mars 2024 et basée au Bénin, Jayden Football Academy se consacre à la formation et au développement des talents footballistiques. Notre objectif est d'offrir à chaque jeune talent la possibilité de s'épanouir, quel que soit son contexte financier. Nous recrutons des joueurs prometteurs à travers l'Afrique, leur fournissant une formation de qualité et des opportunités de développement professionnel dans le monde du football.
     </p>
-    <a href="our-club/index.htm" class="mt-4 inline-block px-6 py-3 hover:text-white hover:bg-black border border-gray-300 text-gray-700 rounded-md ">
+    <a href="{{route('contact-view')}}" class="mt-4 titre2 inline-block px-6 py-3 hover:text-white hover:bg-black border border-gray-300 text-gray-700 rounded-md ">
       Obtenir plus d'informations
     </a>
  </div>
 
+
 </section>
+<div class="bg-[#F3F4F6]  container-fluid">
+  <div class="container ">
+    @include('vitrine.pages.accueil.partials.carousel')
+  
+  </div>
+</div>
+
 
   <!-- Latest News-->
 <section class="section section-md bg-gray-100">
@@ -111,40 +119,9 @@ Acceuil
 
               <div class="col-md-6">
                 <!-- Post Future-->
-                <article class="post-future"><a class="post-future-figure" href="blog-post.html">
-                  <img src="/storage/fichier/AaTuNs2d5GFoYqaNnpgw6Igen54iOnt4C4xb78SE.jpg" alt="" width="368" height="287"></a>
-                  <div class="post-future-main">
-                    <h4 class="post-future-title"><a href="blog-post.html">{{$data->titre}}</a></h4>
-                    <div class="post-future-meta">
-                      <!-- Badge-->
-                      <div class="badge badge-secondary">The Team
-                      </div>
-                      <div class="post-future-time"><span class="icon mdi mdi-clock"></span>
-                        <time datetime="2024">{{$data->created_at}}</time>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="post-future-text">
-                      <p>{{ Str::limit($data->description, 100) }}</p>
-                    </div>
-                    <div class="post-future-footer group-flex group-flex-xs"><a class="button button-gray-outline" href="{{route('model-article',['id' =>$data->id])}}">Read more</a>
-                      <div class="post-future-share">
-                        <div class="inline-toggle-parent">
-                          <div class="inline-toggle icon material-icons-share"></div>
-                          <div class="inline-toggle-element">
-                            <ul class="list-inline">
-                              <li>Share</li>
-                              <li><a class="icon fa-facebook" href="#"></a></li>
-                              <li><a class="icon fa-twitter" href="#"></a></li>
-                              <li><a class="icon fa-google-plus" href="#"></a></li>
-                              <li><a class="icon fa-instagram" href="#"></a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+                @include('vitrine.pages.accueil.partials.blog')
+                
+              
               </div>
                 
               @endforeach
@@ -300,8 +277,8 @@ Acceuil
               <!-- Heading Component-->
               <article class="heading-component">
                 <div class="heading-component-inner">
-                  <h5 class="heading-component-title">In the spotlight
-                  </h5><a class="button button-xs button-gray-outline" href="news-1.html">All news</a>
+                  <h5 class="heading-component-title">Mis en avant
+                  </h5><a class="button button-xs button-gray-outline" href="news-1.html">Tout</a>
                 </div>
               </article>
               <!-- List Post Classic-->
@@ -460,7 +437,7 @@ Acceuil
               <!-- Heading Component-->
               <article class="heading-component">
                 <div class="heading-component-inner">
-                  <h5 class="heading-component-title">Follow us
+                  <h5 class="heading-component-title">Suivez-nous
                   </h5>
                 </div>
               </article>
@@ -479,7 +456,7 @@ Acceuil
               <!-- Heading Component-->
               <article class="heading-component">
                 <div class="heading-component-inner">
-                  <h5 class="heading-component-title">Our Awards
+                  <h5 class="heading-component-title">Nos distinctions
                   </h5>
                 </div>
               </article>
@@ -530,29 +507,29 @@ Acceuil
               </article>
               <article class="gallery" data-lightgallery="group">
                 <div class="row row-10 row-narrow">
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-1-original.jpg"><img src="/landing_assets/images/gallery-soccer-1-212x212.jpg" alt="">
-                      <div class="thumbnail-creative-overlay"></div></a>
-                  </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-2-original.jpg"><img src="/landing_assets/images/gallery-soccer-2-212x212.jpg" alt="">
-                      <div class="thumbnail-creative-overlay"></div></a>
-                  </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-3-original.jpg"><img src="/landing_assets/images/gallery-soccer-3-212x212.jpg" alt="">
-                      <div class="thumbnail-creative-overlay"></div></a>
-                  </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-4-original.jpg"><img src="/landing_assets/images/gallery-soccer-4-212x212.jpg" alt="">
-                      <div class="thumbnail-creative-overlay"></div></a>
-                  </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-5-original.jpg"><img src="/landing_assets/images/gallery-soccer-5-212x212.jpg" alt="">
-                      <div class="thumbnail-creative-overlay"></div></a>
-                  </div>
-                  <div class="col-6 col-sm-4 col-md-6 col-lg-4"><a class="thumbnail-creative" data-lightgallery="item" href="/landing_assets/images/gallery-soccer-6-original.jpg"><img src="/landing_assets/images/gallery-soccer-6-212x212.jpg" alt="">
-                      <div class="thumbnail-creative-overlay"></div></a>
-                  </div>
+                 
+                  @foreach ($galleries as $gallerie )
+
+                  <div class="col-6 col-sm-4 col-md-6 col-lg-4">
+                    
+                    @if ($gallerie->type == 'video')
+                    
+                   @else
+                    <a class="thumbnail-creative" href="{{ asset('storage/'.$gallerie->fichier_image) }}">
+                        <img src="{{ asset('storage/'.$gallerie->fichier_image) }}" alt="{{ $gallerie->nom }}" class="w-[50px] h-[60px] object-cover object-top">
+                    </a>
+                   @endif
+                </div>
+                    
+                  @endforeach
+                 
+                 
                 </div>
               </article>
             </div>
+             <!--
             <div class="aside-component">
-              <!-- Heading Component-->
+              <!-- Heading Component
               <article class="heading-component">
                 <div class="heading-component-inner">
                   <h5 class="heading-component-title">Fan Voting
@@ -561,7 +538,7 @@ Acceuil
               </article>
               <div class="block-voting">
                 <div class="group-md">
-                  <!-- Player Voting Item-->
+                  <!-- Player Voting Item
                   <div class="player-voting-item">
                     <div class="player-voting-item-figure"><img src="/landing_assets/images/player-5-152x144.jpg" alt="" width="152" height="144">
                       <div class="player-number">
@@ -572,7 +549,7 @@ Acceuil
                       <p>Joe Montana</p>
                     </div>
                     <div class="player-voting-item-progress">
-                      <!-- Linear progress bar-->
+                      <!-- Linear progress bar
                       <article class="progress-linear progress-bar-modern progress-bar-modern-red">
                         <div class="progress-header">
                           <p>Pass Acc</p>
@@ -581,7 +558,7 @@ Acceuil
                           <div class="progress-bar-linear"></div>
                         </div><span class="progress-value">95</span>
                       </article>
-                      <!-- Linear progress bar-->
+                      <!-- Linear progress bar
                       <article class="progress-linear progress-bar-modern">
                         <div class="progress-header">
                           <p>Shots Acc</p>
@@ -593,7 +570,7 @@ Acceuil
                     </div>
                     <button class="button button-block button-icon button-icon-left button-primary" type="button"><span class="icon material-icons-thumb_up"></span><span>854 votes</span></button>
                   </div>
-                  <!-- Player Voting Item-->
+                  <!-- Player Voting Item
                   <div class="player-voting-item">
                     <div class="player-voting-item-figure"><img src="/landing_assets/images/player-6-152x144.jpg" alt="" width="152" height="144">
                       <div class="player-number">
@@ -604,7 +581,7 @@ Acceuil
                       <p>George Blanda</p>
                     </div>
                     <div class="player-voting-item-progress">
-                      <!-- Linear progress bar-->
+                      <!-- Linear progress bar
                       <article class="progress-linear progress-bar-modern progress-bar-modern-red">
                         <div class="progress-header">
                           <p>Pass Acc</p>
@@ -613,7 +590,7 @@ Acceuil
                           <div class="progress-bar-linear"></div>
                         </div><span class="progress-value">95</span>
                       </article>
-                      <!-- Linear progress bar-->
+                      <!-- Linear progress bar
                       <article class="progress-linear progress-bar-modern">
                         <div class="progress-header">
                           <p>Shots Acc</p>
@@ -627,7 +604,7 @@ Acceuil
                   </div>
                 </div>
               </div>
-            </div>
+            </div>-->
             <div class="aside-component">
               <div class="owl-carousel-outer-navigation">
                 <!-- Heading Component-->
@@ -645,21 +622,27 @@ Acceuil
                 </article>
                 <!-- Owl Carousel-->
                 <div class="owl-carousel owl-spacing-1" data-items="1" data-dots="false" data-nav="true" data-autoplay="true" data-autoplay-speed="4000" data-stage-padding="0" data-loop="false" data-margin="30" data-mouse-drag="false" data-nav-custom=".owl-carousel-outer-navigation">
+                  
+                  @foreach ( $joueurs as $joueur )
+
                   <article class="product">
                     <header class="product-header">
                       <!-- Badge-->
-                      <div class="badge badge-red">hot<span class="icon material-icons-whatshot"></span>
+                      <div class="badge badge-red">{{$joueur->numero}}<span class="icon material-icons-whatshot"></span>
                       </div>
-                      <div class="product-figure"><img src="/landing_assets/images/shop/product-1.png" alt=""></div>
+                      <div class="product-figure"><img src="{{ asset('storage/'.$joueur->photo) }}" alt="{{ $joueur->photo }}" class="w-[370px] h-[340px] object-cover object-top"></div>
+
+                      
                      
                     </header>
                     <footer class="product-content">
-                      <h6 class="product-title"><a href="product-page.html">Nike hoops elite backpack</a></h6>
-                      <div class="product-price"><span class="product-price-old">$400</span><span class="heading-6 product-price-new">$290</span>
-                      </div>
+                      <h6 class="product-title">{{$joueur->nom}} {{$joueur->prenom}}<a href=""></a></h6>
+                      
                      
                     </footer>
                   </article>
+                    
+                  @endforeach
                  
                 </div>
               </div>

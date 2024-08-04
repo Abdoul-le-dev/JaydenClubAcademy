@@ -97,10 +97,10 @@
             <div class="rd-navbar-main-container container">
               <!-- RD Navbar Nav-->
                                 <ul class="rd-navbar-nav">
-                                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">JAYDEN FOOTBALL ACADEMY</a>
+                                    <li class="rd-nav-item active"><a class="rd-nav-link" href="/">JAYDEN FOOTBALL ACADEMY</a>
                                                        
                                     </li>
-                                    <li class="rd-nav-item"><a class="rd-nav-link" href="#">Blog</a>
+                                    <li class="rd-nav-item"><a class="rd-nav-link " href="#">Blog</a>
                                                                           <article class="rd-menu rd-navbar-megamenu rd-megamenu-2-columns context-light">
                                                                             <div class="rd-megamenu-main">
                                                                                                 <div class="rd-megamenu-item rd-megamenu-item-nav">
@@ -264,12 +264,7 @@
                                 </ul>
               <div class="">
                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('recrutement-view')}}">Recrutement</a>
-                  <ul class="rd-menu rd-navbar-dropdown">
-                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="checkout.html">Admission</a>
-                    </li>
-                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="checkout.html">Conditions d'admission</a>
-                    </li>
-                  </ul>
+                  
                  </li>
                 
               </div>

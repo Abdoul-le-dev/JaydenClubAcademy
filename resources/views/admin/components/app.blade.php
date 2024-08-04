@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.css">
         <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <!-- App favicon -->
-        <link rel="shortcut icon" href="/admin_assets/assets/images/favicon.ico">
+        <link rel="shortcut icon" href="landing_assets/assets/image/logo_s_b_crop.png">
 
         <!-- App css -->
         <link href="/admin_assets/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">

@@ -25,7 +25,7 @@ class StorePostRequest extends FormRequest
             
                 'titre' => 'required|string|max:255',
                 'description' => 'required|string',
-                'file' => 'required|file|mimes:jpg,png|max:2048', // Ajustez les types de fichier et la taille maximale selon vos besoins
+                'file' => 'nullable|file|mimes:jpg,png|max:2048', // Ajustez les types de fichier et la taille maximale selon vos besoins
                 'format' => 'nullable|string|in:Image,Video', // Ajoutez d'autres formats si nécessaire
                 'video_link' => 'nullable|string',
         

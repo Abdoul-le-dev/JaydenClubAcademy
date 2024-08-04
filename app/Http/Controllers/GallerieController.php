@@ -35,6 +35,7 @@ class GallerieController extends Controller
 
         $nom = $request->nom;
         $format = $request->format;
+       
         
         $link = $request->link;
 
@@ -48,7 +49,7 @@ class GallerieController extends Controller
                 [
                     'type' => 'image',
                     'nom' =>$nom,
-                    'fichier'=> $request->file->store('gallerie')
+                    'fichier_image'=> $request->file->store('gallerie')
 
                 ]);
 
@@ -59,11 +60,11 @@ class GallerieController extends Controller
         {
             $type = 'video';
 
-            $image = Gallerie::created(
+            $image = Gallerie::create(
                 [
                     'type' => $type,
                     'nom' =>$nom,
-                    'fichier'=> $request->file->store('gallerie')
+                    'link'=> $request->file->store('gallerie')
 
                 ]);
 
@@ -74,6 +75,21 @@ class GallerieController extends Controller
         return redirect()->route('galerie-view')->with('error',"Impossible d'ajouter le fichier"); 
 
         
+    }
+
+    public function delete($id)
+    {
+        $image = Gallerie::findOrFail($id);
+
+        if($image)
+        {
+            $image->delete();
+            return redirect()->route('galerie-view')->with('success','Le fichier à été supprimé avec succès');    
+
+        }
+        return redirect()->route('galerie-view')->with('error','Fichier non trouver');    
+
+
     }
     
 

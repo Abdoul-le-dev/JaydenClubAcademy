@@ -49,3 +49,12 @@ p
     font-family: titre2
     
 }
+@font-face {
+    font-family:'titre4';
+    src: url('../font/titre/autre2/static/JosefinSans-SemiBold.ttf') format(truetype);
+}
+.titre4
+{
+    font-family: titre4 
+    
+}

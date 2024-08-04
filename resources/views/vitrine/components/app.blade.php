@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Stylesheets-->
+    <link rel="icon" href="landing_assets/assets/image/logo_s_b_crop.png " type="image/x-icon">
+    <!-- Stylesheets
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
-    <link rel="stylesheet" href="/landing_assets/css/bootstrap.css">
+    --><link rel="stylesheet" href="/landing_assets/css/bootstrap.css">
     <link rel="stylesheet" href="/landing_assets/css/fonts.css">
     <link rel="stylesheet" href="/landing_assets/css/font.css">
     <link rel="stylesheet" href="/landing_assets/css/tailwindcss.css">
@@ -63,7 +63,8 @@
     <script src="/landing_assets/js/script.js"></script>
     <script src="/landing_assets/js/Abdoul/animation.js"></script>
     <script src="/landing_assets/js/Abdoul/getData.js"></script>
-    <script src="/landing_assets/js/jquerrys.js"></script>
+   
     @yield('page_script')
-    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script><!-- End Google Tag Manager --></body>
+     <!-- Javascript-->
+          
 </html>

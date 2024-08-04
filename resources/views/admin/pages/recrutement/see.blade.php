@@ -16,43 +16,43 @@ recrutement
                 
                     <div class="flex flex-col">
                         <div class="flex justify-center items-center my-2">
-                            <h3 class="paragraph font-semibold">Informations Personnel du Candidat</h3>
+                            <h3 class=" font-semibold titre2">Informations Personnel du Candidat</h3>
                         </div>
                         <div class="flex flex-row justify-between my-4">
-                            <h3 class="paragraph">Nom: <span class="">{{$liste->nom}}</span></h3>
-                            <h3 class="paragraph">Prenom: <span>{{$liste->prenom}}</span></h3>
-                            <h3 class="paragraph">Date de naissance: <span>{{$liste->date}}</span></h3>
-                            <h3 class="paragraph">Genre: <span>{{$liste->genre}}</span></h3>
+                            <h3 class=" titre4">Nom: <span class="paragraph">{{$liste->nom}}</span></h3>
+                            <h3 class="titre4">Prenom: <span class="paragraph">{{$liste->prenom}}</span></h3>
+                            <h3 class="titre4">Date de naissance: <span class="paragraph">{{$liste->date}}</span></h3>
+                            <h3 class="titre4">Genre: <span class="paragraph">{{$liste->genre}}</span></h3>
                         </div>
-                        <div class="flex flex-row justify-between my-2 w-[50%]">
-                            <h3 class="paragraph">Residence: <span class="">{{$liste->nom}}</span></h3>
-                            <h3 class="paragraph">Nationnalité: <span>{{$liste->prenom}}</span></h3>
+                        <div class="flex flex-row justify-between my-2 w-1/2">
+                            <h3 class="titre4">Residence: <span class="paragraph">{{$liste->nom}}</span></h3>
+                            <h3 class="titre4">Nationnalité: <span class="paragraph">{{$liste->prenom}}</span></h3>
                             
                         </div>
                         <div class="flex justify-center items-center my-4">
-                            <h3 class="paragraph font-semibold">Informations sur ces motivations</h3>
+                            <h3 class=" font-semibold titre2">Informations sur ces motivations</h3>
                         </div>
                         <div class="flex flex-col justify-between my-4">
-                            <h3 class="paragraph my-2">Êtes vous scolarisé ? si oui ou ? votre niveau actuelle:</h3>
+                            <h3 class=" my-2 titre4">Êtes vous scolarisé ? si oui ou ? votre niveau actuelle:</h3>
                             <p class="paragraph"><span>{{$liste->message1}}</span></p>
                         
                         </div>
                         <div class="flex flex-col justify-between my-4">
-                            <h3 class="paragraph my-2">Êtes vous disponiblité pour un entretient virtuelle ? si oui quand ?</h3>
+                            <h3 class=" my-2 titre4">Êtes vous disponiblité pour un entretient virtuelle ? si oui quand ?</h3>
                             <p class="paragraph"><span>{{$liste->message2}}</span></p>
                         
                         </div>
                         <div class="flex flex-col justify-between my-4">
-                            <h3 class="paragraph my-2">Pourquoi le football ? et pourquoi nous ?</h3>
-                            <p class="paragraph"><span>{{$liste->message3}}</span></p>
+                            <h3 class=" my-2 titre4">Pourquoi le football ? et pourquoi nous ?</h3>
+                            <p class=" paragraph"><span>{{$liste->message3}}</span></p>
                         
                         </div>
                         <div class="flex justify-center items-center my-2">
-                            <h3 class="paragraph font-semibold">Contact du titeur légal</h3>
+                            <h3 class=" font-semibold titre2">Contact du titeur légal</h3>
                         </div>
                         <div class="flex flex-row justify-between my-4">
-                            <h3 class="paragraph">Numero: <span class="">{{$liste->telephone}}</span></h3>
-                            <h3 class="paragraph">Email: <span>{{$liste->email}}</span></h3>
+                            <h3 class="titre4">Numero: <span class="paragraph">{{$liste->telephone}}</span></h3>
+                            <h3 class="titre4">Email: <span class="paragraph">{{$liste->email}}</span></h3>
                         
                         </div>
                     </div>

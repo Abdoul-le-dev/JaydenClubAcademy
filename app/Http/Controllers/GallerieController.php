@@ -35,6 +35,7 @@ class GallerieController extends Controller
 
         $nom = $request->nom;
         $format = $request->format;
+       
         
         $link = $request->link;
 
@@ -59,7 +60,7 @@ class GallerieController extends Controller
         {
             $type = 'video';
 
-            $image = Gallerie::created(
+            $image = Gallerie::create(
                 [
                     'type' => $type,
                     'nom' =>$nom,

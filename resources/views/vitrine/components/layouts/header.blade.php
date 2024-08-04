@@ -100,7 +100,7 @@
                                     <li class="rd-nav-item active"><a class="rd-nav-link" href="/">JAYDEN FOOTBALL ACADEMY</a>
                                                        
                                     </li>
-                                    <li class="rd-nav-item"><a class="rd-nav-link text-black " href="#">Blog</a>
+                                    <li class="rd-nav-item"><a class="rd-nav-link " href="#">Blog</a>
                                                                           <article class="rd-menu rd-navbar-megamenu rd-megamenu-2-columns context-light">
                                                                             <div class="rd-megamenu-main">
                                                                                                 <div class="rd-megamenu-item rd-megamenu-item-nav">

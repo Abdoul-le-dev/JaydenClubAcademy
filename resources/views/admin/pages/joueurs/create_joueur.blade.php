@@ -4,6 +4,7 @@
 @section('page_css')
         <!-- Dropify css -->
         <link href="/admin_assets/plugins/dropify/dropify.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/admin_assets/editor/summernote-bs4.css">
 @endsection
 @section('page_content')
 <div class="container-fluid">
@@ -111,8 +112,8 @@
                             </div>
                           </div>
                           <div class="col-md-6 mb-3">
-                            <label for="objectif">Objectifs</label>
-                            <textarea class="form-control" id="objectif"  name="objectif" placeholder="Objectifs du jeu">{{old('objectif')}}</textarea>
+                            <label for="objectif">Description</label>
+                            <textarea class="editor" id="objectif"  name="objectif" placeholder="Objectifs du jeu">{{old('objectif')}}</textarea>
                             <div class="valid-tooltip">
                               Bon travail!
                             </div>
@@ -154,4 +155,20 @@
 <!-- Init js-->
 <script src="/admin_assets/assets/pages/fileuploads-demo.js"></script>
 
+<script src="/admin_assets/editor/summernote-bs4.min.js"></script>
+<script>
+$('.editor').summernote({
+    fontSizes: ['10', '14'],
+    toolbar: [
+        // [groupName, [list of button]]
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['font', ['strikethrough']],
+        ['fontsize', ['fontsize']],
+        ['para', ['ul', 'ol', 'paragraph']]
+    ],
+    placeholder: 'Write here ....',
+    tabsize: 2,
+    height: 200
+});
+</script>
 @endsection

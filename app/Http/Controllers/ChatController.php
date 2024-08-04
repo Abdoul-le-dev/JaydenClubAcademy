@@ -95,8 +95,8 @@ class ChatController extends Controller
         $participantId = $request->input('participant_id');
 
        // Récupérer les instances des utilisateurs
-    $user = User::find($userId);
-    $participant = User::find($participantId);
+    $user = User::findOrFail($userId);
+    $participant = User::findOrFail($participantId);
 
     // Vérifier s'il existe déjà une conversation entre les deux utilisateurs
     $existingConversation = Chat::conversations()

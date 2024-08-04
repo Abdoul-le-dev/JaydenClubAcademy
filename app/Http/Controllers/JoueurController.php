@@ -14,12 +14,14 @@ class JoueurController extends Controller
      */
     public function index()
     {
-        return view('vitrine.pages.joueur.nosJoueur');
+        $joueurs=Joueur::all();
+        return view('vitrine.pages.joueur.index',['joueurs'=>$joueurs]);
     }
 
-    public function joueur()
+    public function joueur($id)
     {
-        return view('vitrine.pages.joueur.index');
+        $joueur=Joueur::findOrFail($id);
+        return view('vitrine.pages.joueur.single_joueur_detail',['joueur'=>$joueur]);
     }
 
     /**

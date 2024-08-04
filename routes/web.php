@@ -42,7 +42,7 @@ Route::get('/galerie', [DashboardController::class,'galeries'])->name('galerie-v
 
 //joueur
 Route::get('/nos_joueurs', [JoueurController::class,'index'])->name('nosJoueurs-view');
-Route::get('/joueur', [JoueurController::class,'joueur'])->name('joueur-view');
+Route::get('/joueur/{id}', [JoueurController::class,'joueur'])->name('joueur-view');
 
 //paperase
 Route::get('/apropos', [DashboardController::class,'aPropos'])->name('apropos-view');

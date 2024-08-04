@@ -33,9 +33,6 @@ class VitrineController extends Controller
 
    public function matches_view(){
     $matches = Matche::all();
-
     return view('vitrine.pages.matches.index',compact('matches'));
-
-
    }
 }

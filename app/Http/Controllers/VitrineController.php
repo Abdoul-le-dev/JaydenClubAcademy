@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallerie;
+use App\Models\Joueur;
 use App\Models\Matche;
 use App\Models\Officiel;
 use App\Models\Post;
@@ -16,9 +18,13 @@ class VitrineController extends Controller
 
         //recuperation des 4 derniers article
 
-        $datas = Post::latest()->take(4)->get();
+        $datas = Post::latest()->take(6)->get();
 
-        return view('vitrine.pages.accueil.index',compact('datas'));
+        $galleries = Gallerie::latest()->take(6)->get();
+
+        $joueurs = Joueur::latest()->get();
+
+        return view('vitrine.pages.accueil.index',compact('datas','galleries','joueurs'));
     }
 
     public function staffs_view(){

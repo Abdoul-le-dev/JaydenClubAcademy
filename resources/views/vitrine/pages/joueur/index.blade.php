@@ -12,7 +12,7 @@ les membres du staff
       <div class="container">
         <h3 class="breadcrumbs-custom-title">Membres des joueurs</h3>
         <ul class="breadcrumbs-custom-path">
-          <li><a href="index.html">JAYDEN FOOTBALL ACADEMY</a></li>
+          <li><a href="/">JAYDEN FOOTBALL ACADEMY</a></li>
           <li><a href="#">Pages</a></li>
           <li class="active">Joueurs</li>
         </ul>

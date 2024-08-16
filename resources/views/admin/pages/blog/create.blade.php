@@ -45,12 +45,12 @@
             <label for="entete" class="mx-2 font_title_first lg:w-1/2 titre3">Entête</label>
             <textarea name="entete" id="" cols="30" placeholder="Entete"  rows="2" class="titre3 border-2 Placeholder p-2 rounded-md focus:outline-none  focus:border-[#4287f5]" required></textarea>
         </div>
-        <div class="flex flex-col  justify-between items-center mb-2 mt-6 ">
+        <div class="flex flex-row   md:justify-between items-center mb-2 mt-6 ">
             
-            <label for="description" class="mx-2 font_title_first  titre3">Description</label>
+            <label for="description" class="mx-4 lg:mx-2 font_title_first  titre3">Description</label>
             
             
-            <textarea name="description" id="" placeholder="contenu de l'article"  class="titre3 editor border-2 Placeholder p-2 rounded-md focus:outline-none  focus:border-[#4287f5] " required ></textarea>
+            <textarea name="description" id="" placeholder="contenu de l'article" cols="30" rows="5" class="titre3  border-2 Placeholder p-2 rounded-md focus:outline-none  focus:border-[#4287f5] " required ></textarea>
         </div>
 
     

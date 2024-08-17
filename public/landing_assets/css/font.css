@@ -58,3 +58,12 @@ p
     font-family: titre4 
     
 }
+@font-face {
+    font-family:'titre5';
+    src: url('../font/iter/Inter-VariableFont_opsz\,wght.ttf') format(truetype);
+}
+.titre5
+{
+    font-family: titre5
+    
+}

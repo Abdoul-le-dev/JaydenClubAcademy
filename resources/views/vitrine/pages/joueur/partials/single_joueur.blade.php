@@ -1,7 +1,7 @@
 
 
 
-                  <div class="player-info-modern"><a class="player-info-modern-figure" href="{{route('joueur-view',['id'=>$joueur->id])}}"><img src="{{Storage::url($joueur->photo)}}" alt="" width="368" height="286"></a>
+                  <div class="player-info-modern"><a class="player-info-modern-figure" href="{{route('joueur-view',['id'=>$joueur->id])}}"><img src="{{asset('/storage/'.$joueur->photo)}}" alt="" width="368" height="286"></a>
                     <div class="player-info-modern-footer">
                       <div class="player-info-modern-number">
                         <p>{{$joueur->numero}}</p>

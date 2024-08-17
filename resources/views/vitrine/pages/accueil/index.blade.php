@@ -16,7 +16,7 @@ Acceuil
             <div class="col-xl-6">
               <div class="swiper-slide-caption">
                 <h1 data-caption-animate="fadeInUp" data-caption-delay="100" class="">Nous jouons au football</h1>
-                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">De façon exceptionnelle </h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Read More</a>
+                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">De façon exceptionnelle </h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Voir plus</a>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@ Acceuil
             <div class="col-xl-5">
               <div class="swiper-slide-caption">
                 <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Nous sommes des pros</h1>
-                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">dans Tout ce qui concerne le football</h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Read More</a>
+                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">dans Tout ce qui concerne le football</h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Voir plus</a>
               </div>
             </div>
           </div>
@@ -39,8 +39,8 @@ Acceuil
           <div class="row">
             <div class="col-xl-5">
               <div class="swiper-slide-caption">
-                <span data-caption-animate="fadeInUp" data-caption-delay="100" class="font-semibold">Meilleure Académie</span>
-                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">pour une formation <br class="d-none d-xl-block"> footballistiqe</h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Read More</a>
+                <h1 data-caption-animate="fadeInUp" data-caption-delay="100" class="font-semibold">Meilleure Académie</h1>
+                <h4 data-caption-animate="fadeInUp" data-caption-delay="200">pour une formation <br class="d-none d-xl-block"> footballistiqe</h4><a class="button button-primary" data-caption-animate="fadeInUp" data-caption-delay="300" href="about-us.html">Voir plus</a>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ Acceuil
   </div>
 
  <div class="flex flex-col justify-center items-center w-full lg:w-[40%] mx-2">
-    <h3 class="text-3xl font-semibold my-4 titre2">JAYDEN FOOTBALL ACADEMY</h3>
+    <h3 class="text-3xl font-semibold my-4 ">JAYDEN FOOTBALL ACADEMY</h3>
     <p class="text-gray-700 mb-4 p-2 titre3 ">
       Fondée en mars 2024 et basée au Bénin, Jayden Football Academy se consacre à la formation et au développement des talents footballistiques. Notre objectif est d'offrir à chaque jeune talent la possibilité de s'épanouir, quel que soit son contexte financier. Nous recrutons des joueurs prometteurs à travers l'Afrique, leur fournissant une formation de qualité et des opportunités de développement professionnel dans le monde du football.
     </p>
@@ -99,6 +99,12 @@ Acceuil
   
   </div>
 </div>
+<div class="bg-[#F3F4F6]  container-fluid">
+  <div class="container ">
+   @include('vitrine.pages.accueil.partials.apropos')
+  </div>
+</div>
+
 
 
   <!-- Latest News-->
@@ -111,7 +117,7 @@ Acceuil
             <article class="heading-component">
               <div class="heading-component-inner">
                 <h5 class="heading-component-title">BLOG D'ACTUALITÉS
-                </h5><a class="button button-xs button-gray-outline" href="news-1.html">Toute les nouvelles</a>
+                </h5><a class="button button-xs button-gray-outline" href="{{ route('blog-view')}}">Toute les nouvelles</a>
               </div>
             </article>
             <div class="row row-30">

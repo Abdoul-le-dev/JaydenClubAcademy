@@ -1086,7 +1086,7 @@ button.link-cart::-moz-focus-inner {
 	flex-direction: column;
 }
 
-.unit-body 
+.unit-body
 	-ms-flex: 0 1 auto;
 	-webkit-flex: 0 1 auto;
 	flex: 0 1 auto;
@@ -14300,7 +14300,7 @@ span.page-link:hover, span.page-link:focus, span.page-link:active {
 	position: relative;
 	overflow: hidden;
 	min-height: 100vh;
-	opacity: 0;
+	opacity: 1;
 }
 
 .page.fadeIn {
@@ -16048,7 +16048,7 @@ html:not(.lt-ie10) .not-animated {
 *
 * Preloaders
 */
-.preloader {
+/* .preloader {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -16108,7 +16108,7 @@ html:not(.lt-ie10) .not-animated {
 	to {
 		transform: rotate(1turn);
 	}
-}
+} */
 
 /**
  * Select 2
@@ -18471,7 +18471,7 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-classic .rd-navbar-list-links {
 	display: block;
 	max-width: 80px;
-	
+
 }
 
 .rd-navbar-classic .rd-navbar-list-links:hover {

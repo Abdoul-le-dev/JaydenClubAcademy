@@ -107,181 +107,181 @@
 	}
 
 	// Initialize scripts that require a loaded window
-	$window.on('load', function () {
-		// Page loader & Page transition
-		if (plugins.preloader.length && !isNoviBuilder) {
-			pageTransition({
-				target:            document.querySelector('.page'),
-				delay:             0,
-				duration:          500,
-				classIn:           'fadeIn',
-				classOut:          'fadeOut',
-				classActive:       'animated',
-				conditions:        function (event, link) {
-					return link && !/(\#|javascript:void\(0\)|callto:|tel:|mailto:|:\/\/)/.test(link) && !event.currentTarget.hasAttribute('data-lightgallery');
-				},
-				onTransitionStart: function (options) {
-					setTimeout(function () {
-						plugins.preloader.removeClass('loaded');
-					}, options.duration * .75);
-				},
-				onReady:           function () {
-					plugins.preloader.addClass('loaded');
-					windowReady = true;
-				}
-			});
-		}
+	// $window.on('load', function () {
+	// 	// Page loader & Page transition
+	// 	if (plugins.preloader.length && !isNoviBuilder) {
+	// 		pageTransition({
+	// 			target:            document.querySelector('.page'),
+	// 			delay:             0,
+	// 			duration:          500,
+	// 			classIn:           'fadeIn',
+	// 			classOut:          'fadeOut',
+	// 			classActive:       'animated',
+	// 			conditions:        function (event, link) {
+	// 				return link && !/(\#|javascript:void\(0\)|callto:|tel:|mailto:|:\/\/)/.test(link) && !event.currentTarget.hasAttribute('data-lightgallery');
+	// 			},
+	// 			onTransitionStart: function (options) {
+	// 				setTimeout(function () {
+	// 					plugins.preloader.removeClass('loaded');
+	// 				}, options.duration * .75);
+	// 			},
+	// 			onReady:           function () {
+	// 				plugins.preloader.addClass('loaded');
+	// 				windowReady = true;
+	// 			}
+	// 		});
+	// 	}
 
-		// Countdown
-		if (plugins.countdownCircle.length) {
+	// 	// Countdown
+	// 	if (plugins.countdownCircle.length) {
 
-			for (let i = 0; i < plugins.countdownCircle.length; i++) {
-				let
-						node = plugins.countdownCircle[i],
-						countdown = aCountdown({
-							node:  node,
-							from:  node.getAttribute('data-from'),
-							to:    node.getAttribute('data-to'),
-							count: node.getAttribute('data-count'),
-							tick:  100,
-						});
-			}
-		}
+	// 		for (let i = 0; i < plugins.countdownCircle.length; i++) {
+	// 			let
+	// 					node = plugins.countdownCircle[i],
+	// 					countdown = aCountdown({
+	// 						node:  node,
+	// 						from:  node.getAttribute('data-from'),
+	// 						to:    node.getAttribute('data-to'),
+	// 						count: node.getAttribute('data-count'),
+	// 						tick:  100,
+	// 					});
+	// 		}
+	// 	}
 
-		// jQuery Countdown
-		if (plugins.countdown.length) {
-			for (let i = 0; i < plugins.countdown.length; i++) {
-				var $countDownItem = $(plugins.countdown[i]),
-						d = new Date(),
-						type = $countDownItem.attr('data-type'),
-						time = $countDownItem.attr('data-time'),
-						format = $countDownItem.attr('data-format'),
-						settings = [];
+	// 	// jQuery Countdown
+	// 	if (plugins.countdown.length) {
+	// 		for (let i = 0; i < plugins.countdown.length; i++) {
+	// 			var $countDownItem = $(plugins.countdown[i]),
+	// 					d = new Date(),
+	// 					type = $countDownItem.attr('data-type'),
+	// 					time = $countDownItem.attr('data-time'),
+	// 					format = $countDownItem.attr('data-format'),
+	// 					settings = [];
 
-				// Classic style
-				if ($countDownItem.attr('data-style') === 'short') {
-					settings['labels'] = ['Yeas', 'Mons', 'Weks', 'Days', 'Hrs', 'Mins', 'Secs'];
-				}
+	// 			// Classic style
+	// 			if ($countDownItem.attr('data-style') === 'short') {
+	// 				settings['labels'] = ['Yeas', 'Mons', 'Weks', 'Days', 'Hrs', 'Mins', 'Secs'];
+	// 			}
 
-				d.setTime(Date.parse(time)).toLocaleString();
-				settings[type] = d;
-				settings['format'] = format;
-				$countDownItem.countdown(settings);
-			}
-		}
+	// 			d.setTime(Date.parse(time)).toLocaleString();
+	// 			settings[type] = d;
+	// 			settings['format'] = format;
+	// 			$countDownItem.countdown(settings);
+	// 		}
+	// 	}
 
-		// Progress Bar
-		if (plugins.progressLinear) {
-			for (let i = 0; i < plugins.progressLinear.length; i++) {
-				let
-						container = plugins.progressLinear[i],
-						bar = container.querySelector('.progress-bar-linear'),
-						duration = container.getAttribute('data-duration') || 1000,
-						counter = aCounter({
-							node:     container.querySelector('.progress-value'),
-							duration: duration,
-							onStart:  function () {
-								this.custom.bar.style.width = this.params.to + '%';
-							}
-						});
+	// 	// Progress Bar
+	// 	if (plugins.progressLinear) {
+	// 		for (let i = 0; i < plugins.progressLinear.length; i++) {
+	// 			let
+	// 					container = plugins.progressLinear[i],
+	// 					bar = container.querySelector('.progress-bar-linear'),
+	// 					duration = container.getAttribute('data-duration') || 1000,
+	// 					counter = aCounter({
+	// 						node:     container.querySelector('.progress-value'),
+	// 						duration: duration,
+	// 						onStart:  function () {
+	// 							this.custom.bar.style.width = this.params.to + '%';
+	// 						}
+	// 					});
 
-				bar.style.transitionDuration = duration / 1000 + 's';
-				counter.custom = {
-					container: container,
-					bar:       bar,
-					onScroll:  (function () {
-						if ((Util.inViewport(this.custom.container) && !this.custom.container.classList.contains('animated')) || isNoviBuilder) {
-							this.run();
-							this.custom.container.classList.add('animated');
-						}
-					}).bind(counter),
-					onBlur:    (function () {
-						this.params.to = parseInt(this.params.node.textContent, 10);
-						this.run();
-					}).bind(counter)
-				};
+	// 			bar.style.transitionDuration = duration / 1000 + 's';
+	// 			counter.custom = {
+	// 				container: container,
+	// 				bar:       bar,
+	// 				onScroll:  (function () {
+	// 					if ((Util.inViewport(this.custom.container) && !this.custom.container.classList.contains('animated')) || isNoviBuilder) {
+	// 						this.run();
+	// 						this.custom.container.classList.add('animated');
+	// 					}
+	// 				}).bind(counter),
+	// 				onBlur:    (function () {
+	// 					this.params.to = parseInt(this.params.node.textContent, 10);
+	// 					this.run();
+	// 				}).bind(counter)
+	// 			};
 
-				if (isNoviBuilder) {
-					counter.run();
-					counter.params.node.addEventListener('blur', counter.custom.onBlur);
-				} else {
-					counter.custom.onScroll();
-					document.addEventListener('scroll', counter.custom.onScroll);
-				}
-			}
-		}
+	// 			if (isNoviBuilder) {
+	// 				counter.run();
+	// 				counter.params.node.addEventListener('blur', counter.custom.onBlur);
+	// 			} else {
+	// 				counter.custom.onScroll();
+	// 				document.addEventListener('scroll', counter.custom.onScroll);
+	// 			}
+	// 		}
+	// 	}
 
-		// Progress Circle
-		if (plugins.progressCircle) {
-			for (let i = 0; i < plugins.progressCircle.length; i++) {
-				let
-						container = plugins.progressCircle[i],
-						counter = aCounter({
-							node:     container.querySelector('.progress-circle-counter'),
-							duration: 500,
-							onUpdate: function (value) {
-								this.custom.bar.render(value * 3.6);
-							}
-						});
+	// 	// Progress Circle
+	// 	if (plugins.progressCircle) {
+	// 		for (let i = 0; i < plugins.progressCircle.length; i++) {
+	// 			let
+	// 					container = plugins.progressCircle[i],
+	// 					counter = aCounter({
+	// 						node:     container.querySelector('.progress-circle-counter'),
+	// 						duration: 500,
+	// 						onUpdate: function (value) {
+	// 							this.custom.bar.render(value * 3.6);
+	// 						}
+	// 					});
 
-				counter.params.onComplete = counter.params.onUpdate;
+	// 			counter.params.onComplete = counter.params.onUpdate;
 
-				counter.custom = {
-					container: container,
-					bar:       aProgressCircle({node: container.querySelector('.progress-circle-bar')}),
-					onScroll:  (function () {
-						if (Util.inViewport(this.custom.container) && !this.custom.container.classList.contains('animated')) {
-							this.run();
-							this.custom.container.classList.add('animated');
-						}
-					}).bind(counter),
-					onBlur:    (function () {
-						this.params.to = parseInt(this.params.node.textContent, 10);
-						this.run();
-					}).bind(counter)
-				};
+	// 			counter.custom = {
+	// 				container: container,
+	// 				bar:       aProgressCircle({node: container.querySelector('.progress-circle-bar')}),
+	// 				onScroll:  (function () {
+	// 					if (Util.inViewport(this.custom.container) && !this.custom.container.classList.contains('animated')) {
+	// 						this.run();
+	// 						this.custom.container.classList.add('animated');
+	// 					}
+	// 				}).bind(counter),
+	// 				onBlur:    (function () {
+	// 					this.params.to = parseInt(this.params.node.textContent, 10);
+	// 					this.run();
+	// 				}).bind(counter)
+	// 			};
 
-				if (isNoviBuilder) {
-					counter.run();
-					counter.params.node.addEventListener('blur', counter.custom.onBlur);
-				} else {
-					counter.custom.onScroll();
-					window.addEventListener('scroll', counter.custom.onScroll);
-				}
-			}
-		}
+	// 			if (isNoviBuilder) {
+	// 				counter.run();
+	// 				counter.params.node.addEventListener('blur', counter.custom.onBlur);
+	// 			} else {
+	// 				counter.custom.onScroll();
+	// 				window.addEventListener('scroll', counter.custom.onScroll);
+	// 			}
+	// 		}
+	// 	}
 
-		// doughnutChart
-		if (plugins.doughnutChart.length) {
-			for (var i = 0; i < plugins.doughnutChart.length; i++) {
-				var $element = $(plugins.doughnutChart[i]),
-						$chartDataList = $element.find('.doughnut-chart-list').first();
+	// 	// doughnutChart
+	// 	if (plugins.doughnutChart.length) {
+	// 		for (var i = 0; i < plugins.doughnutChart.length; i++) {
+	// 			var $element = $(plugins.doughnutChart[i]),
+	// 					$chartDataList = $element.find('.doughnut-chart-list').first();
 
-				if ($chartDataList) {
-					var ratioValues = [],
-							chartDataListItems = $chartDataList.find('> li');
+	// 			if ($chartDataList) {
+	// 				var ratioValues = [],
+	// 						chartDataListItems = $chartDataList.find('> li');
 
-					for (var k = 0; k < chartDataListItems.length; k++) {
-						var value = Math.abs(chartDataListItems[k].getAttribute('data-value') * 1);
-						ratioValues.push({});
-						ratioValues[k].title = chartDataListItems[k].innerHTML;
-						ratioValues[k].value = value ? value : 10;
-					}
+	// 				for (var k = 0; k < chartDataListItems.length; k++) {
+	// 					var value = Math.abs(chartDataListItems[k].getAttribute('data-value') * 1);
+	// 					ratioValues.push({});
+	// 					ratioValues[k].title = chartDataListItems[k].innerHTML;
+	// 					ratioValues[k].value = value ? value : 10;
+	// 				}
 
-					$element.drawDoughnutChart(
-							ratioValues, {
-								segmentShowStroke:     false,
-								segmentStrokeWidth:    0,
-								baseColor:             '#f5f5f5',
-								baseOffset:            0,
-								edgeOffset:            1,
-								percentageInnerCutout: 85
-							}
-					);
-				}
-			}
-		}
-	});
+	// 				$element.drawDoughnutChart(
+	// 						ratioValues, {
+	// 							segmentShowStroke:     false,
+	// 							segmentStrokeWidth:    0,
+	// 							baseColor:             '#f5f5f5',
+	// 							baseOffset:            0,
+	// 							edgeOffset:            1,
+	// 							percentageInnerCutout: 85
+	// 						}
+	// 				);
+	// 			}
+	// 		}
+	// 	}
+	// });
 
 	// Initialize All Scripts
 	$(function () {

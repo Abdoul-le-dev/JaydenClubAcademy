@@ -19,11 +19,11 @@
     @yield('page_css')
   </head>
   <body>
-    <div class="preloader">
+    <!-- <div class="preloader">
       <div class="preloader-body">
         <div class="preloader-item"></div>
       </div>
-    </div>
+    </div> -->
     <!-- Page-->
     <div class="page">
       <!-- Page Header-->
@@ -63,8 +63,8 @@
     <script src="/landing_assets/js/script.js"></script>
     <script src="/landing_assets/js/Abdoul/animation.js"></script>
     <script src="/landing_assets/js/Abdoul/getData.js"></script>
-   
+
     @yield('page_script')
      <!-- Javascript-->
-          
+
 </html>
